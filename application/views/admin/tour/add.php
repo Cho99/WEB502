@@ -14,7 +14,6 @@
 
 				<ul class="tabs">
 					<li><a href="#tab1">Thông tin chung</a></li>
-					<li><a href="#tab2">Nội dung</a></li>
 				</ul>
 
 				<div class="tab_container">
@@ -95,13 +94,13 @@
 						<!-- Price -->
 						<div class="formRow">
 							<label class="formLeft" for="param_discount">
-								Giảm giá (%) 
+								Giảm giá 
 								<span></span>:
 							</label>
 							<div class="formRight">
 								<span>
 									<input name="discount" style="width:100px" id="param_discount" class="format_number" type="text">
-									<img class="tipS" title="Phần trăm giảm giá" style="margin-bottom:-8px" src="<?= 	public_url('admin/') ?>crown/images/icons/notifications/information.png">
+									<img class="tipS" title="Giảm giá" style="margin-bottom:-8px" src="<?= 	public_url('admin/') ?>crown/images/icons/notifications/information.png">
 								</span>
 								<span name="discount_autocheck" class="autocheck"></span>
 								<div name="discount_error" class="clear error"></div>

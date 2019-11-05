@@ -3,8 +3,6 @@ class Login extends MY_Controller {
 
 	public function index()
 	{
-		$this->load->library('form_validation');
-		$this->load->helper('form');
 		if($this->input->post())
 		{
 			$this->form_validation->set_rules('login', 'login', 'callback_check_login');

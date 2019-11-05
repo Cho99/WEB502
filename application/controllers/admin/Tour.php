@@ -44,11 +44,6 @@ class Tour extends MY_Controller {
         //Lấy danh sách danh mục sản phẩm
         $input['where'] = array('parent_id' => 0);
         $catalogs = $this->Catalog_model->get_list($input);
-        foreach ($catalogs as $row) {
-        	$input['where'] = array('parent_id' => $row->id);
-        	$subs = $this->Catalog_model->get_list($input);
-        	$row->subs = $subs;
-        }
         $this->data['catalogs'] = $catalogs;
 
 

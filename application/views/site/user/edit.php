@@ -72,7 +72,8 @@
 							<div class="form-group row">
 								<label for="email" class="col-sm-2 col-form-label"></label>
 								<div class="col-sm-10">
-									<button type="submit" class="userSubmit_3ASx">Cập nhật</button>
+									<button type="submit" class="userSubmit_3ASx" style="
+    cursor: pointer;">Cập nhật</button>
 								</div>
 							</div>
 						</form>

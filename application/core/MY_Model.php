@@ -96,15 +96,8 @@ class MY_Model extends CI_Model {
 		if (!$id) {
 			return FALSE;
 		}
-		// Nếu là một số
-		if (is_numeric($id)) {
-			$where = array($this->key => $id);
-		}
-		// Nếu là một dãy số
-		else {
-			//$id = 1,2,3,...
-			$where = $this->key . " IN (".$id.") ";
-		}
+		$where = array();
+		$where[$this->key] = $id;
 		$this->del_rule($where);
 		return TRUE;
 	}
@@ -113,7 +106,7 @@ class MY_Model extends CI_Model {
 	* Delete row tu dieu kien
 	* $where: dieu kien de xoa
 	*/
-	function del_rule($where) {
+	function del_rule($where = array()) {
 		if (!$where) {
 			return FALSE;
 		}

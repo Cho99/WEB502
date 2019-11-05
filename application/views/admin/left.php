@@ -26,20 +26,14 @@
 
          <a href="admin/tran.html" class="exp inactive">
             <span>Quản lý bán hàng</span>
-            <strong>2</strong>
+            <strong>1</strong>
          </a>
 
          <ul class="sub" style="display: none;">
             <li>
-               <a href="<?= admin_url('transaction') ?>">
-								Giao dịch							</a>
-            </li>
-            <li>
-               <a href="">
-								Đơn hàng sản phẩm							</a>
+               <a href="<?= admin_url('giaodich') ?>">Giao dịch</a>
             </li>
          </ul>
-
       </li>
       <li class="product">
 
@@ -78,7 +72,7 @@
 
          <a href="admin/content.html" class="exp inactive">
             <span>Nội dung</span>
-            <strong>4</strong>
+            <strong>2</strong>
          </a>
 
          <ul class="sub" style="display: none;">

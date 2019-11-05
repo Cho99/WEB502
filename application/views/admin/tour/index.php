@@ -35,15 +35,9 @@
                   <option value=""></option>
                     <!-- kiem tra danh muc co danh muc con hay khong -->
                     <?php foreach ($catalogs as $row):?>
-                    <?php if(count($row->subs) > 1):?>
                           <optgroup label="<?php echo $row->name?>">
-                              <?php foreach ($row->subs as $sub):?>
-                                <option value="<?php echo $sub->id?>" <?php echo ($this->input->get('catalog') == $sub->id) ? 'selected' : ''?>> <?php echo $sub->name?> </option>
-                                <?php endforeach;?>
-                          </optgroup>
-                              <?php else:?>
-                                <option value="<?php echo $row->id?>" <?php echo ($this->input->get('catalog') == $row->id) ? 'selected' : ''?>><?php echo $row->name?></option>
-                    <?php endif;?>
+                             
+                                <option value="<?= $row->name ?>"><?php echo $row->name?></option>
                     <?php endforeach;?>
                 </select>
               </td>
@@ -51,8 +45,7 @@
               <td style="width:150px">
               <input type="submit" value="Lọc" class="button blueB">
               <input type="reset" onclick="window.location.href = '<?php echo admin_url('tour')?>'; " value="Reset" class="basic">
-              </td>
-              
+              </td>           
             </tr>
           </tbody></table>
         </form>
