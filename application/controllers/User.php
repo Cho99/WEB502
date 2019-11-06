@@ -83,7 +83,7 @@ class User extends MY_Controller {
 			$this->form_validation->set_rules('login' ,'login', 'callback_check_login');
 			if ($this->form_validation->run()) {
 				$user = $this->_get_user_info();
-				$this->session->set_userdata('user_id_login', $user->id);       
+				$this->session->set_userdata('user_id_login', $user->id);  
                 redirect();
 			}
 		}

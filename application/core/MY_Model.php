@@ -30,29 +30,25 @@ class MY_Model extends CI_Model {
 	/**
 	 * Lay thong tin cua row tu id
 	 * $id : id can lay thong tin
-	 * $field : cot du lieu ma can lay
 	 */
-
-	function get_info($id, $field='') 
+     // Get_info: Lấy dữ liệu theo ID
+	function get_info($id) 
 	{
 		if (!$id) {
 			return FALSE;
 		}
 		$where = array();
 		$where[$this->key] = $id;
-		return $this->get_info_rule($where, $field);
+		return $this->get_info_rule($where);
 	}
 
 	/**
 	 * Lay thong tin cua row tu dieu kien
 	 * $where: Mảng điều kiện
-	 * $field: Cột muốn lấy dữ liệu
 	 */
-
-	function get_info_rule($where = array(), $field = '') {
-		if ($field) {
-			$this->db->select($field);
-		}
+    // Get_info_rule: Lấy dữ liệu theo điều kiệu truyền vào
+    // VD: $where = array('id_tour' => 4)
+	function get_info_rule($where = array()) {
 		$this->db->where($where);
 		$query = $this->db->get($this->table);
 		if ($query->num_rows()) {
@@ -115,22 +111,14 @@ class MY_Model extends CI_Model {
 		return TRUE;
 	}
 
+
 	/**
-	* Lay 1 row
-	*/
-	function get_row($input = array()) {
-		$this->get_list_set_input($input);
-		$query = $this->db->get($this->table);
-		return $query->row();
-	}
-	/**
-	* Lay 1 row
+	* Lấy một list dữ liệu đầu vào
 	* $input : mang du lieu dau vao
 	*/
 	function get_list($input = array()) {
 		//Xu ly du lieu dau vao
 		$this->get_list_set_input($input);
-
 		//Thuc hien truy van du lieu
 		$query = $this->db->get($this->table);
 		return $query->result();
@@ -140,7 +128,7 @@ class MY_Model extends CI_Model {
 	* Gan cac thuoc tinh trong input khi lay danh sach
 	* $input : mang du lieu dau vao
 	*/
-	protected function get_list_set_input($input = array()) {
+	function get_list_set_input($input = array()) {
 		//Thêm điều kiện cho câu truy vấn truyền qua biến $input['where']
 		//(VD: $input['where'] = array('email' => 'web502@gmail.com'))
 		if ((isset($input['where'])) && $input['where'])
