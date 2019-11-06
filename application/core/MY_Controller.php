@@ -44,12 +44,12 @@ class MY_Controller extends CI_Controller {
 	// Kiem tra trang thai dang nhap cua admin
 	private function _check_login(){
         $controller = $this->uri->rsegment('1');
-        $controller =strtolower($controller);
+        $controller = strtolower($controller);
         $login = $this->session->userdata('login');
-        if (!$login && $controller != 'login') {
+        if (!$login && $controller <> 'login') {
         	redirect(admin_url('login'));
         }
-        if ($login && $controller == 'login') {
+        else if ($login && $controller == 'login') {
         	redirect(admin_url('home'));
         }
      

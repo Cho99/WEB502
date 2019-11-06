@@ -9,7 +9,7 @@ class Login extends MY_Controller {
 			if($this->form_validation->run())
             {
             	$this->session->set_userdata('login',true);
-                admin_url('admin');
+                 redirect(admin_url('home'));
             }
 		}
 		$this->load->view('admin/login/index');
