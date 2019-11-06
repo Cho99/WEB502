@@ -9,7 +9,7 @@
 			<ul>
 				<li><a href="<?= admin_url('giaodich') ?>">
 					<img src="<?= base_url('public/admin/') ?>images/icons/control/16/list.png">
-					<span>Danh sách</span>
+					<span>Danh sách Giao Dịch</span>
 				</a></li>
 				
 				<li><a href="">
@@ -22,15 +22,3 @@
 		<div class="clear"></div>
 	</div>
 </div>
-<script type="text/javascript">
-(function($)
-{
-	$(document).ready(function()
-	{
-		var main = $('#form');
-		
-		// Tabs
-		main.contentTabs();
-	});
-})(jQuery);
-</script>
