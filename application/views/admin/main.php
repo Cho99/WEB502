@@ -14,7 +14,6 @@
 		<!-- End Content -->
         <?php $this->load->view('admin/footer'); ?>
 	</div>
-	<div class="clear">
-	</div>
+	<div class="clear"></div>
 </body>
 </html>

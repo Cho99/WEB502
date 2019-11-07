@@ -153,6 +153,12 @@ class MY_Model extends CI_Model {
 			$order = ($this->order == '') ? array($this->table.'.'.$this->key, 'desc') : $this->order;
 			$this->db->order_by($order[0], $order[1]);
 		}
+		// Thêm điều kiện limit cho câu truy vấn thông qua biến $input['limit'] 
+		//(ví dụ $input['limit'] = array('10' ,'0')) 
+		if (isset($input['limit'][0]) && isset($input['limit'][1]))
+		{
+			$this->db->limit($input['limit'][0], $input['limit'][1]);
+		}
 	}
 
 	function get_total($input = array()) {

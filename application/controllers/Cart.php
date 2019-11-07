@@ -61,19 +61,20 @@ class Cart extends MY_Controller {
 	public function del() {
 		$id = $this->uri->rsegment(3);
 		$id = intval($id);
-		
-		$cart = $this->cart->contents();
-		foreach ($cart as $key => $row) {
-			//Lấy ra hêt số tour
-			if ($row['id'] == $id) {
-				$data = array();
-				$data['rowid'] = $key;
-				$data['qty'] = 0;
-				$this->cart->update($data);
-			}else {
-				//Xóa toàn bộ giỏ hàng
-				$this->cart->destroy();
-			}
+		if ($id > 0) {
+			  $cart = $this->cart->contents();
+			  foreach ($cart as $key=> $row) {
+				// Tổng số lượng sản phẩm
+				if ($row['id'] == $id) {
+					  $data = array();
+		        $data['rowid'] = $key;
+		        $data['qty'] = 0;
+		        $this->cart->update($data);
+				} 
+	     	}
+		}else {
+			// Xóa toàn bộ giỏ hàng
+			$this->cart->destroy();
 		}
 		redirect(base_url('cart'));
 	}

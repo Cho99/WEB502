@@ -12,10 +12,7 @@
 					<span>Danh sách</span>
 				</a></li>
 				
-				<li><a href="">
-					<img src="<?= base_url('public/admin/') ?>images/excel.png">
-					<span>Xuất file excel</span>
-				</a></li>
+				
 			</ul>
 		</div>
 		

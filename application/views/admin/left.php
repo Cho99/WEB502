@@ -24,7 +24,7 @@
       </li>
       <li class="tran">
 
-         <a href="admin/tran.html" class="exp inactive">
+         <a href="" class="exp inactive">
             <span>Quản lý bán hàng</span>
             <strong>1</strong>
          </a>
@@ -37,7 +37,7 @@
       </li>
       <li class="product">
 
-         <a href="admin/product.html" class="exp inactive">
+         <a href="" class="exp inactive">
             <span>Tour Du lịch</span>
             <strong>2</strong>
          </a>
@@ -55,7 +55,7 @@
 
       </li>
       <li class="account">
-         <a href="admin/account.html" class="exp inactive">
+         <a href="" class="exp inactive">
             <span>Tài khoản</span>
             <strong>1</strong>
          </a>
@@ -70,7 +70,7 @@
       </li>
       <li class="content">
 
-         <a href="admin/content.html" class="exp inactive">
+         <a href="" class="exp inactive">
             <span>Nội dung</span>
             <strong>2</strong>
          </a>

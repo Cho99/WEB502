@@ -9,6 +9,7 @@ class MY_Controller extends CI_Controller {
 		parent::__construct();
 		$this->load->library('form_validation');
         $this->load->helper('form');
+        $this->load->model('Catalog_model');
 
 		$controller = $this->uri->segment(1);
 		switch ($controller) {
@@ -22,8 +23,9 @@ class MY_Controller extends CI_Controller {
 			default:
 			{
 				//Lấy danh mục các sản phẩm
-				$this->load->model('Catalog_model');
-				$input = array();
+				//Biến điều khiện sắp xém theo thứ tự từ bé đến lớn
+				//ESC:  theo SQL là sắp xếp theo từ bé đến lớn 
+				$input['order'] = array('id','ESC');
 				$catalog_list = $this->Catalog_model->get_list($input);
 			    $this->data['catalog_list'] = $catalog_list;
 				//Kiểm tra xem thành viên đã đăng nhập chưa

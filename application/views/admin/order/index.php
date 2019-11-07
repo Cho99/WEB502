@@ -5,7 +5,7 @@
 	<div class="widget">
 		<div class="title">
 			<span class="titleIcon"><img src="<?= base_url('public/admin/') ?>images/icons/tableArrows.png"></span>
-			<h6>Danh sách Đơn hàng sản phẩm</h6>
+			<h6>Danh sách Tour đã đặt</h6>
 			
 			<div class="num f12">Tổng số: <b>15</b></div>
 		</div>

@@ -33,16 +33,12 @@ class Tour extends MY_Controller {
         	$input['like'] = array('name', $name);
         }
 
-        $catalog_id = $this->input->post('catalog');
-        if ($catalog_id > 0) {
-        	$input['where']['catalog_id'] = $catalog_id;
-        }
+        // $catalog_id = $this->input->post('catalog');
+        // if ($catalog_id > 0) {
+        // 	$input['where']['catalog_id'] = $catalog_id;
+        // }
 
-        // echo '<pre>';
-        // var_dump($input);
-        // echo '</pre>';
-        // die();
-        
+
         //Lấy danh sách Tour du lịch
         $list = $this->Tour_model->get_list($input);
         $this->data['list'] = $list;

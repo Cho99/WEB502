@@ -1,224 +1,62 @@
 <?php $this->load->view('site/slide'); ?>
-<!-- <div class="khoi4">
-	<div class="container banner4">
-		<div class="tdaddress">
-
-			<h2>Bạn muốn đi du lịch ở đâu?</h2>
-			<p>Hãy cùng 502-TRAVEL lựa chọn nhé!!!</p>
-		</div>
-		<div class="khoiaddressto">
-			<div class="anhtren">
-				<div class="trennho">
-					<div class="overlay1"></div>
-					<div class="tdo1">
-						<h2>Phan Thiết</h2>
-						<p><i class="fas fa-map-marker-alt"></i><span>Mũi Né</span></p>
-					</div>
-				</div>
-				<div class="trento">
-					<div class="overlay2"></div>
-					<div class="tdo1">
-						<h2>Sandy Beach</h2>
-						<p><i class="fas fa-map-marker-alt"></i><span>Đà Nẵng</span></p>
-					</div>
-				</div>
-			</div>
-			<div class="anhduoi">
-				<div class="duoito">
-					<div class="overlay3"></div>
-					<div class="tdo1">
-						<h2>Phú Quốc</h2>
-						<p><i class="fas fa-map-marker-alt"></i><span>Vịnh Thái Lan</span></p>
-					</div>
-				</div>
-				<div class="duoinho">
-					<div class="overlay4"></div>
-					<div class="tdo1">
-						<h2>Vũng Tàu</h2>
-						<p><i class="fas fa-map-marker-alt"></i><span>Bà Rịa - Vũng tàu</span></p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div> hết khối 4 --> 
-
 <div class="khoi4 diemdenyt">
 	<div class="container banner4">
 		<div class="tdaddress td-ddyt">
-			<h2 class="ddyt">Điểm đến yêu thích</h2>
-			<p>Các điểm đến du lịch trong nước và nước ngoài</p>
+			<h2 class="ddyt">Tour Giảm Giá và lượt View Cao</h2>
+			<p>Các điểm đến du lịch trong nước</p>
 		</div>
 		<div class="row sl-travelto">
+			<?php foreach ($tour_discount as $row): ?>
 			<div class="col-sm-3 sl-travel">
 				<div class="pos-travel">
-					<a href="#" class="bg-travel">
-						<img src="images/dd1.jpg" alt="">
+					<a href="<?= base_url('tour/view/').$row->id ?>" class="bg-travel">
+						<img src="<?= base_url('upload/tour/').$row->image_link ?>" alt="">
 						<div class="tt-tour">
-							<div class="destination-name">Vịnh Hạ Long</div>
-							<div class="destination-like">Đã có 
-								<span class="num-like">1,600 
-									<sup class="k">+</sup>
-								</span>lượt khách
+							<div class="destination-name"><?= $row->name ?></div>
+							<?php $percent = ($row->discount / $row->price)*100 ?>
+							<div class="destination-like">Giảm giá: <?= round($percent) ?> 
+								<span class="num-like">
+									<sup class="k">%</sup>
+								</span>
 							</div>
 						</div>
 					</a>
 				</div>
 			</div>
-			<div class="col-sm-3 sl-travel">
-				<div class="pos-travel">
-					<a href="#" class="bg-travel">
-						<img src="images/dd2.jpg" alt="">
-						<div class="tt-tour">
-							<div class="destination-name">Sapa</div>
-							<div class="destination-like">Đã có 
-								<span class="num-like">1,200 
-									<sup class="k">+</sup>
-								</span>lượt khách
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
-			<div class="col-sm-3 sl-travel">
-				<div class="pos-travel">
-					<a href="#" class="bg-travel">
-						<img src="images/dd3.jpg" alt="">
-						<div class="tt-tour">
-							<div class="destination-name">Đà Nẵng</div>
-							<div class="destination-like">Đã có 
-								<span class="num-like">1,350 
-									<sup class="k">+</sup>
-								</span>lượt khách
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
-			<div class="col-sm-3 sl-travel">
-				<div class="pos-travel">
-					<a href="#" class="bg-travel">
-						<img src="images/dd4.jpg" alt="">
-						<div class="tt-tour">
-							<div class="destination-name">Sapa</div>
-							<div class="destination-like">Đã có 
-								<span class="num-like">1,200 
-									<sup class="k">+</sup>
-								</span>lượt khách
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
-
+			<?php endforeach ?>
+		
 			<div class="col-xs-12 netdut">
 				<div style="border-top: 1px dashed #ccc;padding-bottom: 30px;padding-top: 0px;"></div>
 			</div>
-
+			
+            <?php foreach ($tour_view as $row): ?>
 			<div class="col-sm-2 sl-travel">
 				<div class="pos-travel">
-					<a href="#" class="bg-travel bg-small">
+					<a href="<?= base_url('tour/view/').$row->id ?>" class="bg-travel bg-small">
 
-						<img class="imgqg" src="images/ninhbinh2.jpg" alt="">
+						<img class="imgqg" src="<?= base_url('upload/tour/').$row->image_link ?>" alt="">
 						<div class="tt-tour">
-							<div class="destination-name">Ninh Bình</div>
-							<div class="destination-like">Đã có 
-								<span class="num-like">1,200 
-									<sup class="k">+</sup>
-								</span>lượt khách
+							<div class="destination-name"><?= $row->name ?></div>
+							<div class="destination-like">View: 
+								<span class="num-like"><?= $row->view ?>
+								</span>lượt 
 							</div>
 						</div>
 
 					</a>
-				</div>
+				</div>	    
 			</div>
-			<div class="col-sm-2 sl-travel">
-				<div class="pos-travel">
-					<a href="#" class="bg-travel bg-small">
-
-						<img class="imgqg" src="images/dalat.jpg" alt="">
-						<div class="tt-tour">
-							<div class="destination-name">Đà Lạt</div>
-							<div class="destination-like">Đã có 
-								<span class="num-like">2,200 
-									<sup class="k">+</sup>
-								</span>lượt khách
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
-			<div class="col-sm-2 sl-travel">
-				<div class="pos-travel">
-					<a href="#" class="bg-travel bg-small">
-
-						<img class="imgqg" src="images/vinhphuc.jpg" alt="">
-						<div class="tt-tour">
-							<div class="destination-name">Vĩnh Phúc</div>
-							<div class="destination-like">Đã có 
-								<span class="num-like">1,200 
-									<sup class="k">+</sup>
-								</span>lượt khách
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
-			<div class="col-sm-2 sl-travel">
-				<div class="pos-travel">
-					<a href="#" class="bg-travel bg-small">
-
-						<img class="imgqg" src="images/bacninh.jpg" alt="">
-						<div class="tt-tour">
-							<div class="destination-name">Bắc Ninh</div>
-							<div class="destination-like">Đã có 
-								<span class="num-like">1,200 
-									<sup class="k">+</sup>
-								</span>lượt khách
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
-			<div class="col-sm-2 sl-travel">
-				<div class="pos-travel">
-					<a href="#" class="bg-travel bg-small">
-
-						<img class="imgqg" src="images/laichau.jpg" alt="">
-						<div class="tt-tour">
-							<div class="destination-name">Lai Châu</div>
-							<div class="destination-like">Đã có 
-								<span class="num-like">900 
-									<sup class="k">+</sup>
-								</span>lượt khách
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
-	<!-- 		<div class="col-sm-2 sl-travel">
-				<div class="pos-travel">
-					<a href="#" class="bg-travel bg-small">
-
-						<img class="imgqg" src="images/laocai.jpg" alt="">
-						<div class="tt-tour">
-							<div class="destination-name">Lào Cai</div>
-							<div class="destination-like">Đã có 
-								<span class="num-like">1,500 
-									<sup class="k">+</sup>
-								</span>lượt khách
-							</div>
-						</div>
-					</a>
-				</div>
-			</div> -->
-
+			<?php endforeach ?>
 		</div>
 	</div>
 </div><!--  hết khối diem den yeu thich -->
 
 <div class="khoidulich360">
 	<div class="container">
+		<div class="tdaddress">
+			<h2 class="ddyt">Tour du lịch Ba Miền</h2>
+			<p>Các điểm đến du lịch trong nước</p>
+		</div>
 		<div class="row">
 			<?php foreach ($catalog_list as $sub): ?>
 				<div class="col-sm-12">
