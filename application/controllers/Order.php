@@ -28,7 +28,7 @@ class Order extends MY_Controller {
         }
         $this->data['total_amount'] = $total_amount;
 
-		$user_id = 0;
+		$user_id = '';
         $user = '';
 		if ($this->session->userdata('user_id_login')) {
 			$user_id = $this->session->userdata('user_id_login');

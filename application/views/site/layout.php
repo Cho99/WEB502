@@ -2,7 +2,7 @@
 <html lang="en">
  <!-- Head	 -->
  <?php $this->load->view('site/head');  ?>
-<body>
+<body class="body">
 	<!-- Header -->
 	<?php $this->load->view('site/header'); ?>
 

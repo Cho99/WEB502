@@ -79,7 +79,6 @@ class Catalog extends MY_Controller {
 			}
 		}
 		$input = array();
-		$input['where'] = array('parent_id' => 0);
 		$list = $this->Catalog_model->get_list($input);
 		$this->data['list'] = $list;
 		$this->data['temp'] = 'admin/catalog/edit';

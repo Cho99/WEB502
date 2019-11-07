@@ -23,8 +23,8 @@
           <table cellspacing="0" cellpadding="0"><tbody>
           
             <tr>
-              <td  class="label"><label for="filter_id">Mã số</label></td>
-              <td class="item"><input type="text" style="width:55px;" id="filter_id" value="<?php echo $this->input->get('id')?>" name="id"></td>
+              <td  class="label"><label for="filter_id" >Mã số</label></td>
+              <td class="item"><input type="text" placeholder="ma so" style="width:55px;" id="filter_id" value="<?php echo $this->input->get('id')?>" name="id"></td>
               
               <td style="width:40px;" class="label"><label for="filter_id">Tên</label></td>
               <td style="width:155px;" class="item"><input type="text" style="width:155px;" id="filter_iname" value="<?php echo $this->input->get('name')?>" name="name"></td>
@@ -32,12 +32,9 @@
               <td style="width:60px;" class="label"><label for="filter_status">Thể loại</label></td>
               <td class="item">
                 <select name="catalog">
-                  <option value=""></option>
-                    <!-- kiem tra danh muc co danh muc con hay khong -->
+                  <option value=""></option>  
                     <?php foreach ($catalogs as $row):?>
-                          <optgroup label="<?php echo $row->name?>">
-                             
-                                <option value="<?= $row->name ?>"><?php echo $row->name?></option>
+                                <option value="<?= $row->id ?>"><?php echo $row->name?></option>
                     <?php endforeach;?>
                 </select>
               </td>
@@ -117,9 +114,9 @@
           <td class="textC"><?php echo get_date($row->ngay_ve)?></td>
           
           <td class="option textC">
-            <a title="Xem chi tiết sản phẩm" class="tipS" target="_blank" href="tour/view/9.html">
+           <!--  <a title="Xem chi tiết sản phẩm" class="tipS" target="_blank" href="tour/view/9.html">
                 <img src="<?php echo public_url('admin/images')?>/icons/color/view.png">
-             </a>
+             </a> -->
              
              <a class="tipS" title="Chỉnh sửa" href="<?php echo admin_url('tour/edit/'.$row->id)?>">
               <img src="<?php echo public_url('admin/images')?>/icons/color/edit.png">

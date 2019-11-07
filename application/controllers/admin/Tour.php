@@ -37,12 +37,17 @@ class Tour extends MY_Controller {
         if ($catalog_id > 0) {
         	$input['where']['catalog_id'] = $catalog_id;
         }
+
+        // echo '<pre>';
+        // var_dump($input);
+        // echo '</pre>';
+        // die();
+        
         //Lấy danh sách Tour du lịch
         $list = $this->Tour_model->get_list($input);
         $this->data['list'] = $list;
 
         //Lấy danh sách danh mục sản phẩm
-        $input['where'] = array('parent_id' => 0);
         $catalogs = $this->Catalog_model->get_list($input);
         $this->data['catalogs'] = $catalogs;
 

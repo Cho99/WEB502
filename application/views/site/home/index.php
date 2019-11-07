@@ -196,7 +196,7 @@
 					</a>
 				</div>
 			</div>
-			<div class="col-sm-2 sl-travel">
+	<!-- 		<div class="col-sm-2 sl-travel">
 				<div class="pos-travel">
 					<a href="#" class="bg-travel bg-small">
 
@@ -211,7 +211,7 @@
 						</div>
 					</a>
 				</div>
-			</div>
+			</div> -->
 
 		</div>
 	</div>

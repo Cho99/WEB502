@@ -11,7 +11,7 @@
 		<form class="form" id="form" method="post" enctype="multipart/form-data" action="">
 		    <fieldset>
 				<div class="formRow">
-				<label class="formLeft" for="param_name">Tên:<span class="req">*</span></label>
+				<label class="formLeft" for="param_name">Tên:<span class=""></span></label>
 				<div class="formRight">
 				<span class="oneTwo"><input name="name" id="param_name" _autocheck="true" type="text" value="<?= $info->name ?>"></span>
 				<span name="name_autocheck" class="autocheck"></span>
