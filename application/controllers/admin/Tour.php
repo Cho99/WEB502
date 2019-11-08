@@ -32,18 +32,18 @@ class Tour extends MY_Controller {
         if ($name) {
         	$input['like'] = array('name', $name);
         }
-
-        // $catalog_id = $this->input->post('catalog');
-        // if ($catalog_id > 0) {
-        // 	$input['where']['catalog_id'] = $catalog_id;
-        // }
-
-
+        $catalog_id = $this->input->get('catalog');
+        $catalog_id = intval($catalog_id);
+        if($catalog_id > 0)
+        {
+            $input['where']['catalog_id'] = $catalog_id;
+        }
         //Lấy danh sách Tour du lịch
         $list = $this->Tour_model->get_list($input);
         $this->data['list'] = $list;
 
         //Lấy danh sách danh mục sản phẩm
+        $input = array();
         $catalogs = $this->Catalog_model->get_list($input);
         $this->data['catalogs'] = $catalogs;
 
@@ -73,6 +73,8 @@ class Tour extends MY_Controller {
         if ($this->input->post()) {
         	$this->form_validation->set_rules('name', 'Tên', 'required');
             $this->form_validation->set_rules('catalog', 'Thể loại', 'required');
+            $this->form_validation->set_rules('ngay_di', 'Ngày đi', 'required|callback_check_ngay');
+            $this->form_validation->set_rules('ngay_ve', 'Ngày về', 'required|callback_check_ngay');
             $this->form_validation->set_rules('price', 'Giá', 'required');
             $this->form_validation->set_rules('amount', 'Số lượng', 'required');
             $this->form_validation->set_rules('content', 'Nội dung', 'required');
@@ -147,6 +149,8 @@ class Tour extends MY_Controller {
         $this->data['catalogs'] = $catalogs;
         if ($this->input->post()) {
             $this->form_validation->set_rules('name', 'Tên', 'required');
+            $this->form_validation->set_rules('ngay_di', 'Ngày đi', 'required|callback_check_ngay');
+            $this->form_validation->set_rules('ngay_ve', 'Ngày về', 'required|callback_check_ngay');
             $this->form_validation->set_rules('catalog', 'Thể loại', 'required');
             $this->form_validation->set_rules('price', 'Giá', 'required');
             $this->form_validation->set_rules('amount', 'Số lượng', 'required');
@@ -223,6 +227,18 @@ class Tour extends MY_Controller {
         if (file_exists($image_link)) {
             unlink($image_link);
         }
+    }
+
+    public function check_ngay() {
+        $ngay_di = $this->input->post('ngay_di');
+        $ngay_ve = $this->input->post('ngay_ve');
+        if ($ngay_di < $ngay_ve) {
+            return TRUE;
+            die();
+        }else {
+            return FAlSE;
+        }
+        
     }
 
 }

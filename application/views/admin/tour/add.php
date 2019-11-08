@@ -22,7 +22,7 @@
 							<label class="formLeft" for="param_name">Tên:<span class="req">*</span></label>
 							<div class="formRight">
 								<span class="oneTwo"><input name="name" id="param_name" _autocheck="true" type="text" ></span>
-								<div name="name_error" class="clear error"></div>
+								<div name="name_error" class="clear error"><?= form_error('name') ?></div>
 							</div>
 							<div class="clear"></div>
 						</div>
@@ -51,6 +51,7 @@
 									</select>
 								</div>
 							</div>
+
 							<div class="clear"></div>
 						</div>
 
@@ -71,6 +72,7 @@
 									<input type="date" id="ngay_ve" name="ngay_ve" multiple="">
 								</div>
 							</div>
+							<div name="ngaydi_error" class="clear error"><?= form_error('ngay_ve') ?></div>
 							<div class="clear"></div>
 						</div>
 
@@ -86,7 +88,7 @@
 									<img class="tipS" title="Giá bán sử dụng để giao dịch" style="margin-bottom:-8px" src="<?= 	public_url('admin/') ?>crown/images/icons/notifications/information.png">
 								</span>
 								<span name="price_autocheck" class="autocheck"></span>
-								<div name="price_error" class="clear error"></div>
+								<div name="price_error" class="clear error"><?= form_error('price') ?></div>
 							</div>
 							<div class="clear"></div>
 						</div>
@@ -137,7 +139,7 @@
 								<label class="formLeft">Nội dung:</label>
 								<div class="formRight">
 									<textarea name="content" id="param_content" class="editor"></textarea>
-									<div name="content_error" class="clear error"></div>
+									<div name="content_error" class="clear error"><?= form_error('content') ?></div>
 								</div>
 								<div class="clear"></div>
 							</div>

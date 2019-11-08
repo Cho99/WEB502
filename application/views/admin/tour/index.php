@@ -34,7 +34,7 @@
                 <select name="catalog">
                   <option value=""></option>  
                     <?php foreach ($catalogs as $row):?>
-                                <option value="<?= $row->id ?>"><?php echo $row->name?></option>
+                      <option value="<?= $row->id ?>"><?php echo $row->name?></option>
                     <?php endforeach;?>
                 </select>
               </td>

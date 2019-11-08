@@ -91,9 +91,7 @@
 							<a class="dropdown-item" href="dulichmienbac.php">Sông nước miền Nam</a>
 						</div>
 					</li>
-					<li class="nav-item ndheaderduoi active">
-						<a class="nav-link mautextnav" href="#">Khách sạn</a>
-					</li>
+			
 					<li class="nav-item ndheaderduoi">
 						<a class="nav-link mautextnav" href="lienhe.php">Liên hệ</a>
 					</li>
@@ -154,10 +152,10 @@
 							</div> 
 						</div> 
 					</li>
-					<li class="nav-item ndheaderduoi">
+				<!-- 	<li class="nav-item ndheaderduoi">
 						<a class="nav-link" href="hotel.php">Khách sạn</a>
-					</li>
-					<li class="nav-item ndheaderduoi">
+					</li> -->
+					<!-- <li class="nav-item ndheaderduoi">
 						<a class="nav-link" href="thuexe.php">Vận chuyển</a>
 						<div class="gnl_inner"> 
 							<div class="global_inner" id="navmore"> 
@@ -175,12 +173,12 @@
 								</ul> 
 							</div> 
 						</div> 
-					</li>
+					</li> -->
 					<li class="nav-item ndheaderduoi">
 						<a class="nav-link" href="#">Tin tức</a>
 					</li>
 					<li class="nav-item ndheaderduoi">
-						<a class="nav-link" href="#">Khuyến mại</a>
+						<a class="nav-link" href="#">Giới thiệu</a>
 					</li>
 					<li class="nav-item ndheaderduoi">
 						<a class="nav-link" href="lienhe.php">Liên hệ</a>

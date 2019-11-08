@@ -137,12 +137,13 @@ class MY_Model extends CI_Model {
 		}
 		//Tìm kiếm theo like
 		// $input['like'] = array('name', 'abc');
-		 if ((isset($input['like'])) && $input['like'])
+		if ((isset($input['like'])) && $input['like'])
 		{
 			$this->db->like($input['like'][0], $input['like'][1]); 
 		}
-		//Thêm sắp xếp dữ liệu thông qua biến $input['order']
-		//VD: $input['order'] = array('id', 'DESC')
+		
+		// Thêm sắp xếp dữ liệu thông qua biến $input['order'] 
+		//(ví dụ $input['order'] = array('id','DESC'))
 		if (isset($input['order'][0]) && isset($input['order'][1]))
 		{
 			$this->db->order_by($input['order'][0], $input['order'][1]);

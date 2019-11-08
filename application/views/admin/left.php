@@ -25,7 +25,7 @@
       <li class="tran">
 
          <a href="" class="exp inactive">
-            <span>Quản lý bán hàng</span>
+            <span>Quản lý giao dịch</span>
             <strong>1</strong>
          </a>
 

@@ -13,460 +13,167 @@
 <div class="wrapper">
 	
 	<div class="widgets">
-	     <!-- Stats -->
+		<!-- Stats -->
 		
-<!-- Amount -->
-<div class="oneTwo">
-	<div class="widget">
-		<div class="title">
-			<img src="<?= public_url('admin') ?>/images/icons/dark/money.png" class="titleIcon">
-			<h6>Doanh số</h6>
-		</div>
-		
-		<table cellpadding="0" cellspacing="0" width="100%" class="sTable myTable">
-			<tbody>
-				
-					<tr>
-							<td class="fontB blue f13">Tổng doanh số</td>
-							<td class="textR webStatsLink red" style="width:120px;">44,000,000 đ</td>
-					</tr>
-				    
-				    <tr>
-							<td class="fontB blue f13">Doanh số hôm nay</td>
-							<td class="textR webStatsLink red" style="width:120px;">0 đ</td>
-					</tr>
-					
-				    <tr>
-							<td class="fontB blue f13">Doanh số theo tháng</td>
+		<!-- Amount -->
+		<div class="oneTwo">
+			<div class="widget">
+				<div class="title">
+					<img src="<?= public_url('admin') ?>/images/icons/dark/money.png" class="titleIcon">
+					<h6>Doanh thu</h6>
+				</div>
+
+				<table cellpadding="0" cellspacing="0" width="100%" class="sTable myTable">
+					<tbody>
+
+						<tr>
+							<td class="fontB blue f13">Tổng doanh thu</td>
+							<td class="textR webStatsLink red" style="width:120px;"><?= number_format($total_price )?> đ</td>
+						</tr>
+
+						<tr>
+							<td class="fontB blue f13">Doanh thu hôm nay</td>
+							<td class="textR webStatsLink red" style="width:120px;"><?= number_format($total_ngay) ?> đ</td>
+						</tr>
+
+						<tr>
+							<td class="fontB blue f13">Doanh thu theo tháng</td>
 							<td class="textR webStatsLink red" style="width:120px;">
-							0 đ
+								<?= number_format($total_thang) ?> đ
 							</td>
-					</tr>
-				    
-			</tbody>
-		</table>
-	</div>
-</div>
+						</tr>
 
-
-<!-- User -->
-<div class="oneTwo">
-	<div class="widget">
-		<div class="title">
-			<img src="<?= public_url('admin') ?>/images/icons/dark/users.png" class="titleIcon">
-			<h6>Thống kê dữ liệu</h6>
+					</tbody>
+				</table>
+			</div>
 		</div>
-		
-		<table cellpadding="0" cellspacing="0" width="100%" class="sTable myTable">
-			<tbody>
-				
-				<tr>
-					<td>
-						<div class="left">Tổng số giao dịch</div>
-						<div class="right f11"><a href="admin/tran.html">Chi tiết</a></div>
-					</td>
-					
-					<td class="textC webStatsLink">
-						15					</td>
-				</tr>
-				
-				<tr>
-					<td>
-						<div class="left">Tổng số sản phẩm</div>
-						<div class="right f11"><a href="admin/product.html">Chi tiết</a></div>
-					</td>
-					
-					<td class="textC webStatsLink">
-						8					</td>
-				</tr>
-				
-				<tr>
-					<td>
-						<div class="left">Tổng số bài viết</div>
-						<div class="right f11"><a href="admin/news.html">Chi tiết</a></div>
-					</td>
-					
-					<td class="textC webStatsLink">
-						4					</td>
-				</tr>
-				
-				<tr>
-					<td>
-						<div class="left">Tổng số thành viên</div>
-						<div class="right f11"><a href="admin/user.html">Chi tiết</a></div>
-					</td>
-					
-					<td class="textC webStatsLink">
-						2					</td>
-				</tr>
-				<tr>
-					<td>
-						<div class="left">Tổng số liên hệ</div>
-						<div class="right f11"><a href="admin/contact.html">Chi tiết</a></div>
-					</td>
-					
-					<td class="textC webStatsLink">
-						0					</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-</div>
+
+
+		<!-- User -->
+		<div class="oneTwo">
+			<div class="widget">
+				<div class="title">
+					<img src="<?= public_url('admin') ?>/images/icons/dark/users.png" class="titleIcon">
+					<h6>Thống kê dữ liệu</h6>
+				</div>
+				<table cellpadding="0" cellspacing="0" width="100%" class="sTable myTable">
+					<tbody>
+						<tr>
+							<td>
+								<div class="left">Tổng số giao dịch</div>
+								<div class="right f11"><a href="admin/tran.html">Chi tiết</a></div>
+							</td>
+
+							<td class="textC webStatsLink">
+							<?= $total_giaodich ?>			</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="left">Tổng số tour</div>
+								<div class="right f11"><a href="admin/product.html">Chi tiết</a></div>
+							</td>
+							<td class="textC webStatsLink"><?= $total_tour ?></td>
+						</tr>
+
+						<tr>
+							<td>
+								<div class="left">Tổng số thành viên</div>
+								<div class="right f11"><a href="admin/user.html">Chi tiết</a></div>
+							</td>
+
+							<td class="textC webStatsLink"><?= $total_user ?></td>
+						</tr>
+						<tr>
+							<td>
+								<div class="left">Tổng số liên hệ</div>
+								<div class="right f11"><a href="admin/contact.html">Chi tiết</a></div>
+							</td>
+
+							<td class="textC webStatsLink">
+							0					</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
 
 		<div class="clear"></div>
 		
 		<!-- Giao dich thanh cong gan day nhat -->
 		
-	<div class="widget">
-		<div class="title">
-			<span class="titleIcon"><div class="checker" id="uniform-titleCheck"><span><input type="checkbox" id="titleCheck" name="titleCheck" style="opacity: 0;"></span></div></span>
-			<h6>Danh sách Giao dịch</h6>
-		</div>
-		
-		<table cellpadding="0" cellspacing="0" width="100%" class="sTable mTable myTable" id="checkAll">
-			
-			
-			<thead>
-				<tr>
-					<td style="width:10px;"><img src="<?= public_url('admin') ?>/images/icons/tableArrows.png"></td>
-					<td style="width:60px;">Mã số</td>
-					<td style="width:75px;">Thành viên</td>
-					<td style="width:90px;">Số tiền</td>
-					<td>Hình thức</td>
-					<td style="width:100px;">Giao dịch</td>
-					<td style="width:75px;">Ngày tạo</td>
-					<td style="width:55px;">Hành động</td>
-				</tr>
-			</thead>
-			
- 			<tfoot class="auto_check_pages">
-				<tr>
-					<td colspan="8">
-						 <div class="list_action itemActions">
+		<div class="widget">
+			<div class="title">
+				<span class="titleIcon"><div class="checker" id="uniform-titleCheck"><span><input type="checkbox" id="titleCheck" name="titleCheck" style="opacity: 0;"></span></div></span>
+				<h6>Danh sách Giao dịch</h6>
+			</div>
+
+			<table cellpadding="0" cellspacing="0" width="100%" class="sTable mTable myTable" id="checkAll">
+
+
+				<thead>
+					<tr>
+						<td style="width:10px;"><img src="<?= public_url('admin') ?>/images/icons/tableArrows.png"></td>
+						<td style="width:60px;">Mã số</td>
+						<td style="width:75px;">Tên</td>
+						<td style="width:75px;">email</td>
+						<td style="width:90px;">Số tiền</td>
+						<td>Hình thức</td>
+						<td style="width:100px;">Giao dịch</td>
+						<td style="width:75px;">Ngày tạo</td>
+						<td style="width:55px;">Hành động</td>
+					</tr>
+				</thead>
+
+				<tfoot class="auto_check_pages">
+					<tr>
+						<td colspan="9">
+							<div class="list_action itemActions">
 								<a href="#submit" id="submit" class="button blueB" url="admin/tran/del_all.html">
 									<span style="color:white;">Xóa hết</span>
 								</a>
-						 </div>
-					</td>
-				</tr>
-			</tfoot>
-			
-			<!-- <tbody class="list_item">
-				<tr>
-					<td><div class="checker" id="uniform-undefined"><span><input type="checkbox" name="id[]" value="21" style="opacity: 0;"></span></div></td>
-					
-					<td class="textC">21</td>
-					
-					<td>
-					Hoàng văn Tuyền					</td>
-					
-					<td class="textR red">10,000,000</td>
-					
-					<td>
-					dathang					</td>
-					
-					
-					<td class="status textC">
-						<span class="pending">
-						Chờ xử lý						</span>
-					</td>
-					
-					<td class="textC">16-08-2014</td>
-					
-					<td class="textC">
-						<a href="admin/tran/view/21.html" class="lightbox cboxElement">
-							<img src="<?= public_url('admin') ?>/images/icons/color/view.png">
-						</a>
-						
-						<a href="admin/tran/del/21.html" class="tipS verify_action" original-title="Xóa">
-							<img src="<?= public_url('admin') ?>/images/icons/color/delete.png">
-						</a>
-					</td>
-				</tr>
-				<tr>
-					<td><div class="checker" id="uniform-undefined"><span><input type="checkbox" name="id[]" value="20" style="opacity: 0;"></span></div></td>
-					
-					<td class="textC">20</td>
-					
-					<td>
-					Hoàng văn Tuyền					</td>
-					
-					<td class="textR red">5,000,000</td>
-					
-					<td>
-					baokim					</td>
-					
-					
-					<td class="status textC">
-						<span class="pending">
-						Chờ xử lý						</span>
-					</td>
-					
-					<td class="textC">15-08-2014</td>
-					
-					<td class="textC">
-						<a href="admin/tran/view/20.html" class="lightbox cboxElement">
-							<img src="<?= public_url('admin') ?>/images/icons/color/view.png">
-						</a>
-						
-						<a href="admin/tran/del/20.html" class="tipS verify_action" original-title="Xóa">
-							<img src="<?= public_url('admin') ?>/images/icons/color/delete.png">
-						</a>
-					</td>
-				</tr>
-				<tr>
-					<td><div class="checker" id="uniform-undefined"><span><input type="checkbox" name="id[]" value="19" style="opacity: 0;"></span></div></td>
-					
-					<td class="textC">19</td>
-					
-					<td>
-					Hoàng văn Tuyền					</td>
-					
-					<td class="textR red">5,000,000</td>
-					
-					<td>
-					baokim					</td>
-					
-					
-					<td class="status textC">
-						<span class="pending">
-						Chờ xử lý						</span>
-					</td>
-					
-					<td class="textC">15-08-2014</td>
-					
-					<td class="textC">
-						<a href="admin/tran/view/19.html" class="lightbox cboxElement">
-							<img src="<?= public_url('admin') ?>/images/icons/color/view.png">
-						</a>
-						
-						<a href="admin/tran/del/19.html" class="tipS verify_action" original-title="Xóa">
-							<img src="<?= public_url('admin') ?>/images/icons/color/delete.png">
-						</a>
-					</td>
-				</tr>
-				<tr>
-					<td><div class="checker" id="uniform-undefined"><span><input type="checkbox" name="id[]" value="18" style="opacity: 0;"></span></div></td>
-					
-					<td class="textC">18</td>
-					
-					<td>
-					Hoàng văn Tuyền					</td>
-					
-					<td class="textR red">5,000,000</td>
-					
-					<td>
-					baokim					</td>
-					
-					
-					<td class="status textC">
-						<span class="pending">
-						Chờ xử lý						</span>
-					</td>
-					
-					<td class="textC">15-08-2014</td>
-					
-					<td class="textC">
-						<a href="admin/tran/view/18.html" class="lightbox cboxElement">
-							<img src="<?= public_url('admin') ?>/images/icons/color/view.png">
-						</a>
-						
-						<a href="admin/tran/del/18.html" class="tipS verify_action" original-title="Xóa">
-							<img src="<?= public_url('admin') ?>/images/icons/color/delete.png">
-						</a>
-					</td>
-				</tr>
-				<tr>
-					<td><div class="checker" id="uniform-undefined"><span><input type="checkbox" name="id[]" value="17" style="opacity: 0;"></span></div></td>
-					
-					<td class="textC">17</td>
-					
-					<td>
-					Hoàng văn Tuyền					</td>
-					
-					<td class="textR red">5,000,000</td>
-					
-					<td>
-					baokim					</td>
-					
-					
-					<td class="status textC">
-						<span class="pending">
-						Chờ xử lý						</span>
-					</td>
-					
-					<td class="textC">15-08-2014</td>
-					
-					<td class="textC">
-						<a href="admin/tran/view/17.html" class="lightbox cboxElement">
-							<img src="<?= public_url('admin') ?>/images/icons/color/view.png">
-						</a>
-						
-						<a href="admin/tran/del/17.html" class="tipS verify_action" original-title="Xóa">
-							<img src="<?= public_url('admin') ?>/images/icons/color/delete.png">
-						</a>
-					</td>
-				</tr>
-				<tr>
-					<td><div class="checker" id="uniform-undefined"><span><input type="checkbox" name="id[]" value="16" style="opacity: 0;"></span></div></td>
-					
-					<td class="textC">16</td>
-					
-					<td>
-					Hoàng văn Tuyền					</td>
-					
-					<td class="textR red">5,000,000</td>
-					
-					<td>
-					baokim					</td>
-					
-					
-					<td class="status textC">
-						<span class="pending">
-						Chờ xử lý						</span>
-					</td>
-					
-					<td class="textC">15-08-2014</td>
-					
-					<td class="textC">
-						<a href="admin/tran/view/16.html" class="lightbox cboxElement">
-							<img src="<?= public_url('admin') ?>/images/icons/color/view.png">
-						</a>
-						
-						<a href="admin/tran/del/16.html" class="tipS verify_action" original-title="Xóa">
-							<img src="<?= public_url('admin') ?>/images/icons/color/delete.png">
-						</a>
-					</td>
-				</tr>
-				<tr>
-					<td><div class="checker" id="uniform-undefined"><span><input type="checkbox" name="id[]" value="15" style="opacity: 0;"></span></div></td>
-					
-					<td class="textC">15</td>
-					
-					<td>
-					Hoàng văn Tuyền					</td>
-					
-					<td class="textR red">5,000,000</td>
-					
-					<td>
-					baokim					</td>
-					
-					
-					<td class="status textC">
-						<span class="pending">
-						Chờ xử lý						</span>
-					</td>
-					
-					<td class="textC">15-08-2014</td>
-					
-					<td class="textC">
-						<a href="admin/tran/view/15.html" class="lightbox cboxElement">
-							<img src="<?= public_url('admin') ?>/images/icons/color/view.png">
-						</a>
-						
-						<a href="admin/tran/del/15.html" class="tipS verify_action" original-title="Xóa">
-							<img src="<?= public_url('admin') ?>/images/icons/color/delete.png">
-						</a>
-					</td>
-				</tr>
-				<tr>
-					<td><div class="checker" id="uniform-undefined"><span><input type="checkbox" name="id[]" value="14" style="opacity: 0;"></span></div></td>
-					
-					<td class="textC">14</td>
-					
-					<td>
-					Hoàng văn Tuyền					</td>
-					
-					<td class="textR red">10,000,000</td>
-					
-					<td>
-					nganluong					</td>
-					
-					
-					<td class="status textC">
-						<span class="completed">
-						Thành công						</span>
-					</td>
-					
-					<td class="textC">14-08-2014</td>
-					
-					<td class="textC">
-						<a href="admin/tran/view/14.html" class="lightbox cboxElement">
-							<img src="<?= public_url('admin') ?>/images/icons/color/view.png">
-						</a>
-						
-						<a href="admin/tran/del/14.html" class="tipS verify_action" original-title="Xóa">
-							<img src="<?= public_url('admin') ?>/images/icons/color/delete.png">
-						</a>
-					</td>
-				</tr>
-				<tr>
-					<td><div class="checker" id="uniform-undefined"><span><input type="checkbox" name="id[]" value="13" style="opacity: 0;"></span></div></td>
-					
-					<td class="textC">13</td>
-					
-					<td>
-					Hoàng văn Tuyền					</td>
-					
-					<td class="textR red">20,000,000</td>
-					
-					<td>
-					nganluong					</td>
-					
-					
-					<td class="status textC">
-						<span class="completed">
-						Thành công						</span>
-					</td>
-					
-					<td class="textC">13-08-2014</td>
-					
-					<td class="textC">
-						<a href="admin/tran/view/13.html" class="lightbox cboxElement">
-							<img src="<?= public_url('admin') ?>/images/icons/color/view.png">
-						</a>
-						
-						<a href="admin/tran/del/13.html" class="tipS verify_action" original-title="Xóa">
-							<img src="<?= public_url('admin') ?>/images/icons/color/delete.png">
-						</a>
-					</td>
-				</tr>
-				<tr>
-					<td><div class="checker" id="uniform-undefined"><span><input type="checkbox" name="id[]" value="12" style="opacity: 0;"></span></div></td>
-					
-					<td class="textC">12</td>
-					
-					<td>
-					Hoàng văn Tuyền					</td>
-					
-					<td class="textR red">10,000,000</td>
-					
-					<td>
-					nganluong					</td>
-					
-					
-					<td class="status textC">
-						<span class="completed">
-						Thành công						</span>
-					</td>
-					
-					<td class="textC">13-08-2014</td>
-					
-					<td class="textC">
-						<a href="admin/tran/view/12.html" class="lightbox cboxElement">
-							<img src="<?= public_url('admin') ?>/images/icons/color/view.png">
-						</a>
-						
-						<a href="admin/tran/del/12.html" class="tipS verify_action" original-title="Xóa">
-							<img src="<?= public_url('admin') ?>/images/icons/color/delete.png">
-						</a>
-					</td>
-				</tr>
-			</tbody> -->
-			
-		</table>
-	</div>
+							</div>
+						</td>
+					</tr>
+				</tfoot>
 
-        	</div>
-	
+				<tbody class="list_item">
+					<?php foreach ($list as $row): ?>
+						<tr>
+							<td><div class="checker" id="uniform-undefined"><span><input type="checkbox" name="id[]" value="<?= $row->id ?>" style="opacity: 0;"></span></div></td>
+
+							<td class="textC"><?= $row->id ?></td>
+
+							<td class="textC"><?= $row->ten ?></td>
+
+							<td class="textC"><?= $row->email ?></td>
+
+							<td class="textR red"><?= number_format($row->so_tien) ?> đ</td>
+
+							<td><?php if($row->hinhthuc_thanhtoan == 'offline'): ?>
+							<?= 'Đến đại lý thanh toán' ?>
+							<?php endif; ?></td>
+
+
+							<td class="status textC">
+								<span class="pending">Chờ xử lý</span>
+							</td>
+
+							<td class="textC"><?= get_date($row->created) ?></td>
+
+							<td class="textC">
+								<a href="<?= admin_url('order/view/').$row->id ?>" class="lightbox cboxElement">
+									<img src="<?= public_url('admin') ?>/images/icons/color/view.png">
+								</a>
+
+								<a href="admin/tran/del/21.html" class="tipS verify_action" original-title="Xóa">
+									<img src="<?= public_url('admin') ?>/images/icons/color/delete.png">
+								</a>
+							</td>
+						</tr>
+					<?php endforeach ?>
+				</tbody>
+
+			</table>
+		</div>
+	</div>
 </div>
