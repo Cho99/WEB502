@@ -79,7 +79,7 @@
 									<p><?= $row['name'] ?></p>
 								</div>
 								<div class="text title item-title giohangflex" data-spm="details_title">
-									<h5>Giá Tiền:</h5>
+									<h5>Giá Tiền/người:</h5>
 									<p class="bold"><?= number_format($row['price']) ?>đ</p>
 								</div>
 								<div class="text title item-title giohangflex" data-spm="details_title">
@@ -101,6 +101,18 @@
 							</span>
 							<span>
 								<div><a href="<?= base_url('cart/del/').$row['id'] ?>" class="btn btn-danger btn-sm">Hủy</a></div>
+							</span>
+							<span>
+								<span class="text desc info multiply">Số người tối đa:</span>
+								<span class="text"><?= $row['amount'] ?> người
+								</span>
+							</span>
+							<span>
+								<div>
+									<?php $booked = $row['amount'] - $row['booked'] ?>
+									<span class="text desc info multiply">Số người còn lại:</span>
+									<span class="text"><?= $booked ?> người</span>
+								</div>
 							</span>
 						</div>
 						<div class="clear"></div>

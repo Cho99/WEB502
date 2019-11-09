@@ -15,6 +15,7 @@ class Cart extends MY_Controller {
 		//Tổng số sản phẩm
 		$total_items = $this->cart->total_items();
 		$this->data['total_items'] = $total_items;
+
 		$this->data['carts'] = $cart;
 		$this->data['temp'] = 'site/cart/index';
 		$this->load->view('site/layout', $this->data);
@@ -41,6 +42,8 @@ class Cart extends MY_Controller {
 		$data['price'] = $price;
 		$data['ngay_di'] = $tour->ngay_di;
 		$data['ngay_ve'] = $tour->ngay_ve;
+		$data['amount'] = $tour->amount;
+		$data['booked'] = $tour->booked;
 		$data['created'] = now();
 		$this->cart->insert($data);
 		redirect(base_url('cart'));

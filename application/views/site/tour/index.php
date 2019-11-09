@@ -88,9 +88,15 @@
 									</div>
 								</div>
 							    <?php endif; ?>
-								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-5 text-right">
-									<a href="<?= base_url('cart/add/').$tour->id ?>" class="btn btn-book1 btn-md">Đặt ngay</a>
-								</div>
+							    <?php if ($tour->amount > $tour->booked): ?>
+							    	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-5 text-right">
+							    		<a href="<?= base_url('cart/add/').$tour->id ?>" class="btn btn-book1 btn-md">Đặt ngay</a>
+							    	</div>
+								<?php else: ?>
+									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-5 text-right">
+							    		<span style="color: red">Đã đặt hết</span>
+							    	</div>
+								<?php endif; ?>
 							</div>
 						</div>
 						<div class="sec5">
@@ -206,7 +212,7 @@
 													</td>
 													<td>
 														<span style="color:#555555;">
-															<strong><?= get_date($tour->ngay_di) ?></strong>
+															<strong><?= $tour->ngay_di ?></strong>
 														</span>
 													</td>
 												</tr>
@@ -218,7 +224,7 @@
 													</td>
 													<td>
 														<span style="color:#555555;">
-															<strong><?= get_date($tour->ngay_ve) ?></strong>
+															<strong><?= $tour->ngay_ve ?></strong>
 														</span>
 													</td>
 												</tr>
