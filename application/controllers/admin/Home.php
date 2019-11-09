@@ -32,13 +32,13 @@
         $total_ngay = 0;
         $total_thang = 0;
         foreach ($list_giaodich as $row) {
-        	$total_price += $row->so_tien;
         	if (get_date($row->created) == get_date(now())) {
         		$total_ngay += $row->so_tien;
         	}
         	if (date("mm",$row->created) == date("mm", now()) ) {
         		$total_thang += $row->so_tien;
         	}
+        	$total_price = $total_ngay + $total_thang;
         }
 
         $this->data['total_ngay'] = $total_ngay;

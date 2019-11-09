@@ -8,6 +8,7 @@ class Order extends MY_Controller {
 		$this->load->model('User_model');
 		$this->load->model('GiaoDich_model');
 		$this->load->model('Order_model');
+        $this->load->model('Tour_model');
 	}
 
 	public function checkout()
@@ -64,10 +65,17 @@ class Order extends MY_Controller {
             			'sotien'      => $row['subtotal'],
             		);
             		$this->Order_model->create($data);
+                  $input['where'] = array();
+                  $input['where'] = array('id' => $row['id']); 
+                  $tour_amount = $this->Tour_model->get_list($input);
+                  foreach ($tour_amount as $value) {
+                      $booked['booked'] = $value->booked + $row['qty'];
+                      $this->Tour_model->update($row['id'], $booked);
+                  }   
             	}
             	$this->cart->destroy();
             	if ($payment == 'offline') {
-            		$this->session->set_flashdata('message', 'Bạn đã đặt hàng thành công, chúng tôi sẽ kiểm tra và gửi hàng');
+            		$this->session->set_flashdata('message', 'Bạn đã book tour thành công, chúng tôi sẽ gửi mail cho bạn sớm nhât');
             		redirect('cart');
             	}
             }

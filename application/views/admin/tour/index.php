@@ -18,7 +18,7 @@
     
     <table width="100%" cellspacing="0" cellpadding="0" id="checkAll" class="sTable mTable myTable">
       
-      <thead class="filter"><tr><td colspan="8">
+      <thead class="filter"><tr><td colspan="9">
         <form method="get" action="<?php echo admin_url('tour')?>" class="list_filter form">
           <table cellspacing="0" cellpadding="0"><tbody>
           
@@ -54,7 +54,8 @@
           <td style="width:60px;">Mã số</td>
           <td>Tên Tour</td>
           <td>Giá Tour</td>
-          <td style="">Số lượng người</td>
+          <td style="">Số lượng người tối đa</td>
+          <td style="">Số lượng người đã đặt</td>
           <td style="width:75px;">Ngày đi</td>
           <td style="width:75px;">Ngày về</td>
           <td style="width:120px;">Hành động</td>
@@ -63,7 +64,7 @@
       
       <tfoot class="auto_check_pages">
         <tr>
-          <td colspan="8">
+          <td colspan="9">
              <div class="list_action itemActions">
                 <a url="<?php echo admin_url('tour/delete_all')?>" class="button blueB" id="submit" href="#submit">
                   <span style="color:white;">Xóa hết</span>
@@ -109,9 +110,10 @@
                   <b style="color:red"><?php echo number_format($row->price)?> đ</b>
               <?php endif;?>          
           </td>
-           <td class="textC"><?= $row->amount ?></td>
-          <td class="textC"><?php echo get_date($row->ngay_di)?></td>
-          <td class="textC"><?php echo get_date($row->ngay_ve)?></td>
+          <td class="textC"><?= $row->amount ?></td>
+          <td class="textC"><?= $row->booked ?></td>
+          <td class="textC"><?php echo $row->ngay_di?></td>
+          <td class="textC"><?php echo $row->ngay_ve?></td>
           
           <td class="option textC">
            <!--  <a title="Xem chi tiết sản phẩm" class="tipS" target="_blank" href="tour/view/9.html">

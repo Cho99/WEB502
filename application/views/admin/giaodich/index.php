@@ -49,7 +49,18 @@
       </thead>
       
       <tfoot class="auto_check_pages">
-
+        <tr>
+          <td colspan="8">
+             <div class="list_action itemActions">
+                <a url="<?php echo admin_url('giaodich/delete_all')?>" class="button blueB" id="submit" href="#submit">
+                  <span style="color:white;">Xóa hết</span>
+                </a>
+             </div>
+               <div class="pagination">
+                    <?php echo $this->pagination->create_links()?>
+                   </div>
+          </td>
+        </tr>
       </tfoot>
       
       <tbody class="list_item">

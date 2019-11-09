@@ -20,6 +20,24 @@ class Tour extends MY_Controller {
         $total_rows = $this->Tour_model->get_total();
         $this->data['total_rows'] = $total_rows;
 
+        //Phân trang
+
+        $config = array();
+        $config['total_rows'] = $total_rows;//tong tat ca cac san pham tren website
+        $config['base_url']   = admin_url('tour/index'); //link hien thi ra danh sach san pham
+        $config['per_page']   = 5;//so luong tour hien thi tren 1 trang
+        $config['uri_segment'] = 4;//phan doan hien thi ra so trang tren url
+        $config['next_link']   = 'Trang kế tiếp';
+        $config['prev_link']   = 'Trang trước';
+        //khoi tao cac cau hinh phan trang
+        $this->pagination->initialize($config);
+        
+        $segment = $this->uri->segment(4);
+        $segment = intval($segment);
+        
+        $input = array();
+        $input['limit'] = array($config['per_page'], $segment);
+
         //kiem tra co thuc hien loc du lieu hay khong
         $id = $this->input->get('id');
         $id = intval($id);
