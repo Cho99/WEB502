@@ -133,21 +133,13 @@
 						<div class="gnl_inner"> 
 							<div class="global_inner" id="navmore"> 
 								<ul> 
+									<?php foreach ($catalog_list as $row): ?>
 									<li class=""> 
-										<a href="dulichmienbac.php" class="noafter"> 
-											<span>Hùng vĩ miền Bắc</span> 
+										<a href="<?= base_url('tour/mien/').$row->id ?>" class="noafter"> 
+											<span>Du lịch miền <?= $row->name ?></span> 
 										</a> 
 									</li> 
-									<li class=""> 
-										<a href="#" class="noafter"> 
-											<span>Nắng gió miền Trung</span> 
-										</a> 
-									</li> 
-									<li class=""> 
-										<a href="#" class="noafter"> 
-											<span>Sông nước miền Nam</span> 
-										</a> 
-									</li> 
+									<?php endforeach ?>
 								</ul> 
 							</div> 
 						</div> 

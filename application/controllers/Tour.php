@@ -26,6 +26,21 @@ class Tour extends MY_Controller {
 		$this->data['temp'] = 'site/tour/index';
 		$this->load->view('site/layout', $this->data);
 	}
+	public function mien() {
+		$id = $this->uri->segment(3);
+		$input['where']['catalog_id'] = $id;
+		$tour = $this->Tour_model->get_list($input);
+		$this->data['tour'] = $tour;
+
+		$input['limit'] = array('3', '0');
+		$tour_new = $this->Tour_model->get_list($input);
+
+		$this->data['tour_new'] = $tour_new;
+		
+		$this->data['id'] = $id;
+		$this->data['temp'] = 'site/tour/mien';
+		$this->load->view('site/layout', $this->data);	
+	}
 
 }
 

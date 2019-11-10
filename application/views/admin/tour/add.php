@@ -45,7 +45,7 @@
 								<div class="left">
 									<select name="amount">
 										<?php $i = 1 ?>
-										<?php for($i = 1; $i <= 30; $i++){ ?>
+										<?php for($i = 1; $i <= 50; $i++){ ?>
 										<option value="<?= $i ?>" ><?= $i ?></option>
 									    <?php } ?>
 									</select>
