@@ -86,6 +86,11 @@
 								Tin tức							
                </a>
             </li>
+             <li>
+               <a href="<?= admin_url('contact') ?>">
+                        Liên hệ                   
+               </a>
+            </li>
          </ul>
 
       </li>

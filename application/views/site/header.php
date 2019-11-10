@@ -3,7 +3,7 @@
 		<div class="header">
 			<div class="trai">
 				<li class="nav-item hotline">
-					<a class="nav-link" href="lienhe.php">
+					<a class="nav-link" href="<?= base_url('contact') ?>">
 						<span class="textnavbar">Hotline: <span>0989000410</span></span>
 					</a>
 				</li>
@@ -93,7 +93,7 @@
 					</li>
 			
 					<li class="nav-item ndheaderduoi">
-						<a class="nav-link mautextnav" href="lienhe.php">Liên hệ</a>
+						<a class="nav-link mautextnav" href="<?= base_url('contact') ?>">Liên hệ</a>
 					</li>
 					<li class="nav-item ndheaderduoi">
 						<a class="nav-link mautextnav" href="#">Book tour</a>
@@ -173,7 +173,7 @@
 						<a class="nav-link" href="#">Giới thiệu</a>
 					</li>
 					<li class="nav-item ndheaderduoi">
-						<a class="nav-link" href="lienhe.php">Liên hệ</a>
+						<a class="nav-link" href="<?= base_url('contact') ?>">Liên hệ</a>
 					</li>
 				</ul>
 			</div>

@@ -13,6 +13,9 @@ class Order extends MY_Controller {
 
 	public function checkout()
 	{
+        if (!$this->session->userdata('user_id_login')) {
+            redirect('user/login');
+        }
 		//Lấy thông tin giỏ hàng
 		$carts = $this->cart->contents();
 		// Tổng số tour có trong giỏ hàng
