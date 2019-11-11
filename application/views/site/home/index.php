@@ -96,7 +96,7 @@
 													<div>
 														<div class="f-left">
 															<i class="far fa-clock" style="color: #999;"></i>&nbsp;
-															<span style="color: #0aa0fe;font-style: italic;font-weight: bold;font-size: 11px;"><?= $row->ngay_di?></span>
+															<span style="color: #0aa0fe;font-style: italic;font-weight: bold;font-size: 11px;"><?= get_date($row->ngay_di)?></span>
 														</div>
 														<div class="f-right">
 														</div>

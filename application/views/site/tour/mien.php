@@ -111,7 +111,7 @@
 								<div class="gia-calender">
 									<div class="calender">
 										<i class="far fa-calendar-alt"></i>
-										<span><?= $row->ngay_di ?></span>
+										<span><?= get_date($row->ngay_di) ?></span>
 									</div>
 									<?php if($row->discount > 0) ?>
 									<?php $price = $row->price - $row->discount ?>

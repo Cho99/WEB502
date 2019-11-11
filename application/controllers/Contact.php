@@ -47,14 +47,15 @@ class Contact extends MY_Controller {
 
 			$this->email->message($message);
 			if ($this->email->send()) {
-				$this->session->set_flashdata('success', 'Thành cồn');
+				$this->session->set_flashdata('success', 'Gửi tin thành công');
 				$this->data['temp'] = 'site/contact/index';
 				$this->load->view('site/layout', $this->data);
 			} else {
-
+				$this->session->set_flashdata('success', 'Gửi tin thất bại');
+				$this->data['temp'] = 'site/contact/index';
+				$this->load->view('site/layout', $this->data);
 			}
 		}
-
 		$this->data['temp'] = 'site/contact/index';
 		$this->load->view('site/layout', $this->data);
 	}

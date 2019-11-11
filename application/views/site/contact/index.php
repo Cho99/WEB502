@@ -22,6 +22,7 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<div class="td_lienhe">
+						<h1><?= $this->session->flashdata('success') ?></h1>
 						<h2>Liên Hệ	</h2>
 						<p class="text-center">Để có thể đáp ứng được các yêu cầu và các ý kiến đóng góp của quý vị một cách nhanh chóng xin vui lòng liên hệ</p>
 					</div>

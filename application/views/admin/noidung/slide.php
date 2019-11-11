@@ -1,5 +1,4 @@
-   <!-- head -->
-<?php $this->load->view('admin/tour/head',$this->data); ?>
+<?php $this->load->view('admin/noidung/head'); ?>
 
 <div class="line"></div>
 
@@ -25,20 +24,7 @@
             <tr>
               <td  class="label"><label for="filter_id" >Mã số</label></td>
               <td class="item"><input type="text" placeholder="ma so" style="width:55px;" id="filter_id" value="<?php echo $this->input->get('id')?>" name="id"></td>
-              
-              <td style="width:40px;" class="label"><label for="filter_id">Tên</label></td>
-              <td style="width:155px;" class="item"><input type="text" style="width:155px;" id="filter_iname" value="<?php echo $this->input->get('name')?>" name="name"></td>
-              
-              <td style="width:60px;" class="label"><label for="filter_status">Thể loại</label></td>
-              <td class="item">
-                <select name="catalog">
-                  <option value=""></option>  
-                    <?php foreach ($catalogs as $row):?>
-                      <option value="<?= $row->id ?>"><?php echo $row->name?></option>
-                    <?php endforeach;?>
-                </select>
-              </td>
-              
+                   
               <td style="width:150px">
               <input type="submit" value="Lọc" class="button blueB">
               <input type="reset" onclick="window.location.href = '<?php echo admin_url('tour')?>'; " value="Reset" class="basic">
@@ -52,12 +38,9 @@
         <tr>
           <td style="width:21px;"><img src="<?php echo public_url('admin/images')?>/icons/tableArrows.png"></td>
           <td style="width:30px;">Mã số</td>
-          <td>Tên Tour</td>
-          <td>Giá Tour</td>
-          <td style="">Số lượng người tối đa</td>
-          <td style="">Số lượng người đã đặt</td>
-          <td style="width:75px;">Ngày đi</td>
-          <td style="width:75px;">Ngày về</td>
+          <td>Ảnh Banner</td>
+          <td style="">Mô tả</td>
+          <td style="">Nội dung</td>
           <td style="width:120px;">Hành động</td>
         </tr>
       </thead>
@@ -70,10 +53,6 @@
                   <span style="color:white;">Xóa hết</span>
                 </a>
              </div>
-              
-               <div class="pagination">
-                    <?php echo $this->pagination->create_links()?>
-                   </div>
           </td>
         </tr>
       </tfoot>
@@ -92,39 +71,23 @@
           </div>
           
           <a target="_blank" title="" class="tipS" href="">
-              <b><?php echo $row->name?></b>
+              <b><?php echo $row->ten?></b>
           </a>
-          
-          <div class="f11">
-            Đã bán: <?php echo $row->buyed?>  | Xem: <?php echo $row->view?>          
-           </div>
-            
           </td>
-          
-          <td class="textR">
-              <?php if($row->discount > 0):?>
-                 <?php $price_new = $row->price - $row->discount;?>
-                 <b style="color:red"><?php echo number_format($price_new)?> đ</b>
-                 <p style="text-decoration:line-through"><?php echo number_format($row->price)?> đ</p>
-              <?php else:?>
-                  <b style="color:red"><?php echo number_format($row->price)?> đ</b>
-              <?php endif;?>          
-          </td>
-          <td class="textC"><?= $row->amount ?></td>
-          <td class="textC"><?= $row->booked ?></td>
-          <td class="textC"><?php echo get_date($row->ngay_di)?></td>
-          <td class="textC"><?php echo get_date($row->ngay_ve)?></td>
-          
+ 
+          <td class="textC"><?= $row->tieude ?></td>
+          <td class="textC"><?= $row->noidung ?></td>
+    
           <td class="option textC">
            <!--  <a title="Xem chi tiết sản phẩm" class="tipS" target="_blank" href="tour/view/9.html">
                 <img src="<?php echo public_url('admin/images')?>/icons/color/view.png">
              </a> -->
              
-             <a class="tipS" title="Chỉnh sửa" href="<?php echo admin_url('tour/edit/'.$row->id)?>">
+             <a class="tipS" title="Chỉnh sửa" href="<?php echo admin_url('slide/edit/'.$row->id)?>">
               <img src="<?php echo public_url('admin/images')?>/icons/color/edit.png">
             </a>
             
-            <a class="tipS verify_action" title="Xóa" href="<?php echo admin_url('tour/del/'.$row->id)?>">
+            <a class="tipS verify_action" title="Xóa" href="<?php echo admin_url('slide/del/'.$row->id)?>">
                 <img src="<?php echo public_url('admin/images')?>/icons/color/delete.png">
             </a>
           </td>
@@ -136,5 +99,3 @@
   </div>
   
 </div>
-
-

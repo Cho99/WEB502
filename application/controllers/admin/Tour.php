@@ -100,6 +100,9 @@ class Tour extends MY_Controller {
             	$name        = $this->input->post('name');
             	$catalog_id  = $this->input->post('catalog');
             	$ngay_di     = $this->input->post('ngay_di');
+
+                
+                
             	$ngay_ve     = $this->input->post('ngay_ve');
             	$amount      = $this->input->post('amount');
             	$content     = $this->input->post('content');
@@ -128,8 +131,8 @@ class Tour extends MY_Controller {
             		'discount'   => $discount,
             		'image_link' => $image_link,
                     'amount'     => $amount,
-            		'ngay_di'    => $ngay_di,
-            		'ngay_ve'    => $ngay_ve,
+            		'ngay_di'    => strtotime($ngay_di),
+            		'ngay_ve'    => strtotime($ngay_ve),
             		'content'    => $content,
             		'created'    => now(),
             	);

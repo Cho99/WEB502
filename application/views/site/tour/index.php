@@ -52,14 +52,14 @@
 								<div class="col-lg-4 col-md-2 col-sm-3 col-xs-6">Khởi hành:</div>
 								<div class="col-lg-8 col-md-10 col-sm-9 col-xs-6">
 									<div class="mg-bot-date">
-										<?= $tour->ngay_di ?>
+										<?= get_date($tour->ngay_di) ?>
 									</div>
 								</div>
 							</div>
 							<div class="row mg-bot10">
 								<div class="col-lg-4 col-md-2 col-sm-3 col-xs-6">Ngày về:</div>
 								<div class="col-lg-8 col-md-10 col-sm-9 col-xs-6">
-									<?= $tour->ngay_ve ?>
+									<?= get_date($tour->ngay_ve) ?>
 								</div>
 							</div>
 							<!-- <div class="row">
