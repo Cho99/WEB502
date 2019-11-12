@@ -26,6 +26,7 @@
 				<h1 itemprop="name" class="mda-archive-title">
 					<a itemprop="url" title="Du lịch Miền <?= $row->name ?>" href="">Du lịch miền <?= $row->name ?> </a>
 				</h1>
+				
 				<div style="display: none">
 					<div itemprop="review" itemscope="" itemtype="https://schema.org/Review">
 						
@@ -90,7 +91,11 @@
 				</div> <!-- hết row tieude -->
 				<div class="row">
 					<?php foreach ($tour_new as $row): ?>
-					
+					<?php 
+					$date1 = new DateTime(get_date($row->ngay_di));
+					$date2 = new DateTime(get_date($row->ngay_ve));
+					$diff  = $date1->diff($date2);
+				    ?>
 					<div class="col-sm-4">
 						<a href="<?= base_url('tour/view/').$row->id ?>">
 						<div class="oneuser">
@@ -106,7 +111,12 @@
 									<i class="vitri"><?= $row->name ?></i>
 								</div>
 								<div class="time-mbac">
-									<span><?= $row->amount ?> người</span>
+									<i class="far fa-user"></i>
+									<span><?= $row->amount - $row->booked ?>/<?= $row->amount ?> người</span>
+								</div>
+								<div class="time-mbac">
+									<i class="far fa-clock"></i>
+									<span><?= $diff->days ?> ngày</span>
 								</div>
 								<div class="gia-calender">
 									<div class="calender">

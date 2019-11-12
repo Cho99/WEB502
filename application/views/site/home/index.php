@@ -89,10 +89,22 @@
 													<p class="dot-dot catnoidung content-lh-2row" style="word-wrap: break-word;">
 														<?= $row->content ?>
 													</p>
+													<?php if($row->discount > 0): ?>
+													<?php $price_new = $row->price - $row->discount ?>
 													<div class="giatourhome">
+														<i class="fas fa-tags"></i>
+														<p><?= number_format($price_new) ?> đ</p>
+													</div>
+													<div class="giatourhome">
+														<i class="fas fa-money-check-alt"></i>
+														<p style="text-decoration: line-through;"><?= number_format($row->price) ?> đ</p>
+													</div>
+													<?php else: ?>
+														<div class="giatourhome">
 														<i class="fas fa-money-check-alt"></i>
 														<p><?= number_format($row->price) ?> đ</p>
 													</div>
+													<?php endif; ?>
 													<div>
 														<div class="f-left">
 															<i class="far fa-clock" style="color: #999;"></i>&nbsp;

@@ -11,7 +11,7 @@
 								<small>Thành phố Festival du lịch</small>
 								<div class="ke"></div>
 								<p>Từng là Kinh đô của triều đại nhà Nguyễn, chính vì thế mà Huế được xem là một trong những thành phố có bề dày lịch sử, văn hóa lâu đời nhất ở nước ta...</p>
-								<a href="chitiettour.php" class="nut">Xem Thêm</a>
+								<!-- <a href="chitiettour.php" class="nut">Xem Thêm</a> -->
 							</div>
 						</div>
 					</li>
@@ -23,7 +23,7 @@
 								<small>Biển xanh dài bất tận</small>
 								<div class="ke"></div>
 								<p>Thành phố biển Nha Trang là thủ phủ của tỉnh Khánh Hòa, thuộc miền duyên hải Nam Trung bộ Việt Nam. Vịnh biển Nha Trang là một trong những vịnh biển đẹp nhất thế giới...</p>
-								<a href="chitiettour.php" class="nut">Xem Thêm</a>
+								<!-- <a href="chitiettour.php" class="nut">Xem Thêm</a> -->
 							</div>
 						</div>
 					</li>
@@ -35,7 +35,7 @@
 								<small>Nét đẹp văn hóa truyền thống</small>
 								<div class="ke"></div>
 								<p>Phố cổ Hội An là một thành phố nổi tiếng của tỉnh Quảng Nam, một phố cổ giữ được gần như nguyên vẹn với hơn 1000 di tích kiến trúc từ phố xá, nhà cửa, hội quán, đình...</p>
-								<a href="chitiettour.php" class="nut">Xem Thêm</a>
+								<!-- <a href="chitiettour.php" class="nut">Xem Thêm</a> -->
 							</div>
 						</div>
 					</li>
