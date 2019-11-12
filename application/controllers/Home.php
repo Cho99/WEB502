@@ -34,5 +34,16 @@ Class Home extends MY_Controller
 		echo json_encode($reslut);
 		die();
 	}
+
+	public function timkiem() {
+		$this->load->model('Tour_model');
+		$key = $this->input->get('mykey');
+		$input['like'] =  array('name', $key);
+		$list = $this->Tour_model->get_list($input);
+		$this->data['list'] = $list;
+
+        $this->data['temp'] = 'site/tour/timkiem';
+		$this->load->view('site/layout', $this->data);		
+	}
 }
  ?>

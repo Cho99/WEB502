@@ -15,11 +15,9 @@
 
 					<li class="nav-item">
 						<a class="nav-link theasearch" href="#">
-							<div class="input-group nutsearch">
+							<form action="<?= base_url('home/timkiem') ?>" class="input-group nutsearch">
 								<input type="search" ng-model="searchName" placeholder="Search" id="mykey" name="mykey">
-								
-
-							</div>
+							</form>
 						</a>
 					</li>
 
