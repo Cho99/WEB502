@@ -66,7 +66,7 @@
           
           <td>
           <div class="image_thumb">
-            <img height="50" src="<?php echo base_url('upload/tour/'.$row->image_link)?>">
+            <img height="50" src="<?php echo base_url('upload/slide/'.$row->image_link)?>">
             <div class="clear"></div>
           </div>
           
