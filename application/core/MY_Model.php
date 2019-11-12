@@ -114,6 +114,7 @@ class MY_Model extends CI_Model {
 
 	/**
 	* Lấy một list dữ liệu đầu vào
+	
 	* $input : mang du lieu dau vao
 	*/
 	function get_list($input = array()) {
@@ -183,5 +184,11 @@ class MY_Model extends CI_Model {
 			return FALSE;
 		}
 	}
+
+	public function search($Value = ''){
+    $this->db->like('name', $Value, 'BOTH');
+    $data = $this->db->get($this->table);
+    return $data->result_array();
+  }
 }
 ?>

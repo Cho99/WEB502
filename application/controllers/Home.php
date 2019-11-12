@@ -23,5 +23,16 @@ Class Home extends MY_Controller
 		$this->data['temp'] = 'site/home/index';
 		$this->load->view('site/layout', $this->data);
 	}
+
+	public function search_auto() {
+		$this->load->model('Tour_model');
+		$search = $this->input->get('term');
+		$data['search']  = $this->Tour_model->search($search);
+		foreach ($data['search']  as $row) {
+			$reslut[] = array('label' => $row['name']);
+		}
+		echo json_encode($reslut);
+		die();
+	}
 }
  ?>

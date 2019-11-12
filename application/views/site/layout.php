@@ -48,3 +48,14 @@
 		$('.dsheaderduoi li.active a').trigger('click');
 	});
 </script>
+
+<script type="text/javascript">
+$(document).ready(function()
+{  
+    //sử dụng autocomplete với input có id = key
+    $( "input#mykey" ).autocomplete({
+         source:'<?= base_url('home/search_auto') ?>', //link xử lý dữ liệu tìm kiếm
+    })
+});
+</script> 
+
