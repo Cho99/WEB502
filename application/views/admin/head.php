@@ -5,12 +5,17 @@
 
 <meta name="robots" content="noindex, nofollow" />
 
+
+
 <link rel="shortcut icon" href="<?= public_url('admin') ?>/images/icon.png" type="image/x-icon"/>
 <link rel="stylesheet" type="text/css" href="<?= public_url('admin/crown/') ?>css/main.css" />
 <link rel="stylesheet" type="text/css" href="<?= public_url('admin/css/') ?>css.css" media="screen" />
 
 
+
+
 <script type="text/javascript" src="<?= public_url() ?>js/jquery/jquery.min.js"></script>
+
 
 <script type="text/javascript" src="<?= public_url('admin/crown/') ?>js/plugins/spinner/jquery.mousewheel.js"></script>
 
@@ -47,6 +52,10 @@
 <link rel="stylesheet" type="text/css" href="<?= public_url() ?>/js/jquery/colorbox/colorbox.css" media="screen" />
 
 <script type="text/javascript" src="<?= public_url() ?>/js/custom_admin.js" type="text/javascript"></script>
+
+
+
+
 
 
 

@@ -1,0 +1,478 @@
+
+    <table width="100%" cellspacing="0" cellpadding="0" id=" mytable checkAll" class="sTable mTable myTable">
+      
+      <thead class="filter"><tr><td colspan="7">
+        <form method="get" action="http://localhost/L01/Web502/admin/giaodich" class="list_filter form">
+          <table width="80%" cellspacing="0" cellpadding="0"><tbody>
+          
+            <tr>
+              <td style="width:40px;" class="label"><label for="filter_id">Mã số</label></td>
+              <td class="item">
+                <input type="text" style="width:55px;" id="filter_id" value="" name="id">
+              </td>
+          
+
+              <td style="width:150px">
+                <input type="submit" value="Lọc" class="button blueB">
+                <input type="reset" onclick="window.location.href = 'http://localhost/L01/Web502/admin/giaodich'; " value="Reset" class="basic">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        </form>
+    </td></tr></thead>
+      
+    <thead>
+      <tr>
+        <td style="width:60px;">Mã số</td>
+        <td>Tên</td>
+        <td>email</td>
+        <td>Số tiền</td>
+        <td>Phương thức thanh toán</td>
+        <!--  <td>Trạng thái</td> -->
+        <td style="width:75px;">Ngày đặt</td>
+        <td style="width:120px;">Hành động</td>
+      </tr>
+    </thead>
+      
+    <tfoot class="auto_check_pages">
+      <tr>
+        <td colspan="8">
+         <div class="list_action itemActions">
+          <a url="http://localhost/L01/Web502/admin/giaodich/delete_all" class="button blueB" id="submit" href="#submit">
+            <span style="color:white;">Xóa hết</span>
+          </a>
+        </div>
+       
+        <div class="pagination">
+          <strong>1</strong><a href="http://localhost/L01/Web502/admin/giaodich/index/5" data-ci-pagination-page="2">2</a><a href="http://localhost/L01/Web502/admin/giaodich/index/10" data-ci-pagination-page="3">3</a><a href="http://localhost/L01/Web502/admin/giaodich/index/5" data-ci-pagination-page="2" rel="next">Trang kế tiếp</a>        </div>
+      </td>
+    </tr>
+  </tfoot>
+
+      
+      <tbody class="list_item">
+                     <tr class="row_23">
+               <!--        <td><input type="checkbox" value="23" name="id[]"></td> -->
+          
+          <td class="textC">23</td>
+          <td class="textC">Dog</td>
+          <td class="textC">quangsoi99@gmail.com</td>
+     
+          <td> Tổng tiền: 8,999,500 đ </td>
+           <td>               Đến đại lý thanh toán           	             </td>
+
+           <!-- <td>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: Notice</p>
+<p>Message:  Undefined property: stdClass::$status</p>
+<p>Filename: giaodich/index.php</p>
+<p>Line Number: 85</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: C:\xampp\htdocs\L01\Web502\application\views\admin\giaodich\index.php<br />
+			Line: 85<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: C:\xampp\htdocs\L01\Web502\application\views\admin\main.php<br />
+			Line: 13<br />
+			Function: view			</p>
+
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: C:\xampp\htdocs\L01\Web502\application\controllers\admin\GiaoDich.php<br />
+			Line: 54<br />
+			Function: view			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: C:\xampp\htdocs\L01\Web502\index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>Chưa thanh toán</td> -->
+  
+          <td class="textC">11-11-2019</td>
+          
+          <td class="option textC">
+            <a title="Xem chi tiết sản phẩm" class="tipS" target="_blank" href="http://localhost/L01/Web502/admin/order/view/23">
+                <img src="http://localhost/L01/Web502/public/admin/images/icons/color/view.png">
+             </a>
+
+            <a class="tipS verify_action" title="Xóa" href="http://localhost/L01/Web502/admin/giaodich/del/23">
+                <img src="http://localhost/L01/Web502/public/admin/images/icons/color/delete.png">
+            </a>
+          </td>
+        </tr>
+                  <tr class="row_22">
+               <!--        <td><input type="checkbox" value="22" name="id[]"></td> -->
+          
+          <td class="textC">22</td>
+          <td class="textC">Dog</td>
+          <td class="textC">quangsoi99@gmail.com</td>
+     
+          <td> Tổng tiền: 1,800,000 đ </td>
+           <td>               Đến đại lý thanh toán           	             </td>
+
+           <!-- <td>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: Notice</p>
+<p>Message:  Undefined property: stdClass::$status</p>
+<p>Filename: giaodich/index.php</p>
+<p>Line Number: 85</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: C:\xampp\htdocs\L01\Web502\application\views\admin\giaodich\index.php<br />
+			Line: 85<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: C:\xampp\htdocs\L01\Web502\application\views\admin\main.php<br />
+			Line: 13<br />
+			Function: view			</p>
+
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: C:\xampp\htdocs\L01\Web502\application\controllers\admin\GiaoDich.php<br />
+			Line: 54<br />
+			Function: view			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: C:\xampp\htdocs\L01\Web502\index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>Chưa thanh toán</td> -->
+  
+          <td class="textC">10-11-2019</td>
+          
+          <td class="option textC">
+            <a title="Xem chi tiết sản phẩm" class="tipS" target="_blank" href="http://localhost/L01/Web502/admin/order/view/22">
+                <img src="http://localhost/L01/Web502/public/admin/images/icons/color/view.png">
+             </a>
+
+            <a class="tipS verify_action" title="Xóa" href="http://localhost/L01/Web502/admin/giaodich/del/22">
+                <img src="http://localhost/L01/Web502/public/admin/images/icons/color/delete.png">
+            </a>
+          </td>
+        </tr>
+                  <tr class="row_21">
+               <!--        <td><input type="checkbox" value="21" name="id[]"></td> -->
+          
+          <td class="textC">21</td>
+          <td class="textC">Dog</td>
+          <td class="textC">quangsoi99@gmail.com</td>
+     
+          <td> Tổng tiền: 10,800,000 đ </td>
+           <td>               Đến đại lý thanh toán           	             </td>
+
+           <!-- <td>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: Notice</p>
+<p>Message:  Undefined property: stdClass::$status</p>
+<p>Filename: giaodich/index.php</p>
+<p>Line Number: 85</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: C:\xampp\htdocs\L01\Web502\application\views\admin\giaodich\index.php<br />
+			Line: 85<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: C:\xampp\htdocs\L01\Web502\application\views\admin\main.php<br />
+			Line: 13<br />
+			Function: view			</p>
+
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: C:\xampp\htdocs\L01\Web502\application\controllers\admin\GiaoDich.php<br />
+			Line: 54<br />
+			Function: view			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: C:\xampp\htdocs\L01\Web502\index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>Chưa thanh toán</td> -->
+  
+          <td class="textC">10-11-2019</td>
+          
+          <td class="option textC">
+            <a title="Xem chi tiết sản phẩm" class="tipS" target="_blank" href="http://localhost/L01/Web502/admin/order/view/21">
+                <img src="http://localhost/L01/Web502/public/admin/images/icons/color/view.png">
+             </a>
+
+            <a class="tipS verify_action" title="Xóa" href="http://localhost/L01/Web502/admin/giaodich/del/21">
+                <img src="http://localhost/L01/Web502/public/admin/images/icons/color/delete.png">
+            </a>
+          </td>
+        </tr>
+                  <tr class="row_20">
+               <!--        <td><input type="checkbox" value="20" name="id[]"></td> -->
+          
+          <td class="textC">20</td>
+          <td class="textC">Dog</td>
+          <td class="textC">quangsoi99@gmail.com</td>
+     
+          <td> Tổng tiền: 1,800,000 đ </td>
+           <td>               Đến đại lý thanh toán           	             </td>
+
+           <!-- <td>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: Notice</p>
+<p>Message:  Undefined property: stdClass::$status</p>
+<p>Filename: giaodich/index.php</p>
+<p>Line Number: 85</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: C:\xampp\htdocs\L01\Web502\application\views\admin\giaodich\index.php<br />
+			Line: 85<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: C:\xampp\htdocs\L01\Web502\application\views\admin\main.php<br />
+			Line: 13<br />
+			Function: view			</p>
+
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: C:\xampp\htdocs\L01\Web502\application\controllers\admin\GiaoDich.php<br />
+			Line: 54<br />
+			Function: view			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: C:\xampp\htdocs\L01\Web502\index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>Chưa thanh toán</td> -->
+  
+          <td class="textC">09-11-2019</td>
+          
+          <td class="option textC">
+            <a title="Xem chi tiết sản phẩm" class="tipS" target="_blank" href="http://localhost/L01/Web502/admin/order/view/20">
+                <img src="http://localhost/L01/Web502/public/admin/images/icons/color/view.png">
+             </a>
+
+            <a class="tipS verify_action" title="Xóa" href="http://localhost/L01/Web502/admin/giaodich/del/20">
+                <img src="http://localhost/L01/Web502/public/admin/images/icons/color/delete.png">
+            </a>
+          </td>
+        </tr>
+                  <tr class="row_19">
+               <!--        <td><input type="checkbox" value="19" name="id[]"></td> -->
+          
+          <td class="textC">19</td>
+          <td class="textC">Dog</td>
+          <td class="textC">quangsoi99@gmail.com</td>
+     
+          <td> Tổng tiền: 1,800,000 đ </td>
+           <td>               Đến đại lý thanh toán           	             </td>
+
+           <!-- <td>
+<div style="border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;">
+
+<h4>A PHP Error was encountered</h4>
+
+<p>Severity: Notice</p>
+<p>Message:  Undefined property: stdClass::$status</p>
+<p>Filename: giaodich/index.php</p>
+<p>Line Number: 85</p>
+
+
+	<p>Backtrace:</p>
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: C:\xampp\htdocs\L01\Web502\application\views\admin\giaodich\index.php<br />
+			Line: 85<br />
+			Function: _error_handler			</p>
+
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: C:\xampp\htdocs\L01\Web502\application\views\admin\main.php<br />
+			Line: 13<br />
+			Function: view			</p>
+
+		
+	
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: C:\xampp\htdocs\L01\Web502\application\controllers\admin\GiaoDich.php<br />
+			Line: 54<br />
+			Function: view			</p>
+
+		
+	
+		
+	
+		
+			<p style="margin-left:10px">
+			File: C:\xampp\htdocs\L01\Web502\index.php<br />
+			Line: 315<br />
+			Function: require_once			</p>
+
+		
+	
+
+</div>Chưa thanh toán</td> -->
+  
+          <td class="textC">09-11-2019</td>
+          
+          <td class="option textC">
+            <a title="Xem chi tiết sản phẩm" class="tipS" target="_blank" href="http://localhost/L01/Web502/admin/order/view/19">
+                <img src="http://localhost/L01/Web502/public/admin/images/icons/color/view.png">
+             </a>
+
+            <a class="tipS verify_action" title="Xóa" href="http://localhost/L01/Web502/admin/giaodich/del/19">
+                <img src="http://localhost/L01/Web502/public/admin/images/icons/color/delete.png">
+            </a>
+          </td>
+        </tr>
+               </tbody>
+       
+    </table>  
+    
