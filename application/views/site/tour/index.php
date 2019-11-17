@@ -52,14 +52,19 @@
 								<div class="col-lg-4 col-md-2 col-sm-3 col-xs-6">Khởi hành:</div>
 								<div class="col-lg-8 col-md-10 col-sm-9 col-xs-6">
 									<div class="mg-bot-date">
-										<?= get_date($tour->ngay_di) ?>
+										 &nbsp;&nbsp;&nbsp;
+										<span class="hidden-xs">
+											<i class="far fa-calendar-alt"></i>&nbsp;
+											<a href="<?= base_url('tour/listtour/').$tour->name ?>" class="b">Ngày khác</a>
+										</span>
 									</div>
+									
 								</div>
 							</div>
 							<div class="row mg-bot10">
-								<div class="col-lg-4 col-md-2 col-sm-3 col-xs-6">Ngày về:</div>
+								<div class="col-lg-4 col-md-2 col-sm-3 col-xs-6">Thời gian:</div>
 								<div class="col-lg-8 col-md-10 col-sm-9 col-xs-6">
-									<?= get_date($tour->ngay_ve) ?>
+									<?= $tour->days ?> ngày
 								</div>
 							</div>
 							<!-- <div class="row">
@@ -74,17 +79,26 @@
 								<div class="col-xs-12 mg-bot10 giauudai">
 									<span class="font500">Giá ưu đãi khi Đăng ký &amp; thanh toán trực tuyến</span>
 								</div>
+							<?php $place = $tour->amount - $tour->booked  ?>
 							<?php if($tour->discount > 0): ?>
 							<?php $price_new = $tour->price - $tour->discount;?>
 								<div class="col-lg-8 col-md-8 col-sm-8 col-xs-7">
 									<div style="margin-bottom: 7px;" itemscope="" itemtype="http://schema.org/PriceSpecification">
 										<span class="price" itemprop="price" content=""><?= number_format($price_new)?></span>&nbsp;<span class="unit" itemprop="priceCurrency" content="VND">đ</span>
 									</div>
+									<div>
+										Số chỗ còn nhận:
+										<span class="sit"><?= $place ?></span>
+									</div>
 								</div>
 								<?php else:?>
 									<div class="col-lg-8 col-md-8 col-sm-8 col-xs-7">
 									<div style="margin-bottom: 7px;" itemscope="" itemtype="http://schema.org/PriceSpecification">
 										<span class="price" itemprop="price" content=""><?= number_format($tour->price)?> ?></span>&nbsp;<span class="unit" itemprop="priceCurrency" content="VND">đ</span>
+									</div>
+									<div>
+										Số chỗ còn nhận:
+										<span class="sit"><?= $place ?></span>
 									</div>
 								</div>
 							    <?php endif; ?>
@@ -103,11 +117,15 @@
 							<div style="margin-bottom: 8px;">Bạn cần hỗ trợ?</div>
 							<div>
 								<div class="f-left btn-s1">
-									<a href="#" target="_blank">
+									<a href="">
 										<img src="<?= base_url() ?>images/call.png" alt="phone">
 									</a>
 								</div>
-								<div class="f-left btn-s2" data-toggle="modal" data-target="#divTuVan" style="cursor:pointer;"><img src="<?= base_url() ?>images/call2.png" alt="phone"></div>
+								<div class="f-left btn-s2" style="cursor:pointer;">
+									<a href="<?= base_url('Contact') ?>">
+										<img src="<?= base_url() ?>images/call2.png" alt="phone">
+									</a>
+								</div>
 								<div class="clear"></div>
 							</div>
 						</div>
@@ -138,7 +156,7 @@
 											</a>
 										</li>
 										<li class="tab-lienhe" id="tabLienHe">
-											<a href="#">
+											<a href="<?= base_url('Contact') ?>">
 												<i class="fas fa-podcast"></i>
 												&nbsp;&nbsp;
 												<span>Liên hệ</span>
@@ -195,7 +213,7 @@
 												<tr>
 													<td>
 														<span style="color:#555555;">
-															<strong>Lịch trình:</strong>
+															<strong>Điểm khởi hành:</strong>
 														</span>
 													</td>
 													<td>
@@ -207,24 +225,12 @@
 												<tr>
 													<td>
 														<span style="color:#555555;">
-															<strong>Ngày khởi hành:</strong>
+															<strong>Thời gian:</strong>
 														</span>
 													</td>
 													<td>
 														<span style="color:#555555;">
-															<strong><?= $tour->ngay_di ?></strong>
-														</span>
-													</td>
-												</tr>
-												<tr>
-													<td>
-														<span style="color:#555555;">
-															<strong>Ngày khởi về:</strong>
-														</span>
-													</td>
-													<td>
-														<span style="color:#555555;">
-															<strong><?= $tour->ngay_ve ?></strong>
+															<strong><?= $tour->days ?> ngày</strong>
 														</span>
 													</td>
 												</tr>

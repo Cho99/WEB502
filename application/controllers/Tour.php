@@ -36,11 +36,19 @@ class Tour extends MY_Controller {
 		$tour_new = $this->Tour_model->get_list($input);
 
 		$this->data['tour_new'] = $tour_new;
-		
+
 		$this->data['id'] = $id;
 		$this->data['temp'] = 'site/tour/mien';
 		$this->load->view('site/layout', $this->data);	
 	}
+
+	// public function listtour() {
+	// 	$name = $this->uri->segment(3);
+	// 	$name = urldecode($name);
+	// 	$input['like'] = array('name',$name);
+	// 	$list = $this->Tour_model->get_list($input);
+	// 	$this->data['list'] = $list;
+	// }
 
 }
 

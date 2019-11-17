@@ -91,11 +91,6 @@
 				</div> <!-- hết row tieude -->
 				<div class="row">
 					<?php foreach ($tour_new as $row): ?>
-					<?php 
-					$date1 = new DateTime(get_date($row->ngay_di));
-					$date2 = new DateTime(get_date($row->ngay_ve));
-					$diff  = $date1->diff($date2);
-				    ?>
 					<div class="col-sm-4">
 						<a href="<?= base_url('tour/view/').$row->id ?>">
 						<div class="oneuser">
@@ -116,12 +111,12 @@
 								</div>
 								<div class="time-mbac">
 									<i class="far fa-clock"></i>
-									<span><?= $diff->days ?> ngày</span>
+									<span><?= $row->days ?> ngày</span>
 								</div>
 								<div class="gia-calender">
 									<div class="calender">
 										<i class="far fa-calendar-alt"></i>
-										<span><?= get_date($row->ngay_di) ?></span>
+										<span></span>
 									</div>
 									<?php if($row->discount > 0) ?>
 									<?php $price = $row->price - $row->discount ?>
@@ -134,8 +129,9 @@
 				
 					<?php endforeach ?>
 			</div> <!-- hết row  -->
-            <?php foreach ($tour as $row): ?>
+           
 			<div class="row mbac_more">
+				<?php foreach ($tour as $row): ?>
 				<div class="col-sm-4">
 					<a href="<?= base_url('tour/view/').$row->id?>">
 					<div class="sp">
@@ -151,8 +147,9 @@
 					</div>
 					</a>
 				</div>
+				<?php endforeach ?>
 			</div>
-			<?php endforeach ?>
+			
 		</div> <!-- hết noidung3 -->
 	</div> <!-- HẾT wrapCont -->
 </div>

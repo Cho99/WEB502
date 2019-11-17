@@ -91,19 +91,13 @@ class Tour extends MY_Controller {
         if ($this->input->post()) {
         	$this->form_validation->set_rules('name', 'Tên', 'required');
             $this->form_validation->set_rules('catalog', 'Thể loại', 'required');
-            $this->form_validation->set_rules('ngay_di', 'Ngày đi', 'required|callback_check_ngay');
-            $this->form_validation->set_rules('ngay_ve', 'Ngày về', 'required|callback_check_ngay');
             $this->form_validation->set_rules('price', 'Giá', 'required');
             $this->form_validation->set_rules('amount', 'Số lượng', 'required');
             $this->form_validation->set_rules('content', 'Nội dung', 'required');
             if ($this->form_validation->run()) {
             	$name        = $this->input->post('name');
             	$catalog_id  = $this->input->post('catalog');
-            	$ngay_di     = $this->input->post('ngay_di');
 
-                
-                
-            	$ngay_ve     = $this->input->post('ngay_ve');
             	$amount      = $this->input->post('amount');
             	$content     = $this->input->post('content');
             	$price       = $this->input->post('price');
@@ -131,8 +125,6 @@ class Tour extends MY_Controller {
             		'discount'   => $discount,
             		'image_link' => $image_link,
                     'amount'     => $amount,
-            		'ngay_di'    => strtotime($ngay_di),
-            		'ngay_ve'    => strtotime($ngay_ve),
             		'content'    => $content,
             		'created'    => now(),
             	);
@@ -171,8 +163,7 @@ class Tour extends MY_Controller {
         $this->data['catalogs'] = $catalogs;
         if ($this->input->post()) {
             $this->form_validation->set_rules('name', 'Tên', 'required');
-            $this->form_validation->set_rules('ngay_di', 'Ngày đi', 'required|callback_check_ngay');
-            $this->form_validation->set_rules('ngay_ve', 'Ngày về', 'required|callback_check_ngay');
+
             $this->form_validation->set_rules('catalog', 'Thể loại', 'required');
             $this->form_validation->set_rules('price', 'Giá', 'required');
             $this->form_validation->set_rules('amount', 'Số lượng', 'required');
@@ -180,8 +171,6 @@ class Tour extends MY_Controller {
             if ($this->form_validation->run()) {
                 $name        = $this->input->post('name');
                 $catalog_id  = $this->input->post('catalog');
-                $ngay_di     = $this->input->post('ngay_di');
-                $ngay_ve     = $this->input->post('ngay_ve');
                 $amount      = $this->input->post('amount');
                 $content     = $this->input->post('content');
                 $price       = $this->input->post('price');
@@ -208,8 +197,6 @@ class Tour extends MY_Controller {
                     'price'      => $price,
                     'discount'   => $discount,
                     'amount'     => $amount,
-                    'ngay_di'    => $ngay_di,
-                    'ngay_ve'    => $ngay_ve,
                     'content'    => $content,
                 );
                 if ($image_link !='') {
@@ -252,17 +239,17 @@ class Tour extends MY_Controller {
         }
     }
 
-    public function check_ngay() {
-        $ngay_di = $this->input->post('ngay_di');
-        $ngay_ve = $this->input->post('ngay_ve');
-        if ($ngay_di < $ngay_ve) {
-            return TRUE;
-            die();
-        }else {
-            return FAlSE;
-        }
+    // public function check_ngay() {
+    //     $ngay_di = $this->input->post('ngay_di');
+    //     $ngay_ve = $this->input->post('ngay_ve');
+    //     if ($ngay_di < $ngay_ve) {
+    //         return TRUE;
+    //         die();
+    //     }else {
+    //         return FAlSE;
+    //     }
         
-    }
+    // }
 
 }
 

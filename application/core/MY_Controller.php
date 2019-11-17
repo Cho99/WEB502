@@ -5,8 +5,10 @@ class MY_Controller extends CI_Controller {
 
 	public function __construct() 
 	{
+
 		// Kế Thừa Controller
 		parent::__construct();
+		$this->output->set_header('Content-Type: text/html; charset=utf-8');
 		$this->load->library('form_validation');
         $this->load->helper('form');
         $this->load->model('Catalog_model');

@@ -3763,3 +3763,101 @@ td, th {
 .btn_edituser .col-sm-10 a{
 	color: #fff;
 }
+
+/*--------------------------*/
+.n3-pay-online img.pic-ud-l {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+.n3-pay-online .frame-po-l {
+    background-image: url(../content/themehe/img/bg-ud1.png);
+    position: absolute;
+    bottom: 0;
+    padding: 90px 10px 10px 10px;
+    width: 100%;
+    color: #fff;
+}
+.n3-pay-online .cut-po-l {
+    width: 100%;
+    height: 20px;
+}
+.n3-pay-online .po-title-l {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.n3-pay-online .yellow {
+    color: #ffc000;
+}
+.n3-pay-online .price-o {
+    text-decoration: line-through;
+    font-weight: 500;
+}
+.n3-pay-online .price-n {
+    color: #ff002d;
+    font-weight: 500;
+    font-size: 17px;
+}
+.n3-pay-online img.pic-ud-s {
+    width: 100%;
+    height: 195px;
+    object-fit: cover;
+}
+.n3-pay-online .frame-po {
+    position: absolute;
+    bottom: 0;
+    padding: 30px 10px 10px 10px;
+    background: linear-gradient(to bottom,rgba(0,0,0,.01),#1b1b1b);
+    width: 100%;
+    color: #fff;
+}
+.n3-pay-online .frame-po-s {
+    background: #f1f1f1;
+    padding: 15px 10px 10px 10px;
+    height: 155px;
+}
+.n3-pay-online .cut-po-s {
+    width: 100%;
+    height: 20px;
+}
+.n3-pay-online .po-title-s {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 15px;
+}
+.n3-pay-online .po-line {
+    border-bottom: 1px dashed #919191;
+    margin-bottom: 15px;
+}
+.n3-pay-online .po-info-s {
+    margin-left: 8px;
+    padding-top: 2px;
+    line-height: 11px;
+}
+.n3-pay-online .frame-po-s {
+    background: #f1f1f1;
+    padding: 15px 10px 10px 10px;
+    height: 155px;
+}
+.n3-pay-online .cut-po-s {
+    width: 100%;
+    height: 20px;
+}
+.clTourOnline{
+	width: 100%;
+}
+.clTourOnline .touronl1{
+	width: 50%;
+	float: left
+}
+
+.clTourOnline .touronl2{
+	width: 25%;
+	float: left
+}
+.khoiinfott{
+	margin-bottom: 10px;
+}
+

@@ -29,9 +29,6 @@
 						<tr>
 							<td class="label" style="width:60px;"><label for="filter_user">Thành viên</label></td>
 							<td class="item"><input name="user" value="" id="filter_user" class="tipS" type="text" original-title="Nhập mã thành viên"></td>
-
-							
-
 							<td class="label"></td>
 							<td class="item"></td>
 						</tr>
@@ -47,6 +44,7 @@
 					<td style="width:80px;">Giá</td>
 					<td style="width:50px;">Số người</td>
 					<td style="width:70px;">Số tiền</td>
+					<td style="width:70px;">Ngày đi</td>
 				</tr>
 			</thead>
 			
@@ -91,8 +89,9 @@
 						<?php endforeach ?>
 
 						<td class="textC"><?= $row->so_nguoi ?></td>
-
+	
 						<td class="textC"><?= number_format($row->sotien) ?> đ</td>
+						<td class="textC"><?= $row->ngay_di ?></td>
 					</tr>
 					<?php endforeach ?>
 				</tbody>

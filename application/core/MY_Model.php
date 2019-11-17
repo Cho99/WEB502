@@ -110,8 +110,6 @@ class MY_Model extends CI_Model {
 		$this->db->delete($this->table);
 		return TRUE;
 	}
-
-
 	/**
 	* Lấy một list dữ liệu đầu vào
 	
@@ -162,7 +160,7 @@ class MY_Model extends CI_Model {
 			$this->db->limit($input['limit'][0], $input['limit'][1]);
 		}
 	}
-
+	
 	function get_total($input = array()) {
 		$this->get_list_set_input($input);
 		$query = $this->db->get($this->table);
@@ -186,9 +184,12 @@ class MY_Model extends CI_Model {
 	}
 
 	public function search($Value = ''){
-    $this->db->like('name', $Value, 'BOTH');
-    $data = $this->db->get($this->table);
-    return $data->result_array();
-  }
+		$this->db->like('name', $Value, 'BOTH');
+		$this->db->select('name');
+		$this->db->distinct();
+		$data = $this->db->get($this->table);
+		return $data->result_array();
+	}
+
 }
 ?>

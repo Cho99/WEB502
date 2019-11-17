@@ -54,10 +54,9 @@
           <td style="width:30px;">Mã số</td>
           <td>Tên Tour</td>
           <td>Giá Tour</td>
-          <td style="">Số lượng người tối đa</td>
-          <td style="">Số lượng người đã đặt</td>
-          <td style="width:75px;">Ngày đi</td>
-          <td style="width:75px;">Ngày về</td>
+          <td style="">Số lượt tối đa</td>
+          <td style="">Số lượt đã đặt</td>
+          <td style="">Ngày tạo</td>
           <td style="width:120px;">Hành động</td>
         </tr>
       </thead>
@@ -112,8 +111,9 @@
           </td>
           <td class="textC"><?= $row->amount ?></td>
           <td class="textC"><?= $row->booked ?></td>
-          <td class="textC"><?php echo get_date($row->ngay_di)?></td>
-          <td class="textC"><?php echo get_date($row->ngay_ve)?></td>
+          <td class="textC"><?= get_date($row->created) ?></td>
+        
+      
           
           <td class="option textC">
            <!--  <a title="Xem chi tiết sản phẩm" class="tipS" target="_blank" href="tour/view/9.html">
