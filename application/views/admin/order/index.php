@@ -91,7 +91,7 @@
 						<td class="textC"><?= $row->so_nguoi ?></td>
 	
 						<td class="textC"><?= number_format($row->sotien) ?> đ</td>
-						<td class="textC"><?= $row->ngay_di ?></td>
+						<td class="textC"><?= get_date($row->ngay_di) ?></td>
 					</tr>
 					<?php endforeach ?>
 				</tbody>

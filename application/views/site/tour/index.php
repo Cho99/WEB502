@@ -48,7 +48,7 @@
 							</div>
 						</div>
 						<div class="sec2">
-							<div class="row mg-bot10">
+							<!-- <div class="row mg-bot10">
 								<div class="col-lg-4 col-md-2 col-sm-3 col-xs-6">Khởi hành:</div>
 								<div class="col-lg-8 col-md-10 col-sm-9 col-xs-6">
 									<div class="mg-bot-date">
@@ -57,6 +57,15 @@
 											<i class="far fa-calendar-alt"></i>&nbsp;
 											<a href="<?= base_url('tour/listtour/').$tour->name ?>" class="b">Ngày khác</a>
 										</span>
+									</div>
+									
+								</div>
+							</div> -->
+							<div class="row mg-bot10">
+								<div class="col-lg-4 col-md-2 col-sm-3 col-xs-6">Tên tour:</div>
+								<div class="col-lg-8 col-md-10 col-sm-9 col-xs-6">
+									<div class="mg-bot-date">
+										<?= $tour->name ?>
 									</div>
 									
 								</div>
@@ -87,7 +96,7 @@
 										<span class="price" itemprop="price" content=""><?= number_format($price_new)?></span>&nbsp;<span class="unit" itemprop="priceCurrency" content="VND">đ</span>
 									</div>
 									<div>
-										Số chỗ còn nhận:
+										Số lượt đặt còn nhận:
 										<span class="sit"><?= $place ?></span>
 									</div>
 								</div>

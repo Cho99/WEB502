@@ -38,14 +38,22 @@ class Order extends MY_Controller {
 			$user_id = $this->session->userdata('user_id_login');
 			$user = $this->User_model->get_info($user_id);
 		}
+
+        
 		$this->data['user'] = $user;
 		if ($this->input->post()) {
 			$this->form_validation->set_rules('email', 'Email nhận hàng', 'required|valid_email');
             $this->form_validation->set_rules('ten', 'Tên', 'required');
             $this->form_validation->set_rules('sdt', 'Số điện thoại', 'required');
+            $this->form_validation->set_rules('ngay_di', 'Ngày đi', 'required|callback_checkday');
             $this->form_validation->set_rules('payment', 'Cổng thanh toán', 'required');
             if ($this->form_validation->run()) {
+                // Lấy phương thước thanh toán
             	$payment = $this->input->post('payment');
+                // Lấy thời gian đi được đặt
+                $ngay_di = $this->input->post('ngay_di');
+                $ngay_di = strtotime($ngay_di);
+
             	$data = array(
             		'id_user' => $user_id,
             		'email' => $this->input->post('email'),
@@ -65,7 +73,8 @@ class Order extends MY_Controller {
             			'id_giaodich' => $id_giaodich,
             			'id_tour'     => $row['id'],
             			'so_nguoi'    => $row['qty'],
-            			'sotien'      => $row['subtotal'],
+                        'ngay_di'     => $ngay_di,
+              			'sotien'      => $row['subtotal'],
             		);
             		$this->Order_model->create($data);
                   $input['where'] = array();
@@ -87,6 +96,16 @@ class Order extends MY_Controller {
 		$this->data['temp'] = 'site/order/checkout';
         $this->load->view('site/layout', $this->data);
 	}
+
+    function checkday() {
+        $ngay_di = $this->input->post('ngay_di');
+        $ngay_di = strtotime($ngay_di);
+        if (get_date($ngay_di) < get_date(now())) {
+            return FALSE;
+        }else {
+            return True;
+        }
+    }
 
 }
 

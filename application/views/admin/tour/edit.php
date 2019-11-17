@@ -54,26 +54,7 @@
 							</div>
 							<div class="clear"></div>
 						</div>
-						<div class="formRow">
-							<label class="formLeft">Ngày bắt đầu:</label>
-							<div class="formRight">
-								<div class="left">
-									<input type="date" id="ngay_di" name="ngay_di" value="<?=  $tour->ngay_di ?>">
-								</div>
-							</div>
-							<div class="clear"></div>
-						</div>
-
-						<div class="formRow">
-							<label class="formLeft">Ngày kết thúc:</label>
-							<div class="formRight">
-								<div class="left">
-									<input type="date" id="ngay_ve" name="ngay_ve" multiple="">
-								</div>
-							</div>
-							<div name="ngay_ve_error" class="clear error"><?= form_error('ngay_ve') ?></div>
-							<div class="clear"></div>
-						</div> 
+					
 
 
 						<!-- Price -->

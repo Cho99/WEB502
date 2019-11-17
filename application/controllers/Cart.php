@@ -40,8 +40,6 @@ class Cart extends MY_Controller {
 		$data['name'] = url_title($tour->name);
 		$data['image_link'] = $tour->image_link;
 		$data['price'] = $price;
-		$data['ngay_di'] = $tour->ngay_di;
-		$data['ngay_ve'] = $tour->ngay_ve;
 		$data['amount'] = $tour->amount;
 		$data['booked'] = $tour->booked;
 		$data['created'] = now();

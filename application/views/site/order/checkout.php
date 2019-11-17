@@ -18,11 +18,22 @@
 							</div>
 							<div class="form-group row">
 								<label for="phone" class="col-sm-2 col-form-label phoneLabel_3lBr">
+									<span style="color: red;" >Ngày đi:</span>
+								</label>
+								<div class="col-sm-10 col-md-6 col-lg-6 inputkh">
+									<input type="date" name="ngay_di" class="form-control" value="<?= set_value('ngay_di') ?>">
+									<div name="ngay_di_error" class="clear error"><?= form_error('ngay_di') ?></div>
+								</div>
+
+							</div>
+							<div class="form-group row">
+								<label for="phone" class="col-sm-2 col-form-label phoneLabel_3lBr">
 									<span>Email</span>
 								</label>
 								<div class="col-sm-10 col-md-6 col-lg-6 inputkh">
 									<div class="phoneInput_Q_2V">
 										<input name="email" class="form-control" type="email" maxlength="30" placeholder="Email" tabindex="3" value="<?= $user->email ?>">
+										<div name="email_error" class="clear error"><?= form_error('email') ?></div>
 									</div>
 								</div>
 							</div>
@@ -30,6 +41,7 @@
 								<label for="firstName" class="col-sm-2 col-form-label">Họ và tên:</label>
 								<div class="col-sm-10 col-md-6 col-lg-6">
 									<input name="ten" class="form-control" type="text" maxlength="30" placeholder="Họ và tên đệm" tabindex="3" value="<?= $user->ten ?>">
+									<div name="ten_error" class="clear error"><?= form_error('ten') ?></div>
 								</div>
 							</div>
 							<div class="form-group row">
@@ -39,6 +51,7 @@
 								<div class="col-sm-10 col-md-6 col-lg-6">
 									<div class="phoneInput_Q_2V">
 										<input name="sdt" class="form-control" type="number" placeholder="" value="<?= $user->sdt ?>">
+										<div name="sdt_error" class="clear error"><?= form_error('sdt') ?></div>
 									</div>
 								</div>
 							</div>
@@ -49,6 +62,7 @@
 										<option value="">Hình thức thanh toán</option>
 										<option value="offline">Đến đại lý</option>
 									</select>
+									<div name="payment_error" class="clear error"><?= form_error('payment') ?></div>
 								</div>
 							</div>
 

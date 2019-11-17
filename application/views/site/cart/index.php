@@ -35,11 +35,7 @@
 						</li>
 					</ul>
 				</li>
-				<li class="item" id="My-Wishlists">
-					<a href="#" data-spm="My-Wishlists">
-						<span>Khách sạn</span>
-					</a>
-				</li>
+			
 				<li class="item itemkmargin" id="Sell-On-Lazada">
 					<a href="#" data-spm="Sell-On-Lazada">
 						<span>Liên hệ</span>
@@ -86,33 +82,22 @@
 									<h5>Số người đi:</h5>
 									  <input type="number" name="qty_<?php echo $row['id']?>" value="<?php echo $row['qty'];?>" style="width: 10%"/>
 								</div>
+								
 								<div class="text title item-title giohangflex" data-spm="details_title">
 									<h5>Tổng số:</h5>
 									<p class="text bold" ><?php echo number_format($row['subtotal']);?>đ</p>
 								</div>
-								<p class="text desc"></p>
-								<p class="text desc bold"></p>
+							
 							</div>
 						</div>
 						<div class="item-quantity">
-							<span>
-								<span class="text desc info multiply">Ngày khởi hành:</span>
-								<span class="text">&nbsp;30/11/2019</span>
-							</span>
-							<span>
-								<div><a href="<?= base_url('cart/del/').$row['id'] ?>" class="btn btn-danger btn-sm">Hủy</a></div>
-							</span>
 							<span>
 								<span class="text desc info multiply">Số người tối đa:</span>
 								<span class="text"><?= $row['amount'] ?> người
 								</span>
 							</span>
 							<span>
-								<div>
-									<?php $booked = $row['amount'] - $row['booked'] ?>
-									<span class="text desc info multiply">Số người còn lại:</span>
-									<span class="text"><?= $booked ?> người</span>
-								</div>
+								<div><a href="<?= base_url('cart/del/').$row['id'] ?>" class="btn btn-danger btn-sm">Hủy</a></div>
 							</span>
 						</div>
 						<div class="clear"></div>
