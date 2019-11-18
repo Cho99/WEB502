@@ -72,7 +72,7 @@
 
          <a href="" class="exp inactive">
             <span>Nội dung</span>
-            <strong>2</strong>
+            <strong>3</strong>
          </a>
 
          <ul class="sub" style="display: none;">
