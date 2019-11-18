@@ -41,6 +41,7 @@
 				</div>
 				<div class="info col-lg-4 col-md-12 col-sm-12 col-xs-12">
 					<div class="frame-info pos-relative">
+						<form action="<?= base_url('cart/add') ?>" method="post">
 						<div class="sec1">
 							<div class="viewed">
 								<i class="fas fa-eye"></i>&nbsp;&nbsp;<span><?= $tour->view ?></span>&nbsp;&nbsp;
@@ -48,19 +49,6 @@
 							</div>
 						</div>
 						<div class="sec2">
-							<!-- <div class="row mg-bot10">
-								<div class="col-lg-4 col-md-2 col-sm-3 col-xs-6">Khởi hành:</div>
-								<div class="col-lg-8 col-md-10 col-sm-9 col-xs-6">
-									<div class="mg-bot-date">
-										 &nbsp;&nbsp;&nbsp;
-										<span class="hidden-xs">
-											<i class="far fa-calendar-alt"></i>&nbsp;
-											<a href="<?= base_url('tour/listtour/').$tour->name ?>" class="b">Ngày khác</a>
-										</span>
-									</div>
-									
-								</div>
-							</div> -->
 							<div class="row mg-bot10">
 								<div class="col-lg-4 col-md-2 col-sm-3 col-xs-6">Tên tour:</div>
 								<div class="col-lg-8 col-md-10 col-sm-9 col-xs-6">
@@ -76,12 +64,13 @@
 									<?= $tour->days ?> ngày
 								</div>
 							</div>
-							<!-- <div class="row">
-								<div class="col-lg-4 col-md-2 col-sm-3 col-xs-6" style="padding-right: 0px !important;">Nơi khởi hành:</div>
+							 <div class="row">
+							 	<input type="hidden" name="id" value="<?= $tour->id ?>">
+								<div class="col-lg-4 col-md-2 col-sm-3 col-xs-6" style="padding-right: 0px !important;">Ngày đi:</div>
 								<div class="col-lg-8 col-md-10 col-sm-9 col-xs-6">
-									Hà Nội
+									<input type="date" name="ngay_di" class="form-control">
 								</div>
-							</div> -->
+							</div> 
 						</div>
 						<div class="sec3">
 							<div class="row">
@@ -113,7 +102,7 @@
 							    <?php endif; ?>
 							    <?php if ($tour->amount > $tour->booked): ?>
 							    	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-5 text-right">
-							    		<a href="<?= base_url('cart/add/').$tour->id ?>" class="btn btn-book1 btn-md">Đặt ngay</a>
+							    		<button type="submit" class="btn btn-book1 btn-md">Đặt ngay</button>
 							    	</div>
 								<?php else: ?>
 									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-5 text-right">
@@ -142,6 +131,7 @@
 							<img src="<?= base_url() ?>images/bg-phone.png" alt="phone">
 						</div>
 					</div>
+					</form>
 				</div>
 
 				<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 paddingtopinfo">

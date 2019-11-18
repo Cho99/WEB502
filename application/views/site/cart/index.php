@@ -82,6 +82,11 @@
 									<h5>Số người đi:</h5>
 									  <input type="number" name="qty_<?php echo $row['id']?>" value="<?php echo $row['qty'];?>" style="width: 10%"/>
 								</div>
+
+								<div class="text title item-title giohangflex" data-spm="details_title">
+									<h5>Số người đi:</h5>
+									  <input type="date" name="day_<?php echo $row['id']?>" value="<?php echo date('Y-m-d', $row['ngay_di']) ;?>"/>
+								</div>
 								
 								<div class="text title item-title giohangflex" data-spm="details_title">
 									<h5>Tổng số:</h5>
@@ -119,6 +124,7 @@
 	</div>
 	<?php else: ?>
 		<div>Không có tour du lịch nào được đặt</div>
+		<div><?= $this->session->flashdata("message"); ?></div>
 	<?php endif; ?>
 </div>
 </div>

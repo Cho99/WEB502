@@ -9,6 +9,7 @@ class Order extends MY_Controller {
 		$this->load->model('GiaoDich_model');
 		$this->load->model('Order_model');
         $this->load->model('Tour_model');
+        $this->load->library('email');
 	}
 
 	public function checkout()
@@ -45,15 +46,11 @@ class Order extends MY_Controller {
 			$this->form_validation->set_rules('email', 'Email nhận hàng', 'required|valid_email');
             $this->form_validation->set_rules('ten', 'Tên', 'required');
             $this->form_validation->set_rules('sdt', 'Số điện thoại', 'required');
-            $this->form_validation->set_rules('ngay_di', 'Ngày đi', 'required|callback_checkday');
             $this->form_validation->set_rules('payment', 'Cổng thanh toán', 'required');
             if ($this->form_validation->run()) {
                 // Lấy phương thước thanh toán
             	$payment = $this->input->post('payment');
                 // Lấy thời gian đi được đặt
-                $ngay_di = $this->input->post('ngay_di');
-                $ngay_di = strtotime($ngay_di);
-
             	$data = array(
             		'id_user' => $user_id,
             		'email' => $this->input->post('email'),
@@ -73,10 +70,10 @@ class Order extends MY_Controller {
             			'id_giaodich' => $id_giaodich,
             			'id_tour'     => $row['id'],
             			'so_nguoi'    => $row['qty'],
-                        'ngay_di'     => $ngay_di,
+                        'ngay_di'     => $row['ngay_di'],
               			'sotien'      => $row['subtotal'],
             		);
-            		$this->Order_model->create($data);
+            	  $this->Order_model->create($data);
                   $input['where'] = array();
                   $input['where'] = array('id' => $row['id']); 
                   $tour_amount = $this->Tour_model->get_list($input);
@@ -89,6 +86,7 @@ class Order extends MY_Controller {
             	$this->cart->destroy();
             	if ($payment == 'offline') {
             		$this->session->set_flashdata('message', 'Bạn đã book tour thành công, chúng tôi sẽ gửi mail cho bạn sớm nhât');
+                    $this->send_email();
             		redirect('cart');
             	}
             }
@@ -97,14 +95,32 @@ class Order extends MY_Controller {
         $this->load->view('site/layout', $this->data);
 	}
 
-    function checkday() {
-        $ngay_di = $this->input->post('ngay_di');
-        $ngay_di = strtotime($ngay_di);
-        if (get_date($ngay_di) < get_date(now())) {
-            return FALSE;
-        }else {
-            return True;
-        }
+
+    function send_email() {
+            $email   = $this->input->post('email');
+            $ten     = $this->input->post('ten');
+            $subject = "502-Travel.com.vn Thông báo";
+            $sdt     = $this->input->post('sdt');
+            $payment = $this->input->post('payment');
+            $noidung = "Anh/Chị đã đặt tour thành công mong anh chị trong vòng 5 tiếng nữa hãy đến đại lý của chúng tôi để thanh toán không sau 5 tiếng thì đơn đặt tour sẽ bị hủy";
+            $message = 'Dear ' . $ten . "\n\n" . "Số điện thoại: " . $sdt ."\n\n" ."Nội dung: " . "\n\n" . $noidung;
+
+
+            $config['protocol']     = 'smtp';
+            $config['smtp_host']    = 'ssl://smtp.googlemail.com'; //neu sử dụng gmail
+            $config['smtp_user']    = 'tombeo2456@gmail.com';
+            $config['smtp_pass']    = 'ovhezcjqhlgbosne';
+            $config['smtp_port']    = '465'; //nếu sử dụng gmail
+            $config['charset']  = 'utf-8';
+            $config['newline']  = "\r\n";
+
+            $this->email->initialize($config);
+            $this->email->from('admin_Dog@gmail.com', '502-Travel.com.vn');
+            $this->email->to($email);
+            $this->email->subject($subject);
+
+            $this->email->message($message);
+            $this->email->send();
     }
 
 }

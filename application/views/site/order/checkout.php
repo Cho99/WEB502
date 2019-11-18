@@ -18,16 +18,6 @@
 							</div>
 							<div class="form-group row">
 								<label for="phone" class="col-sm-2 col-form-label phoneLabel_3lBr">
-									<span style="color: red;" >Ngày đi:</span>
-								</label>
-								<div class="col-sm-10 col-md-6 col-lg-6 inputkh">
-									<input type="date" name="ngay_di" class="form-control" value="<?= set_value('ngay_di') ?>">
-									<div name="ngay_di_error" class="clear error"><?= form_error('ngay_di') ?></div>
-								</div>
-
-							</div>
-							<div class="form-group row">
-								<label for="phone" class="col-sm-2 col-form-label phoneLabel_3lBr">
 									<span>Email</span>
 								</label>
 								<div class="col-sm-10 col-md-6 col-lg-6 inputkh">
