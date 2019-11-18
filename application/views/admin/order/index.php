@@ -6,8 +6,6 @@
 		<div class="title">
 			<span class="titleIcon"><img src="<?= base_url('public/admin/') ?>images/icons/tableArrows.png"></span>
 			<h6>Danh sách Tour đã đặt</h6>
-			
-			<div class="num f12">Tổng số: <b>15</b></div>
 		</div>
 		
 		<table cellpadding="0" cellspacing="0" width="100%" class="sTable mTable myTable" id="checkAll">
@@ -45,6 +43,7 @@
 					<td style="width:50px;">Số người</td>
 					<td style="width:70px;">Số tiền</td>
 					<td style="width:70px;">Ngày đi</td>
+					<!-- <td style="width:70px;">Hành động</td> -->
 				</tr>
 			</thead>
 			

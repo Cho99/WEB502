@@ -80,17 +80,8 @@
                <?= 'Đến đại lý thanh toán' ?>
            	  <?php endif; ?>
            </td>
+       
 
-           <!-- <td><?php 
-            if ($row->status == 0) {
-              echo 'Chưa thanh toán';
-            }elseif($row->status == 0) {
-             echo 'Đã thanh toán'; 
-            }else {
-              echo 'Thanh toán thất bại';
-            }
-            ?></td> -->
-  
           <td class="textC"><?php echo get_date($row->created)?></td>
           
           <td class="option textC">

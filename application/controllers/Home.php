@@ -8,10 +8,15 @@ Class Home extends MY_Controller
 		$tour = $this->Tour_model->get_list();
 		$this->data['tour'] = $tour;
 
-		$input['limit'] = array('4', '0');
-        $input['order'] = array('discount', 'DESC');
+		$input['limit'] = array('2', '0');
         $tour_discount = $this->Tour_model->get_list($input);
         $this->data['tour_discount'] = $tour_discount;
+
+        $input['limit'] = array('1', '0');
+        $input['order'] = array('discount', 'DESC');
+        $tour_max       = $this->Tour_model->get_list($input);
+        $this->data['tour_max'] = $tour_max;
+
         
         $input['limit'] = array('8', '0');
         $input['order'] = array('view', 'DESC');

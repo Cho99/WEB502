@@ -3,94 +3,70 @@
 	<div class="container banner4">
 		<div class="tdaddress td-ddyt">
 			<h2 class="ddyt">Tour Giảm Giá và lượt View Cao</h2>
-			<p>Các điểm đến du lịch trong nước</p>
+			<p>Book tour và thanh toán cực kỳ nhanh chong</p>
 		</div>
+		<div class="row sl-travelto">
 		<div class="container n3-pay-online">
 			<div class="row">
 				<div id="idTourOnline" class="clTourOnline" style="margin-bottom:30px;">
+					<?php foreach ($tour_max as $row): ?>
 					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mg-bot30 touronl1">
-						<a href="#" title="Nha Trang - Đà Lạt (Khách sạn tương đương 4*. Tour Tiêu Chuẩn)">
+						<a href="#" title="<?= $row->name ?>">
 							<div class="pos-relative">
-								<img src="images/giamg1.jpg" class="img-responsive pic-ud-l" alt="Nha Trang - Đà Lạt (Khách sạn tương đương 4*. Tour Tiêu Chuẩn)">
+								<img src="<?= base_url('upload/tour/').$row->image_link ?>" class="img-responsive pic-ud-l" alt="">
 								<div class="frame-po-l">
-									<div class="po-title-l dot-dot-ajax cut-po-l" style="overflow-wrap: break-word;">Nha Trang - Đà Lạt (Khách sạn tương đương 4*. Tour ...</div>
-									<div class="mg-bot10"><span class="yellow">20/11/2019</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="yellow">5 ngày</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="yellow">6 chỗ</span></div>
+									<div class="po-title-l dot-dot-ajax cut-po-l" style="overflow-wrap: break-word;"><?= $row->name ?></div>
+									<div class="mg-bot10">
+										<span class="yellow"><?= $row->days ?> ngày</span>&nbsp;&nbsp;|&nbsp;&nbsp;
+										<span class="yellow"><?= $row->amount - $row->booked ?> lượt</span></div>
 									<div class="mg-bot10">Nơi khởi hành:&nbsp;&nbsp;<span style="color:#ffc000"> Hồ Chí Minh</span></div>
 									<div>
-										<span class="price-o">5,190,000 đ</span>&nbsp;<span class="hidden-md">&nbsp;&nbsp;&nbsp;</span>
-										<span class="price-n">4,990,000 đ</span>
+										<?php $price = $row->price - $row->discount ?>
+										<span class="price-o"><?= number_format($row->price) ?> đ</span>&nbsp;
+										<span class="hidden-md">&nbsp;&nbsp;&nbsp;</span>
+										<span class="price-n"><?= number_format($price) ?> đ</span>
 									</div>
 								</div>
 							</div>
 						</a>
 					</div>
+				    <?php endforeach ?>
+				    <?php foreach ($tour_discount as $row): ?>
 					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 mg-bot30 touronl2">
-						<a href="/tourNDSGN523-107-201119XE-V/nha-trang-da-lat-tour-tiet-kiem.aspx" title="Nha Trang - Đà Lạt (Tour Tiết Kiệm)">
+						<a href="" title="">
 							<div class="pos-relative">
-								<img src="images/giamg1.jpg" class="img-responsive pic-ud-s" alt="Nha Trang - Đà Lạt (Tour Tiết Kiệm)">
+								<img src="<?= base_url('upload/tour/').$row->image_link ?>" class="img-responsive pic-ud-s" alt="<?= $row->name ?>">
 								<div class="frame-po"><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;Nơi khởi hành:&nbsp;&nbsp;<span style="color:#ffc000"> Hồ Chí Minh</span></div>
 							</div>
 						</a>
 						<div class="frame-po-s">
-							<a href="#" title="Nha Trang - Đà Lạt (Tour Tiết Kiệm)">
-								<div class="po-title-s dot-dot-ajax cut-po-s" style="overflow-wrap: break-word;">Nha Trang - Đà Lạt (Tour Tiết  ...</div>
+							<a href="#" title="<?= $row->name ?>">
+								<div class="po-title-s dot-dot cattieude ddd-truncated" style="overflow-wrap: break-word;"><?= $row->name ?></div>
 							</a>
 							<div class="po-line"></div>
 							<div class="mg-bot10 khoiinfott">
 								<img src="images/ic_date.png" class="f-left" alt="date">
-								<div class="f-left po-info-s">20/11/2019&nbsp;&nbsp;-&nbsp;&nbsp;5 ngày</div>
+								<div class="f-left po-info-s"><?= $row->days ?> ngày</div>
 								<div class="clear"></div>
 							</div>
 							<div class="mg-bot10 khoiinfott">
 								<img src="images/ic_chair.png" class="f-left" alt="chair">
-								<div class="f-left po-info-s">9 chỗ</div>
+								<div class="f-left po-info-s"><?= $row->amount - $row->booked ?> lượt</div>
 								<div class="clear"></div>
 							</div>
 							<div class="mg-bot10 khoiinfott">
 								<img src="images/ic_price.png" class="f-left" alt="price">
 								<div class="f-left po-info-s">
-									<span class="price-o">4,390,000 đ</span>&nbsp;<span class="hidden-md">&nbsp;&nbsp;&nbsp;</span>
-									<span class="price-n">4,190,000 đ</span>
+									<?php $price = $row->price - $row->discount ?>
+									<span class="price-o"><?= number_format($row->price) ?> đ</span>
+									<span class="hidden-md"></span>
+									<span class="price-n"><?= number_format($price) ?> đ</span>
 								</div>
 								<div class="clear"></div>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 mg-bot30 touronl2">
-						<a href="#" title="Nha Trang - Hòn Lao - Vinpearl Land (Máy Bay. Khách Sạn 4*. Tour Tiêu Chuẩn)">
-							<div class="pos-relative">
-								<img src="images/giamg2.jpg" class="img-responsive pic-ud-s" alt="Nha Trang - Hòn Lao - Vinpearl Land (Máy Bay. Khách Sạn 4*. Tour Tiêu Chuẩn)">
-								<div class="frame-po"><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;Nơi khởi hành:&nbsp;&nbsp;<span style="color:#ffc000"> Hồ Chí Minh</span></div>
-							</div>
-						</a>
-						<div class="frame-po-s">
-							<a href="#" title="Nha Trang - Hòn Lao - Vinpearl Land (Máy Bay. Khách Sạn 4*. Tour Tiêu Chuẩn)">
-								<div class="po-title-s dot-dot-ajax cut-po-s" style="overflow-wrap: break-word;">Nha Trang - Hòn Lao - Vinpearl ...</div>
-							</a>
-							<div class="po-line"></div>
-							<div class="mg-bot10 khoiinfott">
-								<img src="images/ic_date.png" class="f-left" alt="date">
-								<div class="f-left po-info-s">20/11/2019&nbsp;&nbsp;-&nbsp;&nbsp;3 ngày</div>
-								<div class="clear"></div>
-							</div>
-							<div class="mg-bot10 khoiinfott">
-								<img src="images/ic_chair.png" class="f-left" alt="chair">
-								<div class="f-left po-info-s">3 chỗ</div>
-								<div class="clear"></div>
-							</div>
-							<div class="mg-bot10 khoiinfott">
-								<img src="images/ic_price.png" class="f-left" alt="price">
-								<div class="f-left po-info-s">
-									<span class="price-o">4,990,000 đ</span>&nbsp;<span class="hidden-md">&nbsp;&nbsp;&nbsp;</span>
-									<span class="price-n">4,790,000 đ</span>
-								</div>
-								<div class="clear"></div>
-							</div>
-						</div>
-					</div>
-					<script>
-						$(".dot-dot-ajax").dotdotdot();
-					</script>
+				    <?php endforeach ?>
 				</div>
 			</div>
 		</div>
@@ -106,7 +82,7 @@
 
 						<img class="imgqg" src="<?= base_url('upload/tour/').$row->image_link ?>" alt="">
 						<div class="tt-tour">
-							<div class="destination-name"><?= $row->name ?></div>
+							<div class="destination-name" style="word-wrap: break-word;"><?= $row->name ?></div>
 							<div class="destination-like">View: 
 								<span class="num-like"><?= $row->view ?>
 								</span>lượt 
