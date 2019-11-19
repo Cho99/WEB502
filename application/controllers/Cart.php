@@ -17,8 +17,8 @@ class Cart extends MY_Controller {
 		//Tổng số sản phẩm
 		$total_items = $this->cart->total_items();
 		$this->data['total_items'] = $total_items;
-
 		$this->data['carts'] = $cart;
+
 		$this->data['temp'] = 'site/cart/index';
 		$this->load->view('site/layout', $this->data);
 	}
@@ -65,6 +65,9 @@ class Cart extends MY_Controller {
 		foreach ($cart as $key => $row) {
 			//Tổng số lượng sản phẩm
 			$total_qty = $this->input->post('qty_'.$row['id']);
+			// $this->form_validation->set_rules('day_'.$row['id'], 'Ngày đi', 'required|callback_checkday');
+			// $this->form_validation->set_rules('amount','Số lượng', 'required|callback_check_amount');
+			
 			$ngay_di = $this->input->post('day_'.$row['id']);
 			$ngay_di = strtotime($ngay_di);
 			$data = array();
@@ -72,6 +75,7 @@ class Cart extends MY_Controller {
 			$data['qty'] = $total_qty;
 			$data['ngay_di'] = $ngay_di;
 			$this->cart->update($data);
+		
 		}	
 		redirect(base_url('cart'));
 	}
@@ -96,15 +100,50 @@ class Cart extends MY_Controller {
 		redirect(base_url('cart'));
 	}
 
-	function checkday() {
-		$ngay_di = $this->input->post('ngay_di');
-		$ngay_di = strtotime($ngay_di);
-		if (get_date($ngay_di) < get_date(now())) {
-			return FALSE;
-		}else {
-			return True;
-		}
-	}
+	// function checkday() {
+	// 	if ($this->input->post('ngay_di')) {
+	// 		$ngay_di = $this->input->post('ngay_di');
+	// 		$ngay_di = strtotime($ngay_di);
+	// 	    if (get_date($ngay_di) < get_date(now())) {
+	// 	    	return FALSE;
+	// 	    }else {
+	// 	    	return TRUE;
+	// 	    }
+	// 	}else {
+	// 		$cart = $this->cart->contents();
+	// 		foreach ($cart as $key => $row) {
+	// 		$ngay_di = $this->input->post('day_'.$row['id']);
+	// 		$ngay_di = strtotime($ngay_di);
+	// 		if (get_date($ngay_di) < get_date(now())) {
+	// 			return FALSE;
+	// 			echo 'Yesss';
+	// 		}else {
+	// 			return TRUE;
+	// 	    }
+	// 	  }
+	// 	}
+	// 	die();
+	// }
+	// function check_amount() {
+	// 	$cart = $this->cart->contents();
+	// 	$tour = $this->Tour_model->get_list();
+	// 	foreach ($cart as $key => $row) {
+	// 		$amount = $this->input->post('qty_'.$row['id']);
+	// 		$amount = intval($amount);
+	// 		$id     = $row['id'];
+	// 		foreach ($tour  as $value) {
+	// 			if ($value->id == $row['id']) {
+	// 				$soluong = $value->amount - $value->booked;
+	// 				if ($amount <= $soluong) {
+	// 					return TRUE;
+	// 				}else {
+	// 					return FALSE;
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+		
+	// }
 
 }
 

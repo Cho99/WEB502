@@ -68,7 +68,8 @@
 							 	<input type="hidden" name="id" value="<?= $tour->id ?>">
 								<div class="col-lg-4 col-md-2 col-sm-3 col-xs-6" style="padding-right: 0px !important;">Ngày đi:</div>
 								<div class="col-lg-8 col-md-10 col-sm-9 col-xs-6">
-									<input type="date" name="ngay_di" class="form-control">
+									<input type="date" name="ngay_di" class="form-text">
+									<div><?= form_error('ngay_di') ?></div>
 								</div>
 							</div> 
 						</div>

@@ -11,7 +11,7 @@
 				<div id="idTourOnline" class="clTourOnline" style="margin-bottom:30px;">
 					<?php foreach ($tour_max as $row): ?>
 					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mg-bot30 touronl1">
-						<a href="#" title="<?= $row->name ?>">
+						<a href="<?= base_url('tour/view/').$row->id ?>" title="<?= $row->name ?>">
 							<div class="pos-relative">
 								<img src="<?= base_url('upload/tour/').$row->image_link ?>" class="img-responsive pic-ud-l" alt="">
 								<div class="frame-po-l">
@@ -33,7 +33,7 @@
 				    <?php endforeach ?>
 				    <?php foreach ($tour_discount as $row): ?>
 					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 mg-bot30 touronl2">
-						<a href="" title="">
+						<a href="<?= base_url('tour/view/').$row->id ?>" title="<?= $row->name ?>">
 							<div class="pos-relative">
 								<img src="<?= base_url('upload/tour/').$row->image_link ?>" class="img-responsive pic-ud-s" alt="<?= $row->name ?>">
 								<div class="frame-po"><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;Nơi khởi hành:&nbsp;&nbsp;<span style="color:#ffc000"> Hồ Chí Minh</span></div>

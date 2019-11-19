@@ -84,8 +84,9 @@
 								</div>
 
 								<div class="text title item-title giohangflex" data-spm="details_title">
-									<h5>Số người đi:</h5>
+									<h5>Ngày đi:</h5>
 									  <input type="date" name="day_<?php echo $row['id']?>" value="<?php echo date('Y-m-d', $row['ngay_di']) ;?>"/>
+									  <div><?= form_error('day_'.$row['id']) ?></div>
 								</div>
 								
 								<div class="text title item-title giohangflex" data-spm="details_title">
