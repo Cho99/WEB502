@@ -102,7 +102,7 @@ class Order extends MY_Controller {
             $subject = "502-Travel.com.vn Thông báo";
             $sdt     = $this->input->post('sdt');
             $payment = $this->input->post('payment');
-            $noidung = "Anh/Chị đã đặt tour thành công mong anh chị trong vòng 5 tiếng nữa hãy đến đại lý của chúng tôi để thanh toán không sau 5 tiếng thì đơn đặt tour sẽ bị hủy";
+            $noidung = "Anh/Chị đã đặt tour thành công mong anh chị hãy đến đại lý của chúng tôi ở các khu vực để thanh toán sớm nhất, nếu Anh/Chị đến sau ngày đặt thì đơn đặt tour sẽ bị hủy";
             $message = 'Dear ' . $ten . "\n\n" . "Số điện thoại: " . $sdt ."\n\n" ."Nội dung: " . "\n\n" . $noidung;
 
 

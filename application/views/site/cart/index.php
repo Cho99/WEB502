@@ -25,13 +25,13 @@
 					</a>
 					<ul class="item-container">
 						<li id="Returns" class="sub">
-							<a href="#" data-spm="Returns">Du lịch miền Bắc</a>
+							<a href="<?= base_url('tour/mien/1') ?>" data-spm="Returns">Du lịch miền Bắc</a>
 						</li>
 						<li id="Cancellations" class="sub">
-							<a href="#" data-spm="Cancellations">Du lịch miền Trung</a>
+							<a href="<?= base_url('tour/mien/2') ?>" data-spm="Cancellations">Du lịch miền Trung</a>
 						</li>
 						<li id="Cancellations" class="sub">
-							<a href="#" data-spm="Cancellations">Du lịch miền Nam</a>
+							<a href="<?= base_url('tour/mien/3') ?>" data-spm="Cancellations">Du lịch miền Nam</a>
 						</li>
 					</ul>
 				</li>
@@ -81,6 +81,9 @@
 								<div class="text title item-title giohangflex" data-spm="details_title">
 									<h5>Số người đi:</h5>
 									  <input type="number" name="qty_<?php echo $row['id']?>" value="<?php echo $row['qty'];?>" style="width: 10%"/>
+									  <!-- <select name="qty_<?php echo $row['id']?>">
+									  	<option value="<?php echo $row['qty'];?>"></option>
+									  </select> -->
 								</div>
 
 								<div class="text title item-title giohangflex" data-spm="details_title">
@@ -98,8 +101,9 @@
 						</div>
 						<div class="item-quantity">
 							<span>
-								<span class="text desc info multiply">Số người tối đa:</span>
-								<span class="text"><?= $row['amount'] ?> người
+								<span class="text desc info multiply">Số lượt còn lại:</span>
+								<span class="text">
+									<?= $row['booked'] ?> lượt
 								</span>
 							</span>
 							<span>

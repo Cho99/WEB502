@@ -100,30 +100,18 @@ class Cart extends MY_Controller {
 		redirect(base_url('cart'));
 	}
 
-	// function checkday() {
-	// 	if ($this->input->post('ngay_di')) {
-	// 		$ngay_di = $this->input->post('ngay_di');
-	// 		$ngay_di = strtotime($ngay_di);
-	// 	    if (get_date($ngay_di) < get_date(now())) {
-	// 	    	return FALSE;
-	// 	    }else {
-	// 	    	return TRUE;
-	// 	    }
-	// 	}else {
-	// 		$cart = $this->cart->contents();
-	// 		foreach ($cart as $key => $row) {
-	// 		$ngay_di = $this->input->post('day_'.$row['id']);
-	// 		$ngay_di = strtotime($ngay_di);
-	// 		if (get_date($ngay_di) < get_date(now())) {
-	// 			return FALSE;
-	// 			echo 'Yesss';
-	// 		}else {
-	// 			return TRUE;
-	// 	    }
-	// 	  }
-	// 	}
-	// 	die();
-	// }
+	function checkday() {
+		if ($this->input->post('ngay_di')) {
+			$ngay_di = $this->input->post('ngay_di');
+			$ngay_di = strtotime($ngay_di);
+			if (get_date($ngay_di) < get_date(now())) {
+				return FALSE;
+				echo 'Yesss';
+			}else {
+				return TRUE;
+		    }
+		} 	
+	}
 	// function check_amount() {
 	// 	$cart = $this->cart->contents();
 	// 	$tour = $this->Tour_model->get_list();

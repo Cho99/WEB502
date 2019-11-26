@@ -4,8 +4,12 @@
 	<meta charset="UTF-8">
 	 <?php $this->load->view('admin/head'); ?>
 </head>
-     <body class="nobg loginPage" style="min-height:100%;">
+    <body class="nobg loginPage" style="min-height:100%;">
+
 	<div class="loginWrapper" style="top:45%;">
+		<div class="alert alert-success alert-dismissible" style="display: flex; justify-content: center;">
+    		<h2>502-Travel.com</h2>
+    	</div>
 	    <div class="widget" id="admin_login" style="height:auto; margin:auto;">
 	        <div class="title"><img src="<?= public_url('admin') ?>/images/icons/dark/laptop.png" alt="" class="titleIcon">
 	        	<h6>Đăng nhập Admin</h6>
