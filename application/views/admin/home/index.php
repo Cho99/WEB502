@@ -61,7 +61,7 @@
 						<tr>
 							<td>
 								<div class="left">Tổng số giao dịch</div>
-								<div class="right f11"><a href="admin/tran.html">Chi tiết</a></div>
+								<div class="right f11"><a href="<?= base_url('admin/giaodich') ?>">Chi tiết</a></div>
 							</td>
 
 							<td class="textC webStatsLink">
@@ -70,7 +70,7 @@
 						<tr>
 							<td>
 								<div class="left">Tổng số tour</div>
-								<div class="right f11"><a href="admin/product.html">Chi tiết</a></div>
+								<div class="right f11"><a href="<?= base_url('admin/tour') ?>">Chi tiết</a></div>
 							</td>
 							<td class="textC webStatsLink"><?= $total_tour ?></td>
 						</tr>
@@ -78,7 +78,7 @@
 						<tr>
 							<td>
 								<div class="left">Tổng số thành viên</div>
-								<div class="right f11"><a href="admin/user.html">Chi tiết</a></div>
+								<div class="right f11"><a href="<?= base_url('admin/admin') ?>">Chi tiết</a></div>
 							</td>
 
 							<td class="textC webStatsLink"><?= $total_user ?></td>
@@ -86,11 +86,12 @@
 						<tr>
 							<td>
 								<div class="left">Tổng số liên hệ</div>
-								<div class="right f11"><a href="admin/contact.html">Chi tiết</a></div>
+								<div class="right f11">
+									<a href="<?= base_url('admin/contact') ?>">Chi tiết</a>
+								</div>
 							</td>
 
-							<td class="textC webStatsLink">
-							0					</td>
+							<td class="textC webStatsLink"><?= $total_contact ?></td>
 						</tr>
 					</tbody>
 				</table>
@@ -112,13 +113,14 @@
 
 				<thead>
 					<tr>
-						<td style="width:10px;"><img src="<?= public_url('admin') ?>/images/icons/tableArrows.png"></td>
+					<!-- 	<td style="width:10px;">
+							<img src="<?= public_url('admin') ?>/images/icons/tableArrows.png">
+						</td> -->
 						<td style="width:60px;">Mã số</td>
 						<td style="width:75px;">Tên</td>
 						<td style="width:75px;">email</td>
 						<td style="width:90px;">Số tiền</td>
 						<td>Hình thức</td>
-						<td style="width:100px;">Giao dịch</td>
 						<td style="width:75px;">Ngày tạo</td>
 						<td style="width:55px;">Hành động</td>
 					</tr>
@@ -128,9 +130,9 @@
 					<tr>
 						<td colspan="9">
 							<div class="list_action itemActions">
-								<a href="#submit" id="submit" class="button blueB" url="admin/tran/del_all.html">
+								<!-- <a href="#submit" id="submit" class="button blueB" url="admin/tran/del_all.html">
 									<span style="color:white;">Xóa hết</span>
-								</a>
+								</a> -->
 							</div>
 						</td>
 					</tr>
@@ -139,7 +141,7 @@
 				<tbody class="list_item">
 					<?php foreach ($list as $row): ?>
 						<tr>
-							<td><div class="checker" id="uniform-undefined"><span><input type="checkbox" name="id[]" value="<?= $row->id ?>" style="opacity: 0;"></span></div></td>
+							<!-- <td><div class="checker" id="uniform-undefined"><span><input type="checkbox" name="id[]" value="<?= $row->id ?>" style="opacity: 0;"></span></div></td> -->
 
 							<td class="textC"><?= $row->id ?></td>
 
@@ -154,19 +156,15 @@
 							<?php endif; ?></td>
 
 
-							<td class="status textC">
+							<!-- <td class="status textC">
 								<span class="pending">Chờ xử lý</span>
-							</td>
+							</td> -->
 
 							<td class="textC"><?= get_date($row->created) ?></td>
 
 							<td class="textC">
-								<a href="<?= admin_url('order/view/').$row->id ?>" class="lightbox cboxElement">
+								<a href="<?= admin_url('order/view/').$row->id ?>" class="lightbox cboxElement" title="Xem chi tiết">
 									<img src="<?= public_url('admin') ?>/images/icons/color/view.png">
-								</a>
-
-								<a href="admin/tran/del/21.html" class="tipS verify_action" original-title="Xóa">
-									<img src="<?= public_url('admin') ?>/images/icons/color/delete.png">
 								</a>
 							</td>
 						</tr>

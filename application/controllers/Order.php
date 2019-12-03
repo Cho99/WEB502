@@ -14,6 +14,7 @@ class Order extends MY_Controller {
 
 	public function checkout()
 	{
+        // Kiểm tra khách hàng đã đang nhập chưa
         if (!$this->session->userdata('user_id_login')) {
             redirect('user/login');
         }
@@ -26,7 +27,6 @@ class Order extends MY_Controller {
 		}
 		//Toong so tien can thanh toan
         $total_amount = 0;
-
         foreach ($carts as $row)
         {
             $total_amount = $total_amount + $row['subtotal'];  
@@ -47,6 +47,7 @@ class Order extends MY_Controller {
             $this->form_validation->set_rules('ten', 'Tên', 'required');
             $this->form_validation->set_rules('sdt', 'Số điện thoại', 'required');
             $this->form_validation->set_rules('payment', 'Cổng thanh toán', 'required');
+
             if ($this->form_validation->run()) {
                 // Lấy phương thước thanh toán
             	$payment = $this->input->post('payment');

@@ -5,6 +5,7 @@
 		$this->load->model('Order_model');
 		$this->load->model('Tour_model');
 		$this->load->model('User_model');
+    $this->load->model('Contact_model');
 
   		//B1: Lấy tổng số lượng các Giao dịch ở trong CSDL
 		$total_giaodich = $this->GiaoDich_model->get_total();
@@ -15,9 +16,12 @@
 
 		$total_user = $this->User_model->get_total();
 		$this->data['total_user'] = $total_user;
+
+    $total_contact= $this->Contact_model->get_total();
+    $this->data['total_contact'] = $total_contact;
         
-        $id = $this->input->get('id');
-        $id = intval($id);
+    $id = $this->input->get('id');
+    $id = intval($id);
 		$input['where'] = array();
 		if ($id > 0) {
 			$input['where']['id'] = $id;
@@ -38,7 +42,11 @@
         	if (date("mm",$row->created) == date("mm", now()) ) {
         		$total_thang += $row->so_tien;
         	}
-        	$total_price = $total_ngay + $total_thang;
+          if (date("mm",$row->created) <> date("mm", now()) || date("mm",$row->created) == date("mm", now())) {
+            $temp = 0;
+            $total_price = $total_ngay + $temp;
+          }
+          $total_price = $total_ngay + $total_thang;
         }
 
         $this->data['total_ngay'] = $total_ngay;

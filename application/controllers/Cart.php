@@ -64,8 +64,7 @@ class Cart extends MY_Controller {
 		foreach ($cart as $key => $row) {
 			//Tổng số lượng sản phẩm
 			$total_qty = $this->input->post('qty_'.$row['id']);
-			// $this->form_validation->set_rules('day_'.$row['id'], 'Ngày đi', 'required|callback_checkday');
-			// $this->form_validation->set_rules('amount','Số lượng', 'required|callback_check_amount');
+			
 			$ngay_di = strtotime($ngay_di);
 			$data = array();
 			$data['rowid'] = $key;

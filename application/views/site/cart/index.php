@@ -88,15 +88,12 @@
 
 								<div class="text title item-title giohangflex" data-spm="details_title">
 									<h5>Ngày đi:</h5>
-									  <input type="date" name="day_<?php echo $row['id']?>" value="<?php echo date('Y-m-d', $row['ngay_di']) ;?>"/>
-									  <div><?= form_error('day_'.$row['id']) ?></div>
+									  <p class="text bold"><?php echo  get_date($row['ngay_di']);?></p>
 								</div>
-								
 								<div class="text title item-title giohangflex" data-spm="details_title">
 									<h5>Tổng số:</h5>
 									<p class="text bold" ><?php echo number_format($row['subtotal']);?>đ</p>
 								</div>
-							
 							</div>
 						</div>
 						<div class="item-quantity">

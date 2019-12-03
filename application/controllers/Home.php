@@ -46,7 +46,7 @@ Class Home extends MY_Controller
 		$input['like'] =  array('name', $key);
 		$list = $this->Tour_model->get_list($input);
 		$this->data['list'] = $list;
-
+		
         $this->data['temp'] = 'site/tour/timkiem';
 		$this->load->view('site/layout', $this->data);		
 	}
