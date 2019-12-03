@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 18, 2019 lúc 02:43 PM
+-- Thời gian đã tạo: Th12 03, 2019 lúc 03:14 AM
 -- Phiên bản máy phục vụ: 10.3.16-MariaDB
 -- Phiên bản PHP: 7.1.30
 
@@ -132,7 +132,11 @@ INSERT INTO `giaodich` (`id`, `id_user`, `email`, `ten`, `sdt`, `so_tien`, `hinh
 (29, 1, 'quangsoi99@gmail.com', 'Dog', 12712313, '14500000.0000', 'offline', '', 1574046636),
 (30, 1, 'quangsoi99@gmail.com', 'Dog', 12712313, '1800000.0000', 'offline', 'dđ', 1574047344),
 (31, 1, 'quangsoi99@gmail.com', 'Dog', 12712313, '5400000.0000', 'offline', '', 1574063766),
-(32, 1, 'quangsoi99@gmail.com', 'Dog', 12712313, '14500000.0000', 'offline', '', 1574063894);
+(32, 1, 'quangsoi99@gmail.com', 'Dog', 12712313, '14500000.0000', 'offline', '', 1574063894),
+(33, 1, 'quangsoi99@gmail.com', 'Dog', 12712313, '181790000.0000', 'offline', '', 1574171430),
+(34, 1, 'quangsoi99@gmail.com', 'Dog', 12712313, '32499000.0000', 'offline', '', 1574762588),
+(35, 1, 'quangsoi99@gmail.com', 'Dog', 12712313, '53997000.0000', 'offline', '', 1575337484),
+(36, 1, 'quangsoi99@gmail.com', 'Dog', 12712313, '8999500.0000', 'offline', '', 1575338414);
 
 -- --------------------------------------------------------
 
@@ -147,13 +151,6 @@ CREATE TABLE `new` (
   `noidung` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `id_catalog` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=koi8r;
-
---
--- Đang đổ dữ liệu cho bảng `new`
---
-
-INSERT INTO `new` (`id`, `ten`, `mota`, `noidung`, `id_catalog`) VALUES
-(1, 'New', 'Tuyệ đẹp', ' hiều 18/11, TAND Cấp cao tại TP.HCM mở lại phiên tòa xét xử vụ án ly hôn giữa bà Lê Hoàng Diệp Thảo, SN 1973, Chủ tịch HĐQT kiêm Tổng Giám đốc công ty Cà phê hòa tan Trung Nguyên và ông Đặng Lê Nguyên Vũ, SN 1971, Chủ tịch HĐQT kiêm Tổng Giám đốc Tập đoàn Cà phê Trung Nguyên.\r\n\r\nTrước đó vào sáng cùng ngày, cấp tòa này đã mở phiên tòa xét xử nhưng sau đó quyết định tạm hoãn phiên tòa vì nguyên đơn có đơn xin hoãn xử.\r\n\r\nTheo HĐXX, việc tạm hoãn phiên tòa là để xác minh bà Thảo có thực sự ốm, đang nằm viện hay không, sau đó sẽ đưa ra quyết định chính thức hoãn phiên xét xử phúc thẩm.\r\n\r\nĐây là lần thứ 3 tòa phúc thẩm mở phiên tòa xét xử theo đơn kháng cáo của bà Thảo, ông Vũ và kháng nghị hủy án của VKSND TP.HCM.\r\n\r\nTrong cả 3 lần mở tòa, ông Vũ đều đến tòa từ sớm. Trong khi đó, cả 3 lần phía bà Thảo đều đề nghị hoãn xét xử vì nhiều lý do khác nhau.', 0);
 
 -- --------------------------------------------------------
 
@@ -202,7 +199,13 @@ INSERT INTO `order` (`id`, `id_giaodich`, `id_tour`, `sotien`, `so_nguoi`, `ngay
 (36, 29, 12, 14500000, 1, 1574550000, 0),
 (37, 30, 1, 1800000, 1, 1574118000, 0),
 (38, 31, 1, 5400000, 3, 1575068400, 0),
-(39, 32, 12, 14500000, 1, 1574118000, 0);
+(39, 32, 12, 14500000, 1, 1574118000, 0),
+(40, 33, 11, 179990000, 20, 1574377200, 0),
+(41, 33, 1, 1800000, 1, 1573945200, 0),
+(42, 34, 11, 17999000, 2, 1575068400, 0),
+(43, 34, 12, 14500000, 1, 1574809200, 0),
+(44, 35, 11, 53997000, 6, 1577314800, 0),
+(45, 36, 11, 8999500, 1, 1577314800, 0);
 
 -- --------------------------------------------------------
 
@@ -246,11 +249,11 @@ CREATE TABLE `tour` (
 --
 
 INSERT INTO `tour` (`id`, `catalog_id`, `name`, `price`, `discount`, `amount`, `booked`, `image_link`, `days`, `content`, `created`, `view`, `buyed`) VALUES
-(1, 1, 'Du lịch Hoàng Thành Thăng Long VIP', '2000000.0000', 200000, 30, 19, 'mbac41.jpg', 5, 'Du lịch cực kỳ đẹp', 1572272643, 146, 11),
-(4, 3, 'Du lịch Miền Nam', '2000000.0000', 200000, 30, 30, 'mbac41.jpg', 3, 'Du lịch cực kỳ đẹp', 1572272643, 121, 5),
-(9, 2, 'Miền Trung', '9000000.0000', 500000, 1, 1, 'dalat1.jpg', 4, 'Thật thú vị', 1573287594, 2, 1),
-(11, 2, 'Đà nẵng', '9000000.0000', 500, 22, 1, 'dd31.jpg', 7, '132', 1573479608, 3, 1),
-(12, 1, 'Du lịch Hoàng Thành Thăng Long', '15000000.0000', 500000, 30, 20, 'mbac41.jpg', 5, 'Du lịch cực kỳ đẹp', 1572272643, 123, 9);
+(1, 1, 'Du lịch Hoàng Thành Thăng Long VIP', '2000000.0000', 200000, 30, 20, 'mbac41.jpg', 5, 'Du lịch cực kỳ đẹp', 1572272643, 147, 12),
+(4, 3, 'Du lịch Miền Nam', '2000000.0000', 200000, 30, 30, 'mbac41.jpg', 3, 'Du lịch cực kỳ đẹp', 1572272643, 124, 5),
+(9, 2, 'Miền Trung', '9000000.0000', 500000, 1, 1, 'dalat1.jpg', 4, 'Thật thú vị', 1573287594, 8, 1),
+(11, 2, 'Đà nẵng', '9000000.0000', 500, 22, 17, 'dd31.jpg', 7, '132', 1573479608, 9, 5),
+(12, 1, 'Du lịch Hoàng Thành Thăng Long', '15000000.0000', 500000, 30, 21, 'mbac41.jpg', 5, 'Du lịch cực kỳ đẹp', 1572272643, 125, 10);
 
 -- --------------------------------------------------------
 
@@ -361,7 +364,7 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT cho bảng `giaodich`
 --
 ALTER TABLE `giaodich`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT cho bảng `new`
@@ -373,7 +376,7 @@ ALTER TABLE `new`
 -- AUTO_INCREMENT cho bảng `order`
 --
 ALTER TABLE `order`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT cho bảng `slide`

@@ -18,7 +18,6 @@ class Cart extends MY_Controller {
 		$total_items = $this->cart->total_items();
 		$this->data['total_items'] = $total_items;
 		$this->data['carts'] = $cart;
-
 		$this->data['temp'] = 'site/cart/index';
 		$this->load->view('site/layout', $this->data);
 	}
@@ -67,13 +66,10 @@ class Cart extends MY_Controller {
 			$total_qty = $this->input->post('qty_'.$row['id']);
 			// $this->form_validation->set_rules('day_'.$row['id'], 'Ngày đi', 'required|callback_checkday');
 			// $this->form_validation->set_rules('amount','Số lượng', 'required|callback_check_amount');
-			
-			$ngay_di = $this->input->post('day_'.$row['id']);
 			$ngay_di = strtotime($ngay_di);
 			$data = array();
 			$data['rowid'] = $key;
 			$data['qty'] = $total_qty;
-			$data['ngay_di'] = $ngay_di;
 			$this->cart->update($data);
 		
 		}	
@@ -112,27 +108,6 @@ class Cart extends MY_Controller {
 		    }
 		} 	
 	}
-	// function check_amount() {
-	// 	$cart = $this->cart->contents();
-	// 	$tour = $this->Tour_model->get_list();
-	// 	foreach ($cart as $key => $row) {
-	// 		$amount = $this->input->post('qty_'.$row['id']);
-	// 		$amount = intval($amount);
-	// 		$id     = $row['id'];
-	// 		foreach ($tour  as $value) {
-	// 			if ($value->id == $row['id']) {
-	// 				$soluong = $value->amount - $value->booked;
-	// 				if ($amount <= $soluong) {
-	// 					return TRUE;
-	// 				}else {
-	// 					return FALSE;
-	// 				}
-	// 			}
-	// 		}
-	// 	}
-		
-	// }
-
 }
 
 /* End of file Cart.php */

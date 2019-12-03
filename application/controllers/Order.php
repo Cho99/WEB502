@@ -78,7 +78,7 @@ class Order extends MY_Controller {
                   $input['where'] = array('id' => $row['id']); 
                   $tour_amount = $this->Tour_model->get_list($input);
                   foreach ($tour_amount as $value) {
-                      $booked['booked'] = $value->booked + $row['qty'];
+                      $booked['booked'] = $value->booked + 1;
                       $booked['buyed'] = $value->buyed + 1;
                       $this->Tour_model->update($row['id'], $booked);
                   }   

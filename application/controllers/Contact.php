@@ -39,8 +39,8 @@ class Contact extends MY_Controller {
 			$config['newline']  = "\r\n";
 
 			$this->email->initialize($config);
-			$this->email->from('admin_Dog@gmail.com', '502-Travel.com.vn');
-			$this->email->to($email);
+			$this->email->from($email, 'Khách hàng');
+			$this->email->to('502_travel@gmail.com');
 			$this->email->subject($subject);
 
 			$message = $tt . "\n\n" . 'Họ và tên: ' . $ten . "\n\n" . "Số điện thoại: " . $sdt ."\n\n". "Địa chỉ: ". $diachi . "\n\n" ."Nội dung: " . "\n\n" . $noidung;
