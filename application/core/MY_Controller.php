@@ -12,6 +12,7 @@ class MY_Controller extends CI_Controller {
 		$this->load->library('form_validation');
         $this->load->helper('form');
         $this->load->model('Catalog_model');
+        $this->load->model('Slide_model');
 
 		$controller = $this->uri->segment(1);
 		switch ($controller) {
@@ -24,6 +25,8 @@ class MY_Controller extends CI_Controller {
 			}
 			default:
 			{
+				$slide = $this->Slide_model->get_list();
+				$this->data['slide'] = $slide;
 				//Lấy danh mục các sản phẩm
 				//Biến điều khiện sắp xém theo thứ tự từ bé đến lớn
 				//ESC:  theo SQL là sắp xếp theo từ bé đến lớn 
@@ -41,6 +44,8 @@ class MY_Controller extends CI_Controller {
 				//Phần giỏ hàng
 				$this->load->library('cart');
 				$this->data['total_items'] = $this->cart->total_items();
+
+
 
 			}		
 		}

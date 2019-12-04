@@ -16,6 +16,15 @@ class News extends MY_Controller {
 		$this->load->view('site/layout', $this->data);
 	}
 
+	public function view() {
+		$id = $this->uri->rsegment(3);
+		$id = intval($id);
+		$new = $this->New_model->get_info($id);
+		$this->data['new'] = $new;
+		$this->data['temp'] = 'site/news/view';
+		$this->load->view('site/layout', $this->data);	
+	}
+
 }
 
 /* End of file News.php */

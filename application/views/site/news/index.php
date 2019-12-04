@@ -34,96 +34,23 @@
 				<div class="global_inner _column">
 					<main class="gc_main">
 						<ul class="module_newsList-01">
+							<?php foreach ($news as $row): ?>
 							<li> 
-								<a href="#"> 
+								<a href="<?= base_url('news/view/').$row->id ?>"> 
 									<div class="head"> 
 										<p class="image">
 											<img src="../images/mbac1.jpg" width="282" height="164" class="attachment-info_thumbnail size-info_thumbnail wp-post-image" alt="" data-lazy-loaded="true" style="display: block;">
 										</p> 
 									</div> 
 									<div class="body"> 
-										<p class="date">
-											<time datetime="2019-08-06">Sapa Sapa</time>
-										</p> 
-										<p class="title">Một cái lạnh không thể tả nổi, không thể tin được, cóc bao tử chua quá. sapa có tuyết phủ trắng, lạnh như bắc cực, nhiệt độ dưới mức âm, gió dật từ cấp 9 đên cấp 20.</p> 
+										<h4 datetime="2019-08-06"><?= $row->ten ?></h4>
+								
+										<p class="title"><?= get_date($row->created) ?></p> 
+										<p class="title"><?= $row->mota ?></p> 
 									</div> 
 								</a> 
 							</li>
-							<li> 
-								<a href="#"> 
-									<div class="head"> 
-										<p class="image">
-											<img src="../images/mbac2.jpg" width="282" height="164" class="attachment-info_thumbnail size-info_thumbnail wp-post-image" alt="" data-lazy-loaded="true" style="display: block;">
-										</p> 
-									</div> 
-									<div class="body"> 
-										<p class="date">
-											<time datetime="2019-07-05">2019 / 07 / 05</time>
-										</p> 
-										<p class="title">Lễ khai giảng khóa tháng 7 năm 2019</p> 
-									</div> 
-								</a> 
-							</li>
-							<li> 
-								<a href="#"> 
-									<div class="head"> 
-										<p class="image">
-											<img src="../images/mbac3.jpg" width="282" height="164" class="attachment-info_thumbnail size-info_thumbnail wp-post-image" alt="" data-lazy-loaded="true" style="display: block;">
-										</p> 
-									</div> 
-									<div class="body"> 
-										<p class="date">
-											<time datetime="2019-06-25">2019 / 06 / 25</time>
-										</p> 
-										<p class="title">Buổi giới thiệu trường,kiểm tra phân lớp và lễ khai giảng cho kỳ tháng 7.2019</p> 
-									</div> 
-								</a> 
-							</li>
-							<li> 
-								<a href="#"> 
-									<div class="head"> 
-										<p class="image">
-											<img src="../images/mbac4.jpg" width="282" height="164" class="attachment-info_thumbnail size-info_thumbnail wp-post-image" alt="" data-lazy-loaded="true" style="display: block;">
-										</p> 
-									</div> 
-									<div class="body"> 
-										<p class="date">
-											<time datetime="2019-06-25">2019 / 06 / 25</time>
-										</p> 
-										<p class="title">Buổi giới thiệu trường,kiểm tra phân lớp và lễ khai giảng cho kỳ tháng 7.2019</p> 
-									</div> 
-								</a> 
-							</li>
-							<li> 
-								<a href="#"> 
-									<div class="head"> 
-										<p class="image">
-											<img src="../images/mbac5.jpg" width="282" height="164" class="attachment-info_thumbnail size-info_thumbnail wp-post-image" alt="" data-lazy-loaded="true" style="display: block;">
-										</p> 
-									</div> 
-									<div class="body"> 
-										<p class="date">
-											<time datetime="2019-06-25">2019 / 06 / 25</time>
-										</p> 
-										<p class="title">Buổi giới thiệu trường,kiểm tra phân lớp và lễ khai giảng cho kỳ tháng 7.2019</p> 
-									</div> 
-								</a> 
-							</li>
-							<li> 
-								<a href="#"> 
-									<div class="head"> 
-										<p class="image">
-											<img src="../images/hue2.jpg" width="282" height="164" class="attachment-info_thumbnail size-info_thumbnail wp-post-image" alt="" data-lazy-loaded="true" style="display: block;">
-										</p> 
-									</div> 
-									<div class="body"> 
-										<p class="date">
-											<time datetime="2019-06-25">2019 / 06 / 25</time>
-										</p> 
-										<p class="title">Buổi giới thiệu trường,kiểm tra phân lớp và lễ khai giảng cho kỳ tháng 7.2019</p> 
-									</div> 
-								</a> 
-							</li>
+							<?php endforeach ?>						
 						</ul>
 <!-- 						<ul class="module_pager-01" role="menubar" aria-label="Pagination">
 							<li class="prev current_prev">
@@ -148,7 +75,7 @@
 						</ul> -->
 					</main>
 
-					<aside class="gc_sub">
+				<!-- 	<aside class="gc_sub">
 						<nav class="local_navigation" id="local_navigation">
 							<h3 class="module_newsTitle-01"><span>Latest News</span></h3>
 							<ul class="module_newsList-01">
@@ -214,7 +141,7 @@
 								</li> 
 							</ul> -->
 						</nav>
-					</aside>
+					</aside> -->
 				</div>
 			</section>
 		</article>

@@ -30,14 +30,16 @@ class News extends MY_Controller {
 		if ($this->input->post()) {
 			//B2: Xét Form_validation
 			$this->form_validation->set_rules('ten', 'Tên thư mục', 'required');
-			$this->form_validation->set_rules('mota', 'Tên thư mục', 'required');
-			$this->form_validation->set_rules('noidung', 'Tên thư mục', 'required');
+			$this->form_validation->set_rules('mota', 'Mô tả', 'required');
+			$this->form_validation->set_rules('parent_id', 'Thư mục', 'required');
+			$this->form_validation->set_rules('noidung', 'Nội dung', 'required');
 			//B3: Kiểm form_validation chạy
 			if ($this->form_validation->run()) {
 				//B4: Đưa các biến vào một biến array
 				$data = array(
 					'ten'     => $this->input->post('ten'),
 					'mota'    => $this->input->post('mota'),
+					'id_catalog'    => $this->input->post('parent_id'),
 					'noidung' => $this->input->post('noidung'),
 					'created' => now() 
 				);

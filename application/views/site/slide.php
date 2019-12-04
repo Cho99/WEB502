@@ -2,43 +2,22 @@
 	<div class="slidewrapper">
 		<div class="cacslide">
 			<ul>
-				<li class="active">
+				<?php 
+				$active=0;
+				?>
+				<?php foreach ($slide as $row): $active++ ?>
+				<li class="<?= ($active==1?'active':'') ?>">
 					<div class="motslide">
-						<div class="anh" style="background-image: url(images/ht9.jpeg);"></div>
+						<div class="anh" style="background-image: url(<?= base_url('upload/slide/').$row->image_link ?>);"></div>
 						<div class="textnd">
-							<h2>Huế</h2>
-							<small>Thành phố Festival du lịch</small>
+							<h2><?= $row->ten ?></h2>
+							<small><?= $row->tieude ?></small>
 							<div class="ke"></div>
-							<p>Từng là Kinh đô của triều đại nhà Nguyễn, chính vì thế mà Huế được xem là một trong những thành phố có bề dày lịch sử, văn hóa lâu đời nhất ở nước ta...</p>
-							<!-- <a href="chitiettour.php" class="nut">Xem Thêm</a> -->
+							<p><?= $row->noidung ?></p>
 						</div>
 					</div>
 				</li>
-				<li>
-					<div class="motslide">
-						<div class="anh" style="background-image: url(images/ht_gt1.jpg);"></div>
-						<div class="textnd">
-							<h2>Nha Trang</h2>
-							<small>Biển xanh dài bất tận</small>
-							<div class="ke"></div>
-							<p>Thành phố biển Nha Trang là thủ phủ của tỉnh Khánh Hòa, thuộc miền duyên hải Nam Trung bộ Việt Nam. Vịnh biển Nha Trang là một trong những vịnh biển đẹp nhất thế giới...</p>
-							<!-- <a href="chitiettour.php" class="nut">Xem Thêm</a> -->
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="motslide">
-						<div class="anh" style="background-image: url(images/ht7.jpeg);"></div>
-						<div class="textnd">
-							<h2>Hội An</h2>
-							<small>Nét đẹp văn hóa truyền thống</small>
-							<div class="ke"></div>
-							<p>Phố cổ Hội An là một thành phố nổi tiếng của tỉnh Quảng Nam, một phố cổ giữ được gần như nguyên vẹn với hơn 1000 di tích kiến trúc từ phố xá, nhà cửa, hội quán, đình...</p>
-							<!-- <a href="chitiettour.php" class="nut">Xem Thêm</a> -->
-						</div>
-					</div>
-				</li>
-
+				<?php endforeach ?>
 			</ul>
 
 		</div>

@@ -38,7 +38,7 @@
         <tr>
           <td style="width:21px;"><img src="<?php echo public_url('admin/images')?>/icons/tableArrows.png"></td>
           <td style="width:30px;">Mã số</td>
-          <td>Ảnh Banner</td>
+          <td style="width:220px;">Ảnh Banner</td>
           <td style="">Mô tả</td>
           <td style="">Nội dung</td>
           <td style="width:120px;">Hành động</td>
