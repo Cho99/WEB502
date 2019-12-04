@@ -1,7 +1,7 @@
 <div class="lzd-playground">
 	<?php if($total_items > 0): ?>
 	<div class="lzd-playground-main">
-		<div class="lzd-playground-nav">
+		<!-- <div class="lzd-playground-nav">
 			<div class="member-info">
 				<p><span>Xin chào,&nbsp;</span><span id="lzd_current_logon_user_name">Đức Kỷ</span></p>
 			</div>
@@ -42,7 +42,7 @@
 					</a>
 				</li>
 			</ul>
-		</div>
+		</div> -->
 		<form action="<?= base_url('cart/update') ?>" method="POST">
 		<div class="lzd-playground-right">
 			<div class="breadcrumbkhachhang">
@@ -88,12 +88,7 @@
 
 								<div class="text title item-title giohangflex" data-spm="details_title">
 									<h5>Ngày đi:</h5>
-<<<<<<< HEAD
-									  <input class="ngayditour" type="date" name="day_<?php echo $row['id']?>" value="<?php echo date('Y-m-d', $row['ngay_di']) ;?>"/>
-									  <div><?= form_error('day_'.$row['id']) ?></div>
-=======
 									  <p class="text bold"><?php echo  get_date($row['ngay_di']);?></p>
->>>>>>> 27d7c8ab30ed64442a4e6975d3a01430d23551cb
 								</div>
 								<div class="text title item-title giohangflex" data-spm="details_title">
 									<h5>Tổng số:</h5>

@@ -43,9 +43,9 @@
 									</div> 
 									<div class="body"> 
 										<p class="date">
-											<time datetime="2019-08-06">2019 / 08 / 06</time>
+											<time datetime="2019-08-06">Sapa</time>
 										</p> 
-										<p class="title">Buổi giới thiệu trường,kiểm tra phân lớp và lễ khai giảng cho kỳ tháng 10.2019</p> 
+										<p class="title">Một cái lạnh không thể tả nổi, không thể tin được, cóc bao tử chua quá. sapa có tuyết phủ trắng, lạnh như bắc cực, nhiệt độ dưới mức âm, gió dật từ cấp 9 đên cấp 20.</p> 
 									</div> 
 								</a> 
 							</li>

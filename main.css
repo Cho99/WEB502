@@ -4496,6 +4496,6 @@ ul.module_list-01 li + li, ul.module_list-notes-01 li + li, ol.module_list-01 li
 	}
 	.global_inner, .local_inner {
 		margin: 0 auto;
-		padding: 0 30px;
+		padding: 0 15px;
 	}
 }
