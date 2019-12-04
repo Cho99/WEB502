@@ -88,7 +88,12 @@
 
 								<div class="text title item-title giohangflex" data-spm="details_title">
 									<h5>Ngày đi:</h5>
+<<<<<<< HEAD
+									  <input class="ngayditour" type="date" name="day_<?php echo $row['id']?>" value="<?php echo date('Y-m-d', $row['ngay_di']) ;?>"/>
+									  <div><?= form_error('day_'.$row['id']) ?></div>
+=======
 									  <p class="text bold"><?php echo  get_date($row['ngay_di']);?></p>
+>>>>>>> 27d7c8ab30ed64442a4e6975d3a01430d23551cb
 								</div>
 								<div class="text title item-title giohangflex" data-spm="details_title">
 									<h5>Tổng số:</h5>
@@ -113,11 +118,11 @@
 			</div>
 		    <?php endforeach ?>
 		    <div class="orders">
-		    	<div class="order">
+		    	<div class="order khoibtntour">
 		    		<div>Tổng số tiền thanh toán: <b style="color: red"><?= number_format($total_amount) ?>Đ - <a href="<?= base_url('cart/del') ?>" class="btn btn-warning btn-sm">Xóa toàn bộ giỏ hàng</a></b></div>
-		    		<div>
-		    			<button type="submit" class="btn btn-outline-primary btn-sm">Cập nhật</button>
-		    		    <a href="order/checkout" class="btn btn-sm - btn-outline-success">Thanh toán</a>
+		    		<div class="lopbtn">
+		    			<button type="submit" class="btn btn-outline-primary btn-sm btncapnhat">Cập nhật</button>
+		    		    <a href="order/checkout" class="btn btn-sm - btn-outline-success thanhtoan">Thanh toán</a>
 		    		</div>	
 		    	</div>
 		    </div>

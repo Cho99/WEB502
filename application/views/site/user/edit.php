@@ -5,14 +5,6 @@
 	<div id="container" class="container rightContainer_1UxO">
 		<div class="accountPage_2lsd">
 			<div class="row pageInner_1FHx">
-				<div class="col-sm-12 col-md-2 col-lg-2">
-					<div class="avatar_3KH_">
-						<div>
-							<img src="//graph.facebook.com/2141500879477452/picture?type=large" title="Đức">
-							<button>Thay đổi</button>
-						</div>
-					</div>
-				</div>
 				<div class="col-sm-12 col-md-10 col-lg-10">
 					<div>
 						<form class="accountFormWrap_2oXG" action="" method="post">

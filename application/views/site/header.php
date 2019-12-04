@@ -167,10 +167,10 @@
 						</div> 
 					</li> -->
 					<li class="nav-item ndheaderduoi">
-						<a class="nav-link" href="#">Tin tức</a>
+						<a class="nav-link" href="<?= base_url('news/index') ?>">Tin tức</a>
 					</li>
 					<li class="nav-item ndheaderduoi">
-						<a class="nav-link" href="#">Giới thiệu</a>
+						<a class="nav-link" href="<?= base_url('about/index') ?>">Giới thiệu</a>
 					</li>
 					<li class="nav-item ndheaderduoi">
 						<a class="nav-link" href="<?= base_url('contact') ?>">Liên hệ</a>
