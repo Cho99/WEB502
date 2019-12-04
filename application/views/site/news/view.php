@@ -9,12 +9,12 @@
 						</a>
 					</li>
 					<li>
-						<a href="lienhe.php">
+						<a href="#">
 							<span>New</span>
 						</a>
 					</li>
 					<li>
-						<a href="lienhe.php">
+						<a href="#">
 							<span><?= $new->ten ?></span>
 						</a>
 					</li>
@@ -40,8 +40,16 @@
 					<h2 class="module_title-01 "> 
 						<span>Nội dung</span>
 					</h2>  
-					 <div> Ngày đăng:<?= get_date($new->created) ?></div>
-					<div>Mô tả:<?= $new->mota  ?></div>
+					<div class="chitietngaydang">
+						<p>Ngày đăng :</p>
+						<div><?= get_date($new->created) ?></div>
+					</div>
+					<div class="chitietmota">
+						<p>Mô tả :</p>
+						<div><?= $new->mota  ?></div>
+					</div>
+					 
+					<div></div>
 					<div>
 						<?= $new->noidung?>
 					</div>

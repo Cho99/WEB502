@@ -43,105 +43,15 @@
 										</p> 
 									</div> 
 									<div class="body"> 
-										<h4 datetime="2019-08-06"><?= $row->ten ?></h4>
-								
-										<p class="title"><?= get_date($row->created) ?></p> 
-										<p class="title"><?= $row->mota ?></p> 
+										<h4 class="namenews" ><?= $row->ten ?></h4>
+										<p class="title ngaydang"><?= get_date($row->created) ?></p> 
+										<p class="title motanews"><?= $row->mota ?></p> 
 									</div> 
 								</a> 
 							</li>
 							<?php endforeach ?>						
 						</ul>
-<!-- 						<ul class="module_pager-01" role="menubar" aria-label="Pagination">
-							<li class="prev current_prev">
-								<a href="#">
-									<i class="fal fa-angle-left"></i>
-								</a>
-							</li>
-							<li class="current">
-								<a class="current">1</a>
-							</li>
-							<li class="current_next">
-								<a href="#" class="inactive">2</a>
-							</li>
-							<li class="current_next2">
-								<a href="#" class="inactive">3</a>
-							</li>
-							<li class="next">
-								<a href="#">
-									<i class="fal fa-angle-right"></i>
-								</a>
-							</li>
-						</ul> -->
 					</main>
-
-				<!-- 	<aside class="gc_sub">
-						<nav class="local_navigation" id="local_navigation">
-							<h3 class="module_newsTitle-01"><span>Latest News</span></h3>
-							<ul class="module_newsList-01">
-								<li class="jp"> 
-									<a href="#"> 
-										<div class="head"> 
-											<p class="image"> 
-												<img src="../images/ht1.jpeg" width="282" height="164" class="attachment-info_thumbnail size-info_thumbnail wp-post-image" alt="" data-lazy-loaded="true" style="display: block;">
-											</p> 
-										</div> 
-										<div class="body"> 
-											<p class="title"> 
-												<time datetime="2019-08-06">2019 / 08 / 06 </time>Buổi giới thiệu trường,ki…
-											</p> 
-										</div> 
-									</a> 
-								</li>
-								<li class="jp"> 
-									<a href="#"> 
-										<div class="head"> 
-											<p class="image"> 
-												<img src="../images/ht2.jpeg" width="282" height="164" class="attachment-info_thumbnail size-info_thumbnail wp-post-image" alt="" data-lazy-loaded="true" style="display: block;">
-											</p> 
-										</div> 
-										<div class="body"> 
-											<p class="title"> 
-												<time datetime="2019-07-05">2019 / 07 / 05 </time>Lễ khai giảng khóa tháng …
-											</p> 
-										</div> 
-									</a> 
-								</li>
-								<li class="jp"> 
-									<a href="#"> 
-										<div class="head"> 
-											<p class="image"> 
-												<img src="../images/ht3.jpeg" width="282" height="164" class="attachment-info_thumbnail size-info_thumbnail wp-post-image" alt="" data-lazy-loaded="true" style="display: block;">
-											</p> 
-										</div> 
-										<div class="body"> 
-											<p class="title"> 
-												<time datetime="2019-06-25">2019 / 06 / 25 </time>Buổi giới thiệu trường,ki…
-											</p> 
-										</div> 
-									</a> 
-								</li>
-							</ul>
-<!-- 							<h3 class="module_newsTitle-02">
-								<span>Archive</span>
-							</h3>
-							<ul class="ln_links"> 
-								<li> 
-									<ul class="year-list">
-										<li>
-											<a href="https://twla.jp/vi/date/2019">2019</a>
-										</li>
-										<li>
-											<a href="https://twla.jp/vi/date/2018">2018</a>
-										</li>
-										<li>
-											<a href="https://twla.jp/vi/date/2017">2017</a>
-										</li>
-									</ul> 
-								</li> 
-							</ul> -->
-						</nav>
-					</aside> -->
 				</div>
 			</section>
 		</article>

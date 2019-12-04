@@ -785,6 +785,7 @@ body{
 	}
 	.sl-travel{
 		width: 100%;
+	    margin-bottom: 15px !important;
 	}
 	.pos-travel{
 		width: 100%;
@@ -4498,4 +4499,32 @@ ul.module_list-01 li + li, ul.module_list-notes-01 li + li, ol.module_list-01 li
 		margin: 0 auto;
 		padding: 0 15px;
 	}
+}
+.namenews{
+	margin: 0 !important;
+}
+.ngaydang{
+	font-size: 11px;
+	color: #327f98;
+	margin: 0 !important;
+}
+.motanews{
+	margin-top: 5px;
+}
+.chitietngaydang{
+	display: flex;
+}
+.chitietngaydang p{
+	color: #327f98;
+	margin: 0!important;
+}
+.chitietngaydang div{
+	color: #327f98;
+	margin-left: 5px;
+}
+.chitietmota{
+	display: flex;
+}
+.chitietmota div{
+	margin-left: 5px;
 }
