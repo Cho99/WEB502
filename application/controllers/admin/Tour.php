@@ -29,6 +29,7 @@ class Tour extends MY_Controller {
         $config['uri_segment'] = 4;//phan doan hien thi ra so trang tren url
         $config['next_link']   = 'Trang kế tiếp';
         $config['prev_link']   = 'Trang trước';
+        
         //khoi tao cac cau hinh phan trang
         $this->pagination->initialize($config);
         

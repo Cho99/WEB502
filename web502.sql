@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 03, 2019 lúc 03:14 AM
+-- Thời gian đã tạo: Th12 05, 2019 lúc 03:04 AM
 -- Phiên bản máy phục vụ: 10.3.16-MariaDB
 -- Phiên bản PHP: 7.1.30
 
@@ -21,6 +21,18 @@ SET time_zone = "+00:00";
 --
 -- Cơ sở dữ liệu: `web502`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `about`
+--
+
+CREATE TABLE `about` (
+  `id` int(11) NOT NULL,
+  `ten` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `noidung` text COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -149,8 +161,20 @@ CREATE TABLE `new` (
   `ten` varchar(50) CHARACTER SET utf8 NOT NULL,
   `mota` varchar(255) CHARACTER SET utf8 NOT NULL,
   `noidung` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `id_catalog` int(11) NOT NULL
+  `id_catalog` int(11) NOT NULL,
+  `created` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=koi8r;
+
+--
+-- Đang đổ dữ liệu cho bảng `new`
+--
+
+INSERT INTO `new` (`id`, `ten`, `mota`, `noidung`, `id_catalog`, `created`) VALUES
+(3, 'Sapa rất lạnh ', 'Trời miền bắc rất lạnh', 'Sa Pa nằm cách thành phố Lào Cai 38km và cách Hà Nội 376km. Để du lịch Sa Pa bạn có thể chọn phương tiện là tàu hỏa hoặc ô tô. Nên đi tàu đêm để sáng sớm đến Sapa.\r\n\r\nHiện nay đường cao tốc Lào Cai rất đẹp, êm ru, có thể đi ô tô riêng hoặc xe khách cũng rất thuận tiện. Nếu đi nhóm đông người, các bạn có thể thuê 1 chiếc xe riêng.\r\nNhà Thờ Cổ Sapa: Nằm ở giữa trung tâm Sapa là một tu viện cổ kính, đẹp nguy nga, huyền bí, được người Pháp xây vào cuối thế kỷ XVIII, dấu ấn kiến trúc của người Pháp còn lại vẹn toàn nhất. Bất cứ ai nhìn thấy nó đều ngạc nhiên vì thời kỳ đó đã có một công trình vừa đồ sộ vừa cầu kỳ một cách lạ thường.Chợ Sapa: là một hoạt động kinh tế văn hóa rất độc đáo, đây là nơi trao đổi mua bán nhiều loại hàng hóa, sản phẩm địa phương.\r\n\r\n', 2, 1575468365),
+(4, 'Hà Nội', 'Đẹp một cách hữu tình', 'Hà Nội, âm thanh vang lên nghe thật trong trẻo, làm động lòng trái tim bao người con đất Việt. Trải qua biết bao thăng trầm lịch sử, Hà Nội vẫn sừng sững ở đó, nguy nga tráng lệ. Nói về Hà Nội, người ta không khỏi nghĩ đến một thành phố tấp nập, những công ti cao trọc trời, những trung tâm giải trí, trung tâm thương mại rộng lớn. Nhưng bạn biết không, bên cạnh vẻ đẹp hiện đại đấy, Hà Nội vẫn giữ cho mình một nét rất riêng, rất Hà Nội mà không nơi đâu có được.', 2, 65422),
+(5, 'Huế', 'Đẹp như 1 nàng thơ', 'Huế – mảnh đất lãng mạn, mộng mơ, đậm chất thơ, một miền di sản có một không hai về vẻ đẹp rất riêng, rất ngọt ngào. Khi chưa đặt chân đến Huế, tôi không mường tượng được một cố đô đầy chất thơ sẽ ra sao giữa thời hiện đại. Nhìn cuộc sống sôi động, ồn ào, náo nhiệt không ngừng ở Thủ đô Hà Nội và tp Hồ Chí Minh, tôi bất chợt lo lắng cho thành phố nhỏ, thơ mộng ấy dường như chỉ xuất hiện trong thơ ca, nhạc họa và nhiếp ảnh...\r\nTrang chủDu lịchTheo chân du khách\r\n \r\nTheo chân du khách\r\nCảm xúc về Huế thân thương\r\nHuế – mảnh đất lãng mạn, mộng mơ, đậm chất thơ, một miền di sản có một không hai về vẻ đẹp rất riêng, rất ngọt ngào. Khi chưa đặt chân đến Huế, tôi không mường tượng được một cố đô đầy chất thơ sẽ ra sao giữa thời hiện đại. Nhìn cuộc sống sôi động, ồn ào, náo nhiệt không ngừng ở Thủ đô Hà Nội và tp Hồ Chí Minh, tôi bất chợt lo lắng cho thành phố nhỏ, thơ mộng ấy dường như chỉ xuất hiện trong thơ ca, nhạc họa và nhiếp ảnh...\r\n\r\nThế rồi, tôi cũng đến Huế. Huế đón chào tôi giống như khi tôi ngắm Huế qua những bức ảnh, thơ ca… Thật bình yên, thơ mộng đến lạ kỳ, Huế bình lặng từ cảnh vật đến con người. Từ nụ cười dịu dàng, kín đáo sau vành nón lá của các cô gái Huế đạp xe trên phố cho đến nét đôn hậu vô tư của bà chủ quán hàng ăn, tay thoăn thoắt xếp bánh bèo cho khách đang nôn nóng chờ đợi…Huế có sông Hương hiền hòa thơ mộng, có núi Ngự thông reo vi vu giữa trời xanh. Huế có Kinh thành, nơi chứng kiến biết bao sự đổi thay quyền cai trị đất nước, lúc thịnh lúc suy. Huế có lăng tẩm đền đài lưu dấu ngàn thu của các bậc Vua chúa. Huế có Từ Đàm, ngôi Phạm Vũ đã chứng tri biết bao biến động thăng trầm hào hùng của lịch sử nước nhà. Huế có Thiên Mụ, ngôi cổ tự hùng thiêng trải qua bao thế hệ. Những hồi chuông Thiên Mụ còn mãi ngân vang từ ngàn xưa cho tới tận ngàn đời sau. Tháp Phước Duyên vời vợi giữa chốn Kinh kỳ, như thâu gọn hồn thiêng của Tổ quốc.', 2, 66545),
+(6, 'Đà Lạt', 'Đà Lạt mộng mơ và quyến rũ', 'Thiên nhiên và con người Đà Lạt đi vào những áng văn thơ, những bức tranh ảnh, vào nghệ thuật, và trong tim mỗi người. Song dù có cố gắng miêu tả thế nào, chỉ khi tự mình đặt chân đến, bạn mới có những cảm nhận thật nhất của riêng mình. Không dám tự nhận là đã hiểu hết về Đà Lạt, xin mạo muội đưa ra những đúc kết của riêng mình về thành phố Đà Lạt – những lý do mà mỗi chúng ta đều yêu mến nơi này.Còn gì tuyệt hơn khi có thể chạy trốn cái nắng nóng của Sài Gòn, đến với Đà Lạt yên bình. Những người con phương Nam chưa bao giờ biết đến mùa đông phương Bắc có thể cảm nhận chút ít tại Đà Lạt. Điều đặc biệt là tiết trời Đà Lạt chỉ se se chứ không quá lạnh… cực kỳ đáng giá là địa điểm nghỉ ngơi.Với rừng thông bạt ngàn, rất nhiều hồ nước, sông suối, Đà Lạt sở hữu khí hậu tuyệt vời. Không khí ở đây trong lành, mát mẻ, khác hẳn sự ngột ngạt, đông đúc của những đô thị lớn như Sài Gòn, Hà Nội. Đến Đà Lạt, bạn có thể trải nghiệm 1 ngày với 4 mùa: Buổi sáng sớm là thời tiết của mùa xuân, buổi trưa là mùa hạ, buổi chiều là mùa thu, và đêm là mùa đông…. Do đó du lịch Đà Lạt không cần mùa, cần tháng. Đà Lạt lúc nào cũng đẹp, cũng mát diụ, cũng nên thơ.', 3, 6824),
+(7, 'TP Hồ Chí Mình', 'Thành phố mang tên Bác', 'Nếu như Hà Nội - bên cạnh nhịp sống hối hả, hiện đại còn ẩn chứa vẻ đẹp thâm trầm sâu lắng của thành phố ngàn năm tuổi, thì Thành phố Hồ Chí Minh (TPHCM) lại là một thành phố trẻ trung, sôi động với nhịp sống hiện đại… TPHCM hiện nay (Sài Gòn trước đây) đã trải qua bao nhiêu thay đổi, nhưng nhịp sống trẻ đầy nhiệt huyết vẫn chẳng hề đổi thay, luôn năng động và hội nhập nhanh chóng với những cái mới khiến bất kì ai đến đây cũng không thể chối từ được “cuốn theo” nhịp sống ấy. Nếu bạn có cơ hội, hãy đến với TPHCM trong dịp Xuân mới để cùng trải nghiệm, khám phá vẻ đẹp và văn hóa của con người mảnh đất phương Nam.Chợ Bến Thành được xem như nhân chứng lịch sử hùng hồn, chứng kiến biết bao đau thương cũng như sự thay đổi, phát triển từng ngày của thành phố, trở thành biểu tượng của TPHCM. Ngày nay, khu chợ vẫn giữ vai trò quan trọng và là một trong những trung tâm buôn bán tấp nập, sầm uất không chỉ của TPHCM mà còn của các tỉnh phía Nam.Một biểu tượng khác của thành phố không thể không nhắc đến là Nhà thờ Đức Bà Sài Gòn (có tên chính thức là Vương cung thánh đường Chính tòa Đức Mẹ Vô nhiễm Nguyên tội), là nhà thờ chính tòa của Tổng giáo phận TPHCM. Nhà thờ không chỉ mang ý nghĩa tôn giáo, mà nó còn mang giá trị kiến trúc độc đáo, một điểm đến hấp dẫn cho khách du lịch. Nhà thờ được người Pháp xây dựng ngay sau khi vừa chiếm được Sài Gòn, trở thành nơi hành lễ cho người Pháp theo đạo Công giáo. Lúc đầu, Nhà thờ khá nhỏ, được linh mục Lefebvre xây dựng trên nền một ngôi chùa bỏ hoang của người Việt. Năm 1876, Thống đốc Nam kỳ Duperré đã tổ chức kỳ thi vẽ đồ án thiết kế Nhà thờ và đồ án của kiến trúc sư J.Bourard với phong cách kiến trúc Roman cải biên pha trộn nét phong cách kiến trúc Gothic đã được chọn. Nhà thờ được xây dựng trong 3 năm (1877-1880), cho đến năm 1895, Nhà thờ xây dựng thêm hai tháp chuông, mỗi tháp cao gần 60 m và có 6 chuông đồng lớn, trên đỉnh có một cây thánh giá cao 3,5 m với trọng lượng 600 kg. Trong quá trình xây dựng, toàn bộ nguyên vật liệu xây dựng từ xi măng, sắt thép đến ốc vít đều mang từ Pháp sang. Từng chi tiết nội thất, thiết kế đều được tính toán tỉ mỉ, cẩn thận và đầy nghệ thuật. Cho đến ngày nay, Nhà thờ Đức Bà Sài Gòn vẫn luôn được xem là thành tựu nổi bật cho kiến trúc tại Sài Gòn.', 1, 5343);
 
 -- --------------------------------------------------------
 
@@ -222,6 +246,14 @@ CREATE TABLE `slide` (
   `created` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `slide`
+--
+
+INSERT INTO `slide` (`id`, `ten`, `image_link`, `tieude`, `noidung`, `created`) VALUES
+(8, 'Huế', 'hue2.jpg', 'THÀNH PHỐ FESTIVAL DU LỊCH', 'Từng là Kinh đô của triều đại nhà Nguyễn, chính vì thế mà Huế được xem là một trong những thành phố có bề dày lịch sử, văn hóa lâu đời nhất ở nước ta...', 1575470391),
+(9, 'Nha Trang', 'nhatrang1.jpg', 'BIỂN XANH DÀI BẤT TẬN', 'Thành phố biển Nha Trang là thủ phủ của tỉnh Khánh Hòa, thuộc miền duyên hải Nam Trung bộ Việt Nam. Vịnh biển Nha Trang là một trong những vịnh biển đẹp nhất thế giới...', 1575470480);
+
 -- --------------------------------------------------------
 
 --
@@ -249,11 +281,15 @@ CREATE TABLE `tour` (
 --
 
 INSERT INTO `tour` (`id`, `catalog_id`, `name`, `price`, `discount`, `amount`, `booked`, `image_link`, `days`, `content`, `created`, `view`, `buyed`) VALUES
-(1, 1, 'Du lịch Hoàng Thành Thăng Long VIP', '2000000.0000', 200000, 30, 20, 'mbac41.jpg', 5, 'Du lịch cực kỳ đẹp', 1572272643, 147, 12),
-(4, 3, 'Du lịch Miền Nam', '2000000.0000', 200000, 30, 30, 'mbac41.jpg', 3, 'Du lịch cực kỳ đẹp', 1572272643, 124, 5),
-(9, 2, 'Miền Trung', '9000000.0000', 500000, 1, 1, 'dalat1.jpg', 4, 'Thật thú vị', 1573287594, 8, 1),
-(11, 2, 'Đà nẵng', '9000000.0000', 500, 22, 17, 'dd31.jpg', 7, '132', 1573479608, 9, 5),
-(12, 1, 'Du lịch Hoàng Thành Thăng Long', '15000000.0000', 500000, 30, 21, 'mbac41.jpg', 5, 'Du lịch cực kỳ đẹp', 1572272643, 125, 10);
+(1, 1, 'Du lịch Hoàng Thành Thăng Long VIP', '2000000.0000', 200000, 30, 20, 'mbac41.jpg', 5, 'Du lịch cực kỳ đẹp', 1572272643, 156, 12),
+(4, 3, 'Du lịch Miền Nam', '2000000.0000', 200000, 30, 30, 'mbac41.jpg', 3, 'Du lịch cực kỳ đẹp', 1572272643, 125, 5),
+(9, 2, 'Miền Trung', '9000000.0000', 500000, 1, 1, 'dalat1.jpg', 4, 'Thật thú vị', 1573287594, 10, 1),
+(11, 2, 'Đà nẵng', '9000000.0000', 500, 22, 17, 'dd31.jpg', 7, '132', 1573479608, 10, 5),
+(12, 1, 'Du lịch Hoàng Thành Thăng Long', '15000000.0000', 500000, 30, 21, 'mbac41.jpg', 5, 'Du lịch cực kỳ đẹp', 1572272643, 126, 10),
+(13, 1, 'Chùa một cột', '200000.0000', 1000, 30, 20, 'mbac41.jpg', 1, 'Đi là nhớ', 1730, 256, 120),
+(15, 2, 'Cầu vàng', '7000000.0000', 4500000, 25, 22, 'dd31.jpg', 3, 'Đi để trở về', 301199, 784, 620),
+(16, 3, 'Vũng Tàu', '500000.0000', 3000000, 12, 6, 'mbac41.jpg', 5, 'Đi là nhớ', 6534, 345, 120),
+(17, 3, 'Cần Thơ', '3500000.0000', 1500000, 20, 15, 'mbac41.jpg', 5, 'Đi xa để nhớ', 7542, 412, 212);
 
 -- --------------------------------------------------------
 
@@ -278,11 +314,17 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `ten`, `cmnd`, `sdt`, `diachi`, `avatar`, `email`, `password`) VALUES
 (1, 'Dog', 123131, 12712313, '504H4, Khu đô thị Việt Hưng', '', 'quangsoi99@gmail.com', '123'),
-(5, 'Anh99', 2147483647, 127, '1231312312313', '', 'A@gmail.com', '123');
+(5, 'admin', 2147483647, 127, '1231312312313', '', 'admin@gmail.com', '123');
 
 --
 -- Chỉ mục cho các bảng đã đổ
 --
+
+--
+-- Chỉ mục cho bảng `about`
+--
+ALTER TABLE `about`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Chỉ mục cho bảng `admin`
@@ -343,6 +385,12 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT cho bảng `about`
+--
+ALTER TABLE `about`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT cho bảng `admin`
 --
 ALTER TABLE `admin`
@@ -370,7 +418,7 @@ ALTER TABLE `giaodich`
 -- AUTO_INCREMENT cho bảng `new`
 --
 ALTER TABLE `new`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT cho bảng `order`
@@ -382,13 +430,13 @@ ALTER TABLE `order`
 -- AUTO_INCREMENT cho bảng `slide`
 --
 ALTER TABLE `slide`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT cho bảng `tour`
 --
 ALTER TABLE `tour`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT cho bảng `user`
