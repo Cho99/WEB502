@@ -87,7 +87,7 @@
 									</div>
 									<div>
 										Số lượt đặt còn nhận:
-										<span class="sit"><?= $place ?></span>
+										<span class="sit"><?= $place ?> lượt</span>
 									</div>
 								</div>
 								<?php else:?>

@@ -114,10 +114,6 @@
 									<span><?= $row->days ?> ngày</span>
 								</div>
 								<div class="gia-calender">
-									<div class="calender">
-										<i class="far fa-calendar-alt"></i>
-										<span></span>
-									</div>
 									<?php if($row->discount > 0) ?>
 									<?php $price = $row->price - $row->discount ?>
 									<div class="gia"><span><?= number_format($price) ?> đ</span></div>

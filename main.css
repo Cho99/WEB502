@@ -4617,7 +4617,7 @@ border-top-right-radius: 5px !important;
 .global_address input{
 	
 }
-.global_inner{
+.glob_inner{
 
 width: 100%;
 
@@ -4639,13 +4639,13 @@ border-radius: initial;
 
 background: #1d9fd8;
 }
-.global_inner span{
+.glob_inner span{
 	padding: 13px 0px 13px 15px;
 	width: 25%;
 	text-align: justify;
 	color: #fff;
 }
-.global_inner input{
+.glob_inner input{
 
 width: 75%;
 
@@ -4670,12 +4670,12 @@ padding-top: 70px;
 	
 width: 100%;
 }
-.global_inner input::-webkit-input-placeholder {
+.glob_inner input::-webkit-input-placeholder {
   font-size: 11px;
   margin-left: 15px;
   color: gray;
 }
-.global_inner textarea{
+.glob_inner textarea{
 
 }
 .btn_dangky{

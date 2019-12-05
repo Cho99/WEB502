@@ -11,31 +11,31 @@
 			<H1 class="name_dangky" >Đăng ký</H1>
 			<div class="container global_dangky">
 				<form method="post" class="form_dangky">
-					<div class="form-control global_email global_inner">
+					<div class="form-control global_email glob_inner">
 						<span>Email*</span>
 						<input type="text" name="email" placeholder="Nhập Email">
 					</div>
-					<div class="form-control global_matkhau global_inner">
+					<div class="form-control global_matkhau glob_inner">
 						<span>Mật khẩu*</span>
 						<input type="text" name="password" placeholder="Nhập password">
 					</div>
-					<div class="form-control global_nhaplaimk global_inner">
+					<div class="form-control global_nhaplaimk glob_inner">
 						<span>Nhập lại mật khẩu*</span>
 						<input type="text" name="re_password" placeholder="Nhập lại password">
 					</div>
-					<div class="form-control global_name global_inner">
+					<div class="form-control global_name glob_inner">
 						<span>Họ và tên*</span>
 						<input type="text" name="ten" placeholder="Họ và Tên">
 					</div>
-					<div class="form-control global_sdt global_inner">
+					<div class="form-control global_sdt glob_inner">
 						<span>Sdt*</span>
 						<input type="text" name="sdt" placeholder="Số điện thọa">
 					</div>
-					<div class="form-control global_cmt global_inner">
+					<div class="form-control global_cmt glob_inner">
 						<span>cmnd*</span>
 						<input type="text" name="cmnd" placeholder="Số chứng minh thư nhân dân">
 					</div>
-					<div class="form-control global_address global_inner">
+					<div class="form-control global_address glob_inner">
 						<span>Địa chỉ*</span>
 						<input name="diachi" placeholder="nhập địa chỉ"></input>
 					</div>

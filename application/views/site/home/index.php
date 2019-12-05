@@ -18,7 +18,7 @@
 											<div class="po-title-l dot-dot-ajax cut-po-l" style="overflow-wrap: break-word;"><?= $row->name ?></div>
 											<div class="mg-bot10">
 												<span class="yellow"><?= $row->days ?> ngày</span>&nbsp;&nbsp;|&nbsp;&nbsp;
-												<span class="yellow"><?= $row->amount - $row->booked ?> lượt</span></div>
+												<span class="yellow"><?= $row->amount - $row->booked ?> lượt còn lại </span></div>
 											<!-- 	<div class="mg-bot10">Nơi khởi hành:&nbsp;&nbsp;<span style="color:#ffc000"> Hồ Chí Minh</span></div> -->
 												<div>
 													<?php $price = $row->price - $row->discount ?>
@@ -51,7 +51,7 @@
 										</div>
 										<div class="mg-bot10 khoiinfott">
 											<img src="images/ic_chair.png" class="f-left" alt="chair">
-											<div class="f-left po-info-s"><?= $row->amount - $row->booked ?> lượt</div>
+											<div class="f-left po-info-s"><?= $row->amount - $row->booked ?> lượt còn lại</div>
 											<div class="clear"></div>
 										</div>
 										<div class="mg-bot10 khoiinfott">
