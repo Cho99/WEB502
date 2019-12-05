@@ -3,45 +3,46 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Đăng ký</title>
+	<link rel="stylesheet" href="<?= base_url() ?>main.css">
 </head>
 <body>
-	<H1>Đăng ký</H1>
-	<div class="container">
-		<form method="post">
-		<div class="form-control">
-			<span>Email*</span>
-			<input type="email" name="email">
+	<div class="MainDangky">
+		<div class="inner_maindk">
+			<H1 class="name_dangky" >Đăng ký</H1>
+			<div class="container global_dangky">
+				<form method="post" class="form_dangky">
+					<div class="form-control global_email global_inner">
+						<span>Email*</span>
+						<input type="text" name="email" placeholder="Nhập Email">
+					</div>
+					<div class="form-control global_matkhau global_inner">
+						<span>Mật khẩu*</span>
+						<input type="text" name="password" placeholder="Nhập password">
+					</div>
+					<div class="form-control global_nhaplaimk global_inner">
+						<span>Nhập lại mật khẩu*</span>
+						<input type="text" name="re_password" placeholder="Nhập lại password">
+					</div>
+					<div class="form-control global_name global_inner">
+						<span>Họ và tên*</span>
+						<input type="text" name="ten" placeholder="Họ và Tên">
+					</div>
+					<div class="form-control global_sdt global_inner">
+						<span>Sdt*</span>
+						<input type="text" name="sdt" placeholder="Số điện thọa">
+					</div>
+					<div class="form-control global_cmt global_inner">
+						<span>cmnd*</span>
+						<input type="text" name="cmnd" placeholder="Số chứng minh thư nhân dân">
+					</div>
+					<div class="form-control global_address global_inner">
+						<span>Địa chỉ*</span>
+						<input name="diachi" placeholder="nhập địa chỉ"></input>
+					</div>
+					<input type="submit" name="submit" class="button btn_dangky" value="Đăng ký">
+				</form>
+			</div>
 		</div>
-		<div class="form-control">
-			<span>Mật khẩu*</span>
-			<input type="password" name="password">
-		</div>
-		<div class="form-control">
-			<span>Nhập lại mật khẩu*</span>
-			<input type="password" name="re_password">
-		</div>
-			<div class="form-control">
-			<span>Họ và tên*</span>
-			<input type="text" name="ten">
-		</div>
-		</div>
-			<div class="form-control">
-			<span>Sdt*</span>
-			<input type="text" name="sdt">
-		</div>
-		</div>
-		<div class="form-control">
-			<span>cmnd*</span>
-			<input type="text" name="cmnd">
-		</div>
-		</div>
-			<div class="form-control">
-			<span>Địa chỉ*</span>
-			<textarea name="diachi"></textarea>
-		</div>
-		<input type="submit" name="submit" class="button" value="Đăng ký">
-		</form>
 	</div>
-	
 </body>
 </html>

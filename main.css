@@ -4528,3 +4528,169 @@ ul.module_list-01 li + li, ul.module_list-notes-01 li + li, ol.module_list-01 li
 .chitietmota div{
 	margin-left: 5px;
 }
+
+
+
+/*------------------------ form dang ki -------------------*/
+
+.name_dangky{
+
+color: #fff;
+
+margin-bottom: 25px;
+}
+.global_dangky{
+
+width: 100%;
+}
+.form_dangky{
+
+width: 40%;
+
+margin: auto;
+
+background: #fff;
+
+border-radius: 5px;
+}
+.global_email{
+
+border-top-left-radius: 5px !important;
+
+border-top-right-radius: 5px !important;
+}
+.global_email span{
+
+}
+.global_email input{border-top-right-radius: 5px;}
+.global_matkhau{
+
+}
+.global_matkhau span {
+
+}
+.global_matkhau input{
+
+}
+.global_nhaplaimk{
+
+}
+.global_nhaplaimk span{
+
+}
+.global_nhaplaimk input{
+
+}
+.global_name{
+
+}
+.global_name span{
+
+}
+.global_name input{
+
+}
+.global_sdt{
+
+}
+.global_sdt span{
+
+}
+.global_sdt input{
+
+}
+.global_cmt{
+
+}
+.global_cmt span{
+
+}
+.global_cmt input{
+	
+}
+.global_address{
+
+}
+.global_address span{
+
+}
+.global_address input{
+	
+}
+.global_inner{
+
+width: 100%;
+
+margin-bottom: 15px;
+
+padding: 0;
+
+margin: auto;
+
+border: none;
+
+display: flex;
+
+border-bottom: 1px solid gray;
+
+height: 45px;
+
+border-radius: initial;
+
+background: #1d9fd8;
+}
+.global_inner span{
+	padding: 13px 0px 13px 15px;
+	width: 25%;
+	text-align: justify;
+	color: #fff;
+}
+.global_inner input{
+
+width: 75%;
+
+border: none;
+
+/* background: #d5dadc; */
+
+padding-left: 15px;
+}
+.MainDangky{
+	overflow: hidden;
+	margin: auto;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background: url(images/ht_gt1.jpg) no-repeat;
+    background-size: cover;
+}
+.inner_maindk{
+	
+padding-top: 70px;
+	
+width: 100%;
+}
+.global_inner input::-webkit-input-placeholder {
+  font-size: 11px;
+  margin-left: 15px;
+  color: gray;
+}
+.global_inner textarea{
+
+}
+.btn_dangky{
+	
+padding: 10px 30px 10px 30px;
+	
+margin-top: 15px;
+	
+margin-bottom: 15px;
+	
+background: #1d9fd8;
+	
+border: none;
+	
+border-radius: 5px;
+	
+color: #fff;
+}
