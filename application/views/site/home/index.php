@@ -19,7 +19,7 @@
 											<div class="mg-bot10">
 												<span class="yellow"><?= $row->days ?> ngày</span>&nbsp;&nbsp;|&nbsp;&nbsp;
 												<span class="yellow"><?= $row->amount - $row->booked ?> lượt</span></div>
-												<div class="mg-bot10">Nơi khởi hành:&nbsp;&nbsp;<span style="color:#ffc000"> Hồ Chí Minh</span></div>
+											<!-- 	<div class="mg-bot10">Nơi khởi hành:&nbsp;&nbsp;<span style="color:#ffc000"> Hồ Chí Minh</span></div> -->
 												<div>
 													<?php $price = $row->price - $row->discount ?>
 													<span class="price-o"><?= number_format($row->price) ?> đ</span>&nbsp;
@@ -36,7 +36,7 @@
 									<a href="<?= base_url('tour/view/').$row->id ?>" title="<?= $row->name ?>">
 										<div class="pos-relative">
 											<img src="<?= base_url('upload/tour/').$row->image_link ?>" class="img-responsive pic-ud-s" alt="<?= $row->name ?>">
-											<div class="frame-po"><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;Nơi khởi hành:&nbsp;&nbsp;<span style="color:#ffc000"> Hồ Chí Minh</span></div>
+											<div class="frame-po"><!-- <i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;Nơi khởi hành:&nbsp;&nbsp;<span style="color:#ffc000"> Hồ Chí Minh</span> --></div>
 										</div>
 									</a>
 									<div class="frame-po-s">
