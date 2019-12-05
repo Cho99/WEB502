@@ -6,7 +6,7 @@
       <a href="#" title="" class="profileFace"><img width="40" src="<?= public_url('admin') ?>/images/user.png">
       </a>
       <span>Xin chào: <strong>admin!</strong></span>
-      <span>Chó</span>
+      <span>Admin</span>
       <div class="clear"></div>
    </div>
    <div class="sidebarSep"></div>

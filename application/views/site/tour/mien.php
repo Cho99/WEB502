@@ -107,7 +107,7 @@
 								</div>
 								<div class="time-mbac">
 									<i class="far fa-user"></i>
-									<span><?= $row->amount - $row->booked ?>/<?= $row->amount ?> người</span>
+									<span><?= $row->amount - $row->booked ?>/<?= $row->amount ?> lượt</span>
 								</div>
 								<div class="time-mbac">
 									<i class="far fa-clock"></i>

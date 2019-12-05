@@ -40,7 +40,7 @@
 
 
 						<div class="formRow">
-							<label class="formLeft">Số lượng người:</label>
+							<label class="formLeft">Số lượt đặt:</label>
 							<div class="formRight">
 								<div class="left">
 									<select name="amount">
